@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="burgermenu.css">
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+
+        <nav>
+            <div id="menu-desktop" class="menu-desktop-cntainer">
+                <div class="menu-wrapper">
+                    <div class="desktop-logo"></div>
+                    <ul class="header-menu-container">
+                        <a href="#">
+                            <li>Forside</li>
+                        </a>
+                        <a href="#">
+                            <li>Galleri</li>
+                        </a>
+                        <a href="#">
+                            <li>Teambuilding</li>
+                        </a>
+                        <a href="#">
+                            <li>Polterabend</li>
+                        </a>
+                        <a href="#">
+                            <li>Kontakt</li>
+                        </a>
+                        <a href="#">
+                            <li>Webshop</li>
+                        </a>
+                    </ul>
+                </div>
+                <div class="desktop-logo"></div>
+            </div>
+            <div id="menu-mobile">
+                <div class="menu__toggler"><span></span></div>
+                <div class="mobile-menu-dropdown">
+                    <ul class="atags-mobile-menu">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Gallery</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+
+        </nav>
+
+    </header>
+
+    <main id="main">
+        <section id="webshop">
+            <div class="container-max">
+                <div id="webshop-grid">
+                </div>
+            </div>
+
+        </section>
+
+
+    </main>
+
+    <template class="test-template">
+        <div class="box1">
+
+            <img src="" alt="">
+            <div class="title"></div>
+        </div>
+    </template>
+
+
+
+    <script>
+        const skabelon = document.querySelector(".test-template");
+        const liste = document.querySelector("#wrapper");
+        cykler.forEach(cykel => {
+            const klon = skabelon.cloneNode(true).content;
+            klon.querySelector("img").src = cykel.billede.guid;
+            klon.querySelector("img").alt = "slider image";
+            klon.querySelector(".title").innerHTML = cykel.title.rendered;
+            liste.appendChild(klon);
+        });
+
+
+
+
+
+
+
+        const toggler = document.querySelector('.menu__toggler');
+        const menu = document.querySelector('.mobile-menu-dropdown');
+        const atags = document.querySelector('.atags-mobile-menu');
+
+        toggler.addEventListener('click', () => {
+            toggler.classList.toggle('active');
+            atags.classList.toggle('fade-in-left');
+            menu.classList.toggle('active');
+        });
+
+        (function(i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function() {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-46156385-1', 'cssscript.com');
+        ga('send', 'pageview');
+    </script>
+</body></html>
