@@ -5,8 +5,6 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="burgermenu.css">
-
-
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <title>Document</title>
@@ -71,7 +69,7 @@
     </main>
 
     <template class="test-template">
-        <div class="box1">
+        <div class="">
 
             <img src="" alt="">
             <div class="title"></div>
@@ -81,15 +79,45 @@
 
 
     <script>
+        document.addEventListener("DOMContentLoaded", getJson);
+
         const skabelon = document.querySelector(".test-template");
-        const liste = document.querySelector("#wrapper");
-        cykler.forEach(cykel => {
-            const klon = skabelon.cloneNode(true).content;
-            klon.querySelector("img").src = cykel.billede.guid;
-            klon.querySelector("img").alt = "slider image";
-            klon.querySelector(".title").innerHTML = cykel.title.rendered;
-            liste.appendChild(klon);
-        });
+        const liste = document.querySelector("#webshop-grid");
+
+
+        let webshopItems;
+
+
+
+
+        async function getJson() {
+            let jsonData = await fetch("https://mostvalue.dk/Copenhagenglass/wordpress/wp-json/wp/v2/Webshop_item");
+
+            webshopItems = await jsonData.json();
+
+            console.log(webshopItems);
+
+            vis();
+        };
+
+        function vis() {
+
+            const skabelon = document.querySelector(".test-template");
+            const liste = document.querySelector("#webshop-grid");
+
+
+            webshopItems.forEach(item => {
+                const klon = skabelon.cloneNode(true).content;
+                klon.querySelector("img").src = item.billede.guid;
+                klon.querySelector("img").alt = "slider image";
+                klon.querySelector(".title").innerHTML = item.title.rendered;
+                liste.appendChild(klon);
+            });
+
+
+        };
+
+
 
 
 
