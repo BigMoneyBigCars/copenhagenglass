@@ -80,34 +80,5 @@
 
         </template>
     </main>
-    <script>
-        document.addEventListener("DOMContentLoaded", getJson);
-
-        const skabelon = document.querySelector(".test-template");
-        const liste = document.querySelector("#webshop-grid");
-        let webshopItems;
-
-        async function getJson() {
-            let jsonData = await fetch("https://mostvalue.dk/Copenhagenglass/wordpress/wp-json/wp/v2/pages");
-            webshopItems = await jsonData.json();
-            console.log(webshopItems);
-
-            vis();
-        };
-
-        function vis() {
-
-
-
-
-            webshopItems.forEach(item => {
-                const klon = skabelon.cloneNode(true).content;
-
-                klon.querySelector(".title").innerHTML = item.content.rendered;
-                liste.appendChild(klon);
-            });
-
-
-        };
-    </script>
+    <script src="script.js"></script>
 </body></html>
