@@ -1,4 +1,5 @@
 * {
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -20,6 +21,8 @@ img {
 }
 
 .menu-desktop-container ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 
@@ -32,9 +35,12 @@ img {
     grid-template-columns: 1fr 5fr 1fr;
     grid-template-rows: auto;
     justify-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     height: 200px;
     width: 100vw;
+    -webkit-transition: height .5s cubic-bezier(.19, 1, .22, 1);
     transition: height .5s cubic-bezier(.19, 1, .22, 1);
     background-color: rgba(199, 199, 199, 0);
 }
@@ -64,6 +70,7 @@ img {
     background: rgb(240, 240, 240);
     height: 100vh;
     display: inline-block;
+    -webkit-transition: 200ms left cubic-bezier(0.77, 0, 0.175, 1);
     transition: 200ms left cubic-bezier(0.77, 0, 0.175, 1);
     width: 500px;
     left: -500px;
@@ -86,18 +93,143 @@ li {
     text-decoration: none;
 }
 
+h1 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 45px;
+}
+
+
+
 .atags-mobile-menu a {
     display: block;
     margin-bottom: 30px;
     color: Black;
     list-style: none;
+    -webkit-animation-name: fade-in-left;
     animation-name: fade-in-left;
 }
 
-#splash {}
+/****** SPLASH SECTION ***/
+
+#splash {
+    padding-top: 20px;
+    padding-right: 12px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+
+}
+
+.splash-max {
+    background-color: darkblue;
+    width: 320px;
+    height: 450px;
+}
+
+.video-splash {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin-left: 60px;
+    padding-top: 20px;
+
+}
+
+.hero-video {
+
+    width: 300px;
+    height: 450px;
+    padding: 0px;
+
+}
+
+.cover {
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+
+/***** SPLASH SECTION slut ****/
+
+/***** OM SECTION ****/
+
+.hero-txt {
+    margin-top: 50px;
+    margin-left: 35px;
+
+}
+
+.hero-txt h1 {
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+}
+
+.hero-txt p {
+    padding: 20px;
+    line-height: 25px;
+}
+
+.hero-txt-thin {
+    margin-top: 10px;
+    font-family: 'Roboto thin100', sans-serif;
+    font-size: 20px;
+
+
+}
+
+.hero-txt-thin h2 {
+    font-weight: 100;
+
+
+}
+
+.box1 p {
+    padding: 40px;
+    padding-bottom: 0px;
+    padding-top: 20px;
+    line-height: 25px;
+    font-family: "Helvetica", sans-serif;
+    font-size: 19px;
+}
+
+.box2 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+
+}
+
+.box2 img {
+    width: 60%;
+    height: 350px;
+    margin-top: 60px;
+
+}
+
+/*****OM SECTION DONE*****/
+
+
+
+
+
 
 main {
-    margin-top: 200px;
+    margin-top: 50px;
 }
 
 .container-max {
