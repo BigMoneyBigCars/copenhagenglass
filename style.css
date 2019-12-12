@@ -11,6 +11,7 @@ img {
 
 .menu-desktop-container {
     width: 100vw;
+
     display: grid;
     grid-template-rows: auto;
     grid-template-columns: 100px;
@@ -22,14 +23,18 @@ img {
     display: flex;
 }
 
+#menu-desktop {}
 
 .menu-wrapper {
+    position: fixed;
+    top: 0;
     display: none;
-    grid-template-columns: 300px auto 200px;
+    grid-template-columns: 1fr 5fr 1fr;
     grid-template-rows: auto;
     justify-items: center;
     align-items: center;
-    height: 15vh;
+    height: 200px;
+    width: 100vw;
     transition: height .5s cubic-bezier(.19, 1, .22, 1);
     background-color: rgba(199, 199, 199, 0);
 }
@@ -73,9 +78,7 @@ img {
 
 .desktop-logo {}
 
-body {
-    max-width: 1920px;
-}
+body {}
 
 ul,
 li {
@@ -91,12 +94,15 @@ li {
     animation-name: fade-in-left;
 }
 
-#splash {
-    height: 80%;
+#splash {}
+
+main {
+    margin-top: 200px;
 }
 
 .container-max {
     width: 80%;
+    max-width: 1920px;
     margin: 0 auto;
 }
 
