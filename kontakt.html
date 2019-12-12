@@ -62,8 +62,28 @@
 
                 <h2>Åbningstider</h2>
                 <div class="aabningstider-container">
+                    <h3>Mandag</h3>
+                    <p class="mandag"></p>
+                    <h3>Tirsdag</h3>
+                    <p class="tirsdag"></p>
+                    <h3>Onsdag</h3>
+                    <p class="onsdag"></p>
+                    <h3>Torsdag</h3>
+                    <p class="torsdag"></p>
+                    <h3>Fredag</h3>
+                    <p class="fredag"></p>
+                    <h3>Lørdag</h3>
+                    <p class="loerdag"></p>
+                    <h3>Søndag</h3>
+                    <p class="soendag"></p>
+
                 </div>
 
+
+
+                <div class="google-maps">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2249.5102615565215!2d12.589602515898013!3d55.68011598053404!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46525322d44023c7%3A0x37ab900c9154a0ad!2sToldbodgade%204%2C%201253%20K%C3%B8benhavn!5e0!3m2!1sda!2sdk!4v1576182033775!5m2!1sda!2sdk" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                </div>
 
 
 
@@ -81,4 +101,29 @@
         </template>
     </main>
     <script src="script.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", getJson);
+        let aabningstider;
+
+        async function getJson() {
+
+            let jsonData = await fetch("https://mostvalue.dk/Copenhagenglass/wordpress/wp-json/wp/v2/aabningstid");
+
+            aabningstider = await jsonData.json();
+            console.log(aabningstider);
+            vis();
+        };
+
+        function vis() {
+            document.querySelector(".mandag").textContent = aabningstider[0].mandag;
+            document.querySelector(".tirsdag").textContent = aabningstider[0].tirsdag;
+            document.querySelector(".onsdag").textContent = aabningstider[0].onsdag;
+            document.querySelector(".torsdag").textContent = aabningstider[0].torsdag;
+            document.querySelector(".fredag").textContent = aabningstider[0].fredag;
+            document.querySelector(".loerdag").textContent = aabningstider[0].loerdag;
+            document.querySelector(".soendag").textContent = aabningstider[0].soendag;
+        }
+    </script>
+
 </body></html>
