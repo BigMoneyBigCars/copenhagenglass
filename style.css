@@ -33,15 +33,18 @@ img {
     grid-template-rows: auto;
     justify-items: center;
     align-items: center;
-    height: 200px;
+    height: 130px;
     width: 100vw;
     transition: height .5s cubic-bezier(.19, 1, .22, 1);
-    background-color: rgba(199, 199, 199, 0);
+    background-color: rgb(255, 255, 255);
+    z-index: 200;
 }
 
 .header-menu-container {
     justify-self: right;
 }
+
+
 
 .header-menu-container ul {
     margin-bottom: 0;
@@ -76,7 +79,7 @@ img {
     width: 100%;
 }
 
-.desktop-logo {}
+.desktop-logo img {}
 
 body {}
 
@@ -97,22 +100,30 @@ li {
 #splash {}
 
 main {
-    margin-top: 200px;
+    margin-top: 100px;
+    position: relative;
 }
 
 .container-max {
-    width: 80%;
+    width: 85%;
     max-width: 1920px;
     margin: 0 auto;
 }
 
-#webshop-grid {
+.title {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: auto;
     grid-gap: 6px;
 }
 
+
+#menu-mobile {
+    background-color: red;
+    height: 75px;
+    border-bottom: 1px solid black;
+
+}
 
 /* Media queries */
 
