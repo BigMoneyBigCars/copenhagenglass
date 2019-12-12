@@ -233,7 +233,12 @@ h1 {
 
 main {
 <<<<<<< HEAD
+<<<<<<< HEAD
     margin-top: 50px;
+=======
+    margin-top: 100px;
+    position: relative;
+>>>>>>> copenhagenglass/master
 =======
     margin-top: 100px;
     position: relative;
