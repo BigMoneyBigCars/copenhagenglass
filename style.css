@@ -38,16 +38,19 @@ img {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    height: 200px;
+    height: 130px;
     width: 100vw;
     -webkit-transition: height .5s cubic-bezier(.19, 1, .22, 1);
     transition: height .5s cubic-bezier(.19, 1, .22, 1);
-    background-color: rgba(199, 199, 199, 0);
+    background-color: rgb(255, 255, 255);
+    z-index: 200;
 }
 
 .header-menu-container {
     justify-self: right;
 }
+
+
 
 .header-menu-container ul {
     margin-bottom: 0;
@@ -83,7 +86,7 @@ img {
     width: 100%;
 }
 
-.desktop-logo {}
+.desktop-logo img {}
 
 body {}
 
@@ -229,22 +232,34 @@ h1 {
 
 
 main {
+<<<<<<< HEAD
     margin-top: 50px;
+=======
+    margin-top: 100px;
+    position: relative;
+>>>>>>> copenhagenglass/master
 }
 
 .container-max {
-    width: 80%;
+    width: 85%;
     max-width: 1920px;
     margin: 0 auto;
 }
 
-#webshop-grid {
+.title {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: auto;
     grid-gap: 6px;
 }
 
+
+#menu-mobile {
+    background-color: red;
+    height: 75px;
+    border-bottom: 1px solid black;
+
+}
 
 /* Media queries */
 
