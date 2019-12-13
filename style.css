@@ -129,7 +129,7 @@ h1 {
 .tb2,
 .pa2 {
     display: flex;
-    flex-wrap: wrap-reverse;
+    flex-wrap: wrap;
 }
 
 .fbg {
