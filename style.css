@@ -114,6 +114,29 @@ h1 {
     animation-name: fade-in-left;
 }
 
+/* event side */
+.flex {}
+
+.tb1,
+
+.pa1 {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
+
+}
+
+.tb2,
+.pa2 {
+    display: flex;
+    flex-wrap: wrap-reverse;
+}
+
+.fbg {
+    flex-grow: 1;
+    flex-basis: 300px;
+}
+
 /****** SPLASH SECTION ***/
 
 #splash {
