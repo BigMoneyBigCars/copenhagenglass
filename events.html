@@ -55,44 +55,45 @@
     </header>
 
     <main id="main">
+        <h1>Events</h1>
         <section id="teambuilding">
-            <div class="container-max">
-                <h1>Events</h1>
-                <div class="tb teambuilding-first-container">
-
-                    <div class="billede1-container"> <img src="" alt=""></div>
-                    <div class="tekst-container">
-                        <h2 class="overskrift1"></h2>
-                        <h3 class="underoverskrift1"></h3>
-                        <p class="tekst1"></p>
+            <div class="container-max flex">
+                <div class="tb1">
+                    <div class="fbg"> <img src="" alt=""></div>
+                    <div class="fbg">
+                        <h2></h2>
+                        <h3></h3>
+                        <p></p>
                     </div>
                 </div>
-
-                <div class="tb teambuilding-second-container">
-                    <div class="billede2-container "> <img src="" alt=""></div>
-                    <div class="tekst-container">
-                        <h2 class="overskrift1"></h2>
-                        <h3 class="underoverskrift1"></h3>
-                        <p class="tekst2"></p>
+                <div class="tb2">
+                    <div class="fbg"> <img src="" alt=""></div>
+                    <div class="fbg">
+                        <p></p>
                     </div>
-
-                </div>
-
-
-
-                <div class="pb polterabend-container">
-                    <div class="tekst-container flex">
-                        <h2 class="overskrift1"></h2>
-                        <h3 class="underoverskrift1"></h3>
-                        <p class="tekst1"></p>
-                        <div class="billede1 "> <img src="" alt=""></div>
-                    </div>
-
-                    <div class="flex tekst2"></div>
-
                 </div>
             </div>
         </section>
+
+        <section id="polterabend">
+            <div class="container-max flex">
+                <div class="pa1">
+                    <div class="fbg"> <img src="" alt=""></div>
+                    <div class="fbg">
+                        <h2></h2>
+                        <h3></h3>
+                        <p></p>
+                    </div>
+                </div>
+                <div class="pa2">
+                    <div class="fbg"> <img src="" alt=""></div>
+                    <div class="fbg">
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
 
 
     </main>
@@ -103,9 +104,7 @@
         async function getJson() {
             let jsonDataTeambuilding = await fetch("https://mostvalue.dk/Copenhagenglass/wordpress/wp-json/wp/v2/Teambuilding");
             let jsonDataPolterabend = await fetch("https://mostvalue.dk/Copenhagenglass/wordpress/wp-json/wp/v2/Polterabend")
-
             teambuilding = await jsonDataTeambuilding.json();
-
             polterabend = await jsonDataPolterabend.json();
             console.log(teambuilding);
             console.log(polterabend);
@@ -114,21 +113,22 @@
         };
 
         function visTeambuilding() {
-            document.querySelector(".tb .overskrift1").textContent = teambuilding[0].overskrift1;
-            document.querySelector(".tb .underoverskrift1").textContent = teambuilding[0].underoverskrift1;
-            document.querySelector(".tb .tekst1").textContent = teambuilding[0].tekst1;
-            document.querySelector(".tb .tekst2").textContent = teambuilding[0].tekst2;
-            document.querySelector(".tb img").src = teambuilding[0].billede1.guid;
-
+            document.querySelector(".tb1 h2").textContent = teambuilding[0].overskrift1;
+            document.querySelector(".tb1 h3").textContent = teambuilding[0].underoverskrift1;
+            document.querySelector(".tb1 p").textContent = teambuilding[0].tekst1;
+            document.querySelector(".tb1 img").src = teambuilding[0].billede1.guid;
+            document.querySelector(".tb2 p").textContent = teambuilding[0].tekst2;
+            document.querySelector(".tb2 img").src = teambuilding[0].billede2.guid;
         }
 
-
         function visPolterabend() {
-            document.querySelector(".pb .overskrift1").textContent = polterabend[0].overskrift1;
-            document.querySelector(".pb .underoverskrift1").textContent = polterabend[0].underoverskrift1;
-            document.querySelector(".pb .tekst1").textContent = polterabend[0].tekst1;
-            document.querySelector(".pb .tekst2").textContent = polterabend[0].tekst2;
-            document.querySelector(".pb .billede1 img").src = polterabend[0].billede1.guid;
+            document.querySelector(".pa1 h2").textContent = polterabend[0].overskrift1;
+            document.querySelector(".pa1 h3").textContent = polterabend[0].underoverskrift1;
+            document.querySelector(".pa1 p").textContent = polterabend[0].tekst1;
+            document.querySelector(".pa1 img").src = polterabend[0].billede1.guid;
+            document.querySelector(".pa2 p").textContent = polterabend[0].tekst2;
+            document.querySelector(".pa2 img").src = polterabend[0].billede2.guid;
+
 
         }
     </script>
