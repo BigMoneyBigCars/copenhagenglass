@@ -61,55 +61,7 @@
 
     </header>
 
-    <main id="main">
-        <section id="splash">
-            <div class="splash-max">
-                <div class="container-max">
 
-                    <div class="video-splash"><img src="img/04114_intotheforest_2560x1440.jpg" class="hero-video cover">
-                    </div>
-
-                </div>
-            </div>
-
-        </section>
-
-    </main>
-    <div class="test"></div>
-    <div class="test2"></div>
-
-
-    <div class="hero-txt">
-        <h1>Nyhavns<br>Glaspusteri</h1>
-        <div class="hero-txt-thin">
-            <h2>ANNO 1999</h2>
-        </div>
-    </div>
-
-    <div class="box1">
-        <p>Hold en udbytterig dag for dig og dit firma hos Nyhavns Glaspusteri. Vi arrangerer teambuilding, som henvender sig specielt til virksomheder og deres ansatte. Her er der mulighed for at udfordre hinanden kreativt og i samarbejde skabe nogle unikke glas i vores glaspusteri.</p>
-    </div>
-    <div class="box2">
-
-        <img src="img/christianbillede.jpg" alt="christianbillede">
-    </div>
-    <div class="hero-txt">
-        <h1>Christian<br>Edwards</h1>
-        <div class="hero-txt-thin">
-            <h2>Din helt egen<br>glaspuster</h2>
-        </div>
-    </div>
-    <div class="box1">
-
-        <p>Glaspusteren Christian Edwards vejleder og skaber rammen om arrangementet således, at alle har mulighed for at deltage. Der stilles ingen specielle krav til fysisk form eller forudgående kendskab til håndværket.<br><br>
-
-
-            <p> De færdige glas bliver et varigt minde om en anderledes oplevelse og kan hentes eller sendes efter aftale, når de er afkølede.Prisen fastsættes ud fra arrangementets indhold, forplejning, varighed og antal deltagere (max. 12 personer).<br><br>
-
-                Arrangementet kan også afholdes udenfor normal åbningstid.</p>
-
-
-    </div>
     <script src="script.js"></script>
 
     <script>
@@ -122,12 +74,15 @@
 
             forsideinfo = await jsonData.json();
             console.log(forsideinfo);
-            vis();
+            visForside();
         };
 
-        function vis() {
+        function visForside() {
             document.querySelector(".test").innerHTML = forsideinfo[0].content.rendered;
             document.querySelector(".test2").innerHTML = forsideinfo[0].title.rendered;
         }
+
     </script>
-</body></html>
+</body>
+
+</html>

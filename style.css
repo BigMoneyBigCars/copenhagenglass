@@ -97,7 +97,7 @@ li {
     text-decoration: none;
 }
 
-h1 {
+h2 {
     font-family: 'Roboto', sans-serif;
     font-weight: bold;
     font-size: 45px;
@@ -173,7 +173,7 @@ h1 {
 
 }
 
-.hero-txt h1 {
+.hero-txt h2 {
     text-transform: uppercase;
     letter-spacing: 0.4px;
 }
@@ -191,7 +191,7 @@ h1 {
 
 }
 
-.hero-txt-thin h2 {
+.hero-txt-thin h3 {
     font-weight: 100;
 
 
