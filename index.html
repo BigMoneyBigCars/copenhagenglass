@@ -61,28 +61,80 @@
 
     </header>
 
+    <main id="main">
+        <section id="splash">
+            <div class="splash-max">
+                <div class="container-max">
 
-    <script src="script.js"></script>
+                    <div class="video-splash"><img src="" class="hero-video cover">
+                    </div>
 
+                </div>
+            </div>
+
+        </section>
+
+
+        <section id="nyhavnsglaspusteri">
+            <div class="container-max">
+                <div class="ng1">
+                    <div class="fbg"> <img src="" alt=""></div>
+                    <div class="fbg">
+                        <h2></h2>
+                        <h3></h3>
+                        <p></p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="glaspusterchristianedwards">
+            <div class="container-max">
+                <div class="gce1">
+                    <div class="fbg"> <img src="" alt=""></div>
+                    <div class="fbg">
+                        <h2></h2>
+                        <h3></h3>
+                        <p></p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+
+    </main>
     <script>
         document.addEventListener("DOMContentLoaded", getJson);
-        let forsideinfo;
-
+        let forside;
         async function getJson() {
+            let jsonDataForside = await fetch("https://mostvalue.dk/Copenhagenglass/wordpress/wp-json/wp/v2/Forside");
+            forside = await jsonDataForside.json();
 
-            let jsonData = await fetch("https://mostvalue.dk/Copenhagenglass/wordpress/wp-json/wp/v2/Forside");
+            console.log(forside);
 
-            forsideinfo = await jsonData.json();
-            console.log(forsideinfo);
             visForside();
+
         };
 
         function visForside() {
-            document.querySelector(".test").innerHTML = forsideinfo[0].content.rendered;
-            document.querySelector(".test2").innerHTML = forsideinfo[0].title.rendered;
+            document.querySelector("#splash img").src = forside[0].splashvideo.guid;
+            document.querySelector(".ng1 h2").textContent = forside[0].overskrift1;
+            document.querySelector(".ng1 h3").textContent = forside[0].underoverskrift1;
+            document.querySelector(".ng1 p").textContent = forside[0].tekst1;
+            document.querySelector(".ng1 img").src = forside[0].billedeafchristian.guid;
+
+
+            document.querySelector(".gce1 h2").textContent = forside[0].overskrift2;
+            document.querySelector(".gce1 h3").textContent = forside[0].underoverskrift2;
+            document.querySelector(".gce1 p").textContent = forside[0].tekst2;
+            document.querySelector(".gce1 img").src = forside[0].billedeafchristian.guid;
         }
-
     </script>
-</body>
+    <script src="script.js"></script>
 
-</html>
+
+
+</body></html>

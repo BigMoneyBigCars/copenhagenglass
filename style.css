@@ -120,20 +120,32 @@ h2 {
 .tb1,
 
 .pa1 {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: row-reverse;
     flex-direction: row-reverse;
 
 }
 
 .tb2,
 .pa2 {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
 }
 
 .fbg {
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
     flex-grow: 1;
+    -ms-flex-preferred-size: 300px;
     flex-basis: 300px;
 }
 
@@ -187,6 +199,37 @@ h2 {
 }
 
 /***** SPLASH SECTION slut ****/
+
+/***** FLEX ***/
+
+.ng1 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: row-reverse;
+    flex-direction: row-reverse;
+}
+
+.gce1 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+
+}
+
+.fbg {
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    -ms-flex-preferred-size: 300px;
+    flex-basis: 300px;
+}
 
 /***** OM SECTION ****/
 
