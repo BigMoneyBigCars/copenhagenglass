@@ -49,4 +49,6 @@
            document.querySelector(".fredag").textContent = aabningstider[0].fredag;
            document.querySelector(".loerdag").textContent = aabningstider[0].loerdag;
            document.querySelector(".soendag").textContent = aabningstider[0].soendag;
+
+
        }
