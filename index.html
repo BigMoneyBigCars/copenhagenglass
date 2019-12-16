@@ -7,11 +7,12 @@
     <link rel="stylesheet" href="burgermenu.css">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,700&display=swap" rel="style.css">
+
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Copenhagen Glass</title>
 
-    <title>Nyhavns Glaspusteri</title>
 </head>
 
 <body>
@@ -20,11 +21,8 @@
         <nav>
             <div id="menu-desktop" class="menu-desktop-cntainer">
                 <div class="menu-wrapper">
-
                     <div class="desktop-logo"><img src="img/logo.png"></div>
-
-                    <p>Nyhavns Glaspusteri</p>
-
+                    <h1>Copenhagen Glass</h1>
                     <ul class="header-menu-container">
                         <a href="index.html">
                             <li>Forside</li>
@@ -45,21 +43,21 @@
                     </ul>
                 </div>
             </div>
-
             <div id="menu-mobile">
                 <a href="index.html">
                     <div class="mobil-logo"></div>
                 </a>
-
-
+                <p>Copenhagen Glass</p>
                 <div class="menu__toggler"><span></span></div>
                 <div class="mobile-menu-dropdown">
                     <ul class="atags-mobile-menu">
+
 
                         <li><a href="#">Home</a></li>
                         <li><a href="#nyhavnsglaspusteri">About</a></li>
                         <li><a href="#">Gallery</a></li>
                         <li><a href="#">Contact</a></li>
+
 
                         <a href="index.html">
                             <li>Forside</li>
@@ -78,58 +76,35 @@
                             <li>Webshop</li>
                         </a>
 
+
+
                     </ul>
                 </div>
             </div>
-
         </nav>
-
     </header>
-
     <main id="main">
-
-        <div class="categoryWrapper splash-overskrift" style="text-align: center; transform: scale(0.8); left: 0;">
-
-            <a href="#nyhavnsglaspusteri">
-                <h1 data-aos="fade-right" data-aos-duration="3000">Nyhavns Glaspusteri</h1>
-            </a>
-
-            <button>
-                <span>
+        <section id="video-section" class="container-max">
+            <div class="categoryWrapper splash-overskrift" style="text-align: center; transform: scale(0.8); left: 0;">
+                <a href="#nyhavnsglaspusteri">
+                    <h1 data-aos="fade-right" data-aos-duration="3000">Copenhagen Glass</h1>
+                </a>
+                <button>
                     <span>
-                        <a div data-aos="fade-up" data-aos-duration="3000" class="cta-knap" href="#glaspusterchristianedwards">
-                            Læs mere
-                        </a>
+                        <span>
+                            <a div data-aos="fade-up" data-aos-duration="3000" class="cta-knap" href="#glaspusterchristianedwards">
+                                Læs mere
+                            </a>
+                        </span>
                     </span>
-                </span>
-            </button>
-        </div>
-
-
-        <div class="splash-max">
-
-            <section data-aos="zoom-in-down" data-aos-duration="2000" id="splash">
-
+                </button>
+            </div>
+            <div class="splash-max" id="splash">
                 <video class="hero-video cover" playsinline="" muted="" onplaying="this.controls=false" autoplay loop>
                     <source src="video/splashfilm.mp4" type='video/mp4;'>
-
-
-
                 </video>
-
-
-
-
-
-
-
-
-
-
-            </section>
-        </div>
-
-
+            </div>
+        </section>
         <section id="nyhavnsglaspusteri">
             <div class="container-max">
                 <div class="ng1">
@@ -140,7 +115,6 @@
                         <p></p>
                     </div>
                 </div>
-
             </div>
         </section>
 
@@ -154,22 +128,20 @@
                         <p></p>
                     </div>
                 </div>
-
             </div>
         </section>
 
+
+
+
+
+        <!-- SnapWidget -->
+
         <section id="instagram">
 
-
-            <!-- SnapWidget -->
             <a href="https://www.instagram.com/explore/locations/5280909/nyhavns-glaspusteri/" target="_blank"> <iframe src="https://snapwidget.com/embed/770512" class="snapwidget-widget" allowtransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden; pointer-events: none;  width:375px; height:70vh"></iframe></a>
         </section>
-
-
-
     </main>
-
-    <footer>@Nyhavns<br>Glaspusteri<br>2019</footer>
     <script>
         document.addEventListener("DOMContentLoaded", getJson);
         let forside;
@@ -178,29 +150,26 @@
             forside = await jsonDataForside.json();
 
             console.log(forside);
-
             visForside();
-
         };
 
         function visForside() {
-
             document.querySelector(".ng1 h2").textContent = forside[0].overskrift1;
             document.querySelector(".ng1 h3").textContent = forside[0].underoverskrift1;
             document.querySelector(".ng1 p").textContent = forside[0].tekst1;
             document.querySelector(".ng1 img").src = forside[0].billedeafchristian.guid;
-
 
             document.querySelector(".gce1 h2").textContent = forside[0].overskrift2;
             document.querySelector(".gce1 h3").textContent = forside[0].underoverskrift2;
             document.querySelector(".gce1 p").textContent = forside[0].tekst2;
             document.querySelector(".gce1 img").src = forside[0].billedeafchristian.guid;
         }
+
     </script>
     <script src="script.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!--  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
-    <script>
+  <script>
         AOS.init();
     </script>
     <script>
@@ -208,34 +177,34 @@
             easing: 'ease-out-back',
             duration: 1000
         });
+<<<<<<< HEAD
     </script>
 
 
 
 
+=======
+    </script>-->
+
     <footer id="footer">
-
         <div class="container">
-
             <div class="butik-container">
-
                 <h4>Butik</h4>
                 <h5>København</h5>
                 <p>Toldbodgade 4
-
-                    1253 København K</p>
+                </p>
+                <p>1253 København K</p>
                 <div class="tlf">
-                    <h5>TLF: </h5>
-                    <p> 40 17 01 34</p>
+                    <p>Telefon: 40 17 01 34</p>
                 </div>
-
                 <p>CVR: 38766309</p>
             </div>
             <div class="kontakt">
-                <h4>Kontakt</h4>
-                <p>Skriv en bedsked til Nyhavns Glaspuster</p>
-                <button>Send mail</button>
+                <h4>Booking</h4>
+                <p>Vdr. Events </p>
 
+                <p>Kontakt butikken</p>
+                <button>Kontakt Butik</button>
                 <a href="#">
                     <h6>Køb et gavekort</h6>
                 </a>
@@ -243,7 +212,6 @@
             <div class="aabningstid">
                 <h4>Åbningstider</h4>
                 <div class="aabningstiden">
-
                     <h3>Mandag</h3>
                     <p class="mandag"></p>
                     <h3>Tirsdag</h3>
@@ -261,33 +229,16 @@
                 </div>
             </div>
         </div>
+        <a href="kontakt.html"> <button class="mobile-footer">
+                <p>Kontakt Butik</p>
+            </button></a>
         <div class="social-icons">
-            <i class="fa fa-facebook-square" style="font-size:36px"></i>
-            <i class="fa fa-instagram" style="font-size:36px"></i>
-            <i class="fa fa-envelope" style="font-size:36px" aria-hidden="true"></i>
-
-
+            <i class="fa fa-facebook-square" style="font-size:24px"></i>
+            <i class="fa fa-instagram" style="font-size:24px"></i>
+            <i class="fa fa-envelope" style="font-size:24px" aria-hidden="true"></i>
         </div>
-        <p>Copyright: Nyhavns Glaspusteri 2019</p>
-
-
-        <!-- <div class="footer-container">
-            <a href="kontakt.html">
-                <p>Kontakt</p>
-            </a>
-
-            <p>CVR: 38766309</p>
-
-            <div class="social-icons">
-                <i class="fa fa-facebook-square" style="font-size:36px"></i>
-                <i class="fa fa-instagram" style="font-size:36px"></i>
-                <i class="fa fa-envelope" style="font-size:36px" aria-hidden="true"></i>
-
-
-            </div>
-            <p>Copyright: Nyhavns Glaspusteri 2019</p>
-
-        </div>-->
-
+        <p>Copyright: Copenhagen Glass 2019</p>
     </footer>
-</body></html>
+</body>
+
+</html>

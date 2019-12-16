@@ -5,9 +5,31 @@
     padding: 0;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    padding: 0;
+    font-weight: 300;
+}
+
 img {
     width: 100%;
+}
 
+nav h1 {
+    font-family: "Roboto";
+    font-weight: bold;
+    font-size: 28px;
+}
+
+nav li {
+    font-family: "Roboto";
+    font-weight: 400;
+    font-size: 22px;
 }
 
 .menu-desktop-container {
@@ -32,8 +54,8 @@ img {
     position: fixed;
     top: 0;
     display: none;
-    grid-template-columns: 1fr 1fr 5fr 1fr;
-    grid-template-rows: auto;
+    grid-template-columns: 1fr 2fr 4fr 1fr;
+    grid-template-rows: 130px;
     justify-items: center;
     -webkit-box-align: center;
     -ms-flex-align: center;
@@ -49,21 +71,21 @@ img {
 
 .header-menu-container {
     justify-self: right;
+    display: flex;
 }
-
-
 
 .header-menu-container ul {
     margin-bottom: 0;
 }
 
 .header-menu-container li {
-    display: inline-block;
-    margin-right: 20px;
+    margin-left: 30px;
+    color: black;
+}
+
+.header-menu-container a {
     text-decoration: none;
     list-style-type: none;
-
-    color: black;
 }
 
 /* mobile menu */
@@ -88,22 +110,16 @@ img {
 }
 
 .desktop-logo img {
-    width: 90px;
-    height: 90px;
+    height: 120px;
+    width: auto;
 }
 
 .mobil-logo img {
-    width: 40px;
-    height: 40px;
-    position: relative;
-    top: 22px;
-    left: 20px;
+    height: 60px;
+    width: auto;
 }
 
-.mobil-logo {
-    width: 40px;
-    height: 40px;
-}
+.mobil-logo {}
 
 body {}
 
@@ -118,10 +134,6 @@ h2 {
     font-weight: bold;
     font-size: 45px;
 }
-
-
-
-
 
 .atags-mobile-menu a {
     display: block;
@@ -197,12 +209,6 @@ h2 {
 #splash {
     width: 100%;
     height: 700px;
-
-
-
-
-
-
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -235,20 +241,14 @@ h2 {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
-
-
-
 }
 
 .hero-video {
-
     width: 100%;
     height: 737px;
     margin: 0 auto;
     -webkit-filter: brightness(0.4);
     filter: brightness(0.5);
-
-
 }
 
 .splash-overskrift {
@@ -260,7 +260,6 @@ h2 {
     top: 400px;
     left: 40px;
     z-index: 20;
-
 }
 
 .categoryWrapper span {
@@ -269,23 +268,13 @@ h2 {
     right: 0px;
     margin: 0 auto;
     text-align: center;
-
-
 }
 
 .categoryWrapper a {
     text-decoration: none;
     font-family: "Roboto", sans-serif;
     color: white;
-
-
-
-
 }
-
-
-
-
 
 .cover {
     -o-object-fit: cover;
@@ -293,8 +282,6 @@ h2 {
 }
 
 /***** KNAP PÅ VIDEO ****/
-
-
 
 .categoryWrapper {
 
@@ -513,9 +500,6 @@ h2 {
 
     font-family: "Roboto", sans-serif;
 
-
-
-
 }
 
 /***** SPLASH SECTION slut ****/
@@ -551,6 +535,8 @@ h2 {
     flex-basis: 300px;
 }
 
+
+
 /***** OM SECTION ****/
 
 #nyhavnsglaspusteri {
@@ -560,9 +546,6 @@ h2 {
 #glaspusterchristianedwards {
     margin-top: 80px;
 }
-
-
-
 
 
 .fbg h2 {
@@ -584,13 +567,17 @@ h2 {
     font-size: 20px;
     font-weight: 100;
     font-size: 30px;
-
-
 }
 
+section {}
 
+section img {
+    width: 300px;
+    height: auto;
+}
 
-p {
+#events p,
+#forside p {
     padding: 40px;
     padding-bottom: 0px;
     padding-top: 20px;
@@ -782,15 +769,7 @@ p {
 
 
 main {
-
-    /*<<<<<<< HEAD <<<<<<< HEAD margin-top: 50px;
-    =======margin-top: 100px;
-    position: relative;
-    > > > > > > > copenhagenglass/master=======margin-top: 100px;
-    position: relative;
-    > > > > > > > copenhagenglass/master*/
-
-
+    margin-top: 75px;
 }
 
 .container-max {
@@ -801,15 +780,20 @@ main {
 
 
 
-
 #menu-mobile {
     background-color: #ffffff;
     height: 75px;
     border-bottom: 1px solid black;
-    display: flex;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
     justify-content: left;
     padding-left: 15px;
+    align-items: center;
+    position: fixed;
+    width: 100vw;
+    z-index: 200;
+    top: 0;
+
 
 }
 
@@ -821,6 +805,7 @@ footer {
     background-color: #efefef;
     padding-top: 25px;
     padding-bottom: 25px;
+    font-family: "Roboto", sans-serif;
 }
 
 footer .container {
@@ -833,18 +818,66 @@ footer .container {
 
 }
 
+footer button {
+    width: 130px;
+    height: 40px;
+    border: 2px solid black;
+    border-radius: 25px;
+    background-color: none;
+    background-color: transparent;
+    cursor: pointer;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    transition: ease-in-out 0.3s;
+}
+
+footer h4 {
+    font-size: 22px;
+    font-weight: 600;
+
+    padding-bottom: 25px;
+}
+
+footer h5 {
+    font-size: 18px;
+
+    font-weight: 500;
+
+}
+
+
+footer p {
+    font-size: 16px;
+}
+
+footer button p {
+    color: black;
+
+}
+
+
+footer button:hover {
+
+    border: 3px solid white;
+    background-color: black;
+    color: white;
+}
+
+footer button p:hover {
+    color: white;
+}
+
 .tlf {
     display: flex;
     align-content: center;
 }
 
-.container h4 {
-    padding-bottom: 15px;
-}
+
 
 .butik-container,
 .kontakt,
 .aabningstid {
+    display: none;
     flex-grow: 1;
     flex-basis: 100px;
     margin: 0 auto;
@@ -853,9 +886,28 @@ footer .container {
 
 .kontakt h5,
 .kontakt p,
-.kontakt button,
+
 .kontakt a {
-    padding-bottom: 10px;
+    margin-bottom: 10px;
+    text-decoration: none;
+    list-style-type: none;
+
+
+}
+
+.kontakt h6:hover {
+
+    text-decoration: underline;
+}
+
+.kontakt h6 {
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: black;
+    font-weight: 500;
+    transition: ease-in-out 0.3s;
+
+
 }
 
 .butik-container h5,
@@ -863,6 +915,7 @@ footer .container {
 .butik-container div {
     padding-bottom: 10px;
 }
+
 
 .aabningstiden {
     display: grid;
@@ -875,6 +928,7 @@ footer .container {
     padding-right: 15px;
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD #menu-mobile {
     height: 75px;
 
@@ -882,6 +936,56 @@ footer .container {
     footer-container p {
         text-decoration: none;
         list-style-type: none;
+=======
+
+
+.footer-container a,
+footer-container p {
+    text-decoration: none;
+    list-style-type: none;
+}
+
+.fa-facebook-square:hover,
+.fa-instagram:hover,
+.fa-envelope:hover {
+    color: white;
+    transform: scale(1.2);
+}
+
+.footer-container {
+    width: 100vw;
+    background-color: rgba(117, 117, 119, 0.76);
+    display: block;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.social-icons i {
+    cursor: pointer;
+    transition: ease-in-out 0.3s;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+/**** footer ****/
+
+
+/* Media queries */
+/** FORSIDE **/
+/** forside knap og headline mobil ***/
+
+@media screen and (min-width: 375px) {
+    .cta-knap {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        font-size: 20px;
+>>>>>>> copenhagenglass/master
     }
 
     .fa-facebook-square:hover,
@@ -982,6 +1086,7 @@ footer .container {
 
     /**** events side ***/
 
+<<<<<<< HEAD
     #teambuilding {
         margin-top: 20px;
 
@@ -1006,6 +1111,9 @@ footer .container {
     .pa1 {
         margin-top: 50px;
     }
+=======
+
+>>>>>>> copenhagenglass/master
 
     .pa2 p {
         padding: 0px;
@@ -1029,9 +1137,21 @@ footer .container {
             display: grid;
         }
 
+<<<<<<< HEAD
         .butik-container,
         .kontakt,
         .aabningstid {}
+=======
+    .mobile-footer {
+        display: none;
+    }
+
+    .butik-container,
+    .kontakt,
+    .aabningstid {
+        display: block;
+    }
+>>>>>>> copenhagenglass/master
 
         #menu-mobile {
             display: none;
@@ -1042,6 +1162,15 @@ footer .container {
             object-fit: cover;
         }
 
+    main {
+        margin-top: 130px;
+    }
+
+
+
+    .footer button p {
+        text-decoration: underline;
+    }
 
 
 
