@@ -7,7 +7,8 @@
     <link rel="stylesheet" href="burgermenu.css">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,700&display=swap" rel="style.css">
-    <title>Document</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <title>Nyhavns Glaspusteri</title>
 </head>
 
 <body>
@@ -19,7 +20,7 @@
         <nav>
             <div id="menu-desktop" class="menu-desktop-cntainer">
                 <div class="menu-wrapper">
-                    <div class="desktop-logo"><img src="img/logo.jpg"></div>
+                    <div class="desktop-logo"><img src="img/logo.png"></div>
                     <ul class="header-menu-container">
                         <a href="#">
                             <li>Forside</li>
@@ -41,16 +42,19 @@
                         </a>
                     </ul>
                 </div>
-                <div class="desktop-logo"></div>
             </div>
-            <div id="menu-mobile">
 
-                <p>Nyhavns Glaspusteri</p>
+            <div id="menu-mobile">
+                <a href="index.html">
+                    <div class="mobil-logo"><img src="img/logo.png"></div>
+                </a>
+
+
                 <div class="menu__toggler"><span></span></div>
                 <div class="mobile-menu-dropdown">
                     <ul class="atags-mobile-menu">
                         <li><a href="#">Home</a></li>
-                        <li><a href="#">About</a></li>
+                        <li><a href="#nyhavnsglaspusteri">About</a></li>
                         <li><a href="#">Gallery</a></li>
                         <li><a href="#">Contact</a></li>
                     </ul>
@@ -62,50 +66,89 @@
     </header>
 
     <main id="main">
-        <section id="splash">
-            <div class="splash-max">
-                <div class="container-max">
 
-                    <div class="video-splash"><img src="" class="hero-video cover">
-                    </div>
+        <div class="categoryWrapper splash-overskrift" style="text-align: center; transform: scale(0.8); left: 0;">
 
-                </div>
-            </div>
+            <a href="#nyhavnsglaspusteri">
+                <h1 data-aos="fade-right" data-aos-duration="3000">Nyhavns Glaspusteri</h1>
+            </a>
 
-        </section>
+            <button>
+                <span>
+                    <span>
+                        <a div data-aos="fade-up" data-aos-duration="3000" class="cta-knap" href="#glaspusterchristianedwards">
+                            Læs mere
+                        </a>
+                    </span>
+                </span>
+            </button>
+        </div>
+
+
+        <div class="splash-max">
+
+            <section data-aos="zoom-in-down" data-aos-duration="2000" id="splash">
+
+                <video class="hero-video cover" playsinline="" muted="" onplaying="this.controls=false" autoplay loop>
+                    <source src="video/splashfilm.mp4" type='video/mp4;'>
+
+
+
+                </video>
+
+
+
+
+
+
+
+
+
+
+            </section>
+        </div>
 
 
         <section id="nyhavnsglaspusteri">
-            <div class="container-max">
-                <div class="ng1">
-                    <div class="fbg"> <img src="" alt=""></div>
-                    <div class="fbg">
-                        <h2></h2>
-                        <h3></h3>
-                        <p></p>
+            <div data-aos="fade-up" data-aos-duration="3000" class="container-max">
+                <div data-aos="fade-up" data-aos-duration="3000" class="ng1">
+                    <div data-aos="fade-up" data-aos-duration="3000" class="fbg"> <img src="" alt=""></div>
+                    <div data-aos="fade-up" data-aos-duration="3000" class="fbg">
+                        <h2 data-aos="fade-right" data-aos-duration="3000"></h2>
+                        <h3 data-aos="fade-right" data-aos-duration="3000"></h3>
+                        <p data-aos="fade-up" data-aos-duration="3000"></p>
                     </div>
                 </div>
 
             </div>
         </section>
 
-        <section id="glaspusterchristianedwards">
-            <div class="container-max">
-                <div class="gce1">
-                    <div class="fbg"> <img src="" alt=""></div>
-                    <div class="fbg">
-                        <h2></h2>
-                        <h3></h3>
-                        <p></p>
+        <section data-aos="fade-up" data-aos-duration="3000" id="glaspusterchristianedwards">
+            <div data-aos="fade-up" data-aos-duration="3000" class="container-max">
+                <div data-aos="fade-up" data-aos-duration="3000" class="gce1">
+                    <div data-aos="fade-up" data-aos-duration="3000" class="fbg"> <img src="" alt=""></div>
+                    <div data-aos="fade-up" data-aos-duration="3000" class="fbg">
+                        <h2 data-aos="fade-right" data-aos-duration="3000"></h2>
+                        <h3 data-aos="fade-right" data-aos-duration="3000"></h3>
+                        <p data-aos="fade-up" data-aos-duration="3000"></p>
                     </div>
                 </div>
 
             </div>
+        </section>
+
+        <section data-aos="fade-up" data-aos-duration="3000" id="instagram">
+
+
+            <!-- SnapWidget -->
+            <a data-aos="fade-up" data-aos-duration="3000" href="https://www.instagram.com/explore/locations/5280909/nyhavns-glaspusteri/" target="_blank"> <iframe src="https://snapwidget.com/embed/770512" class="snapwidget-widget" allowtransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden; pointer-events: none;  width:375px; height:70vh"></iframe></a>
         </section>
 
 
 
     </main>
+
+    <footer>@Nyhavns<br>Glaspusteri<br>2019</footer>
     <script>
         document.addEventListener("DOMContentLoaded", getJson);
         let forside;
@@ -120,7 +163,7 @@
         };
 
         function visForside() {
-            document.querySelector("#splash img").src = forside[0].splashvideo.guid;
+
             document.querySelector(".ng1 h2").textContent = forside[0].overskrift1;
             document.querySelector(".ng1 h3").textContent = forside[0].underoverskrift1;
             document.querySelector(".ng1 p").textContent = forside[0].tekst1;
@@ -132,9 +175,25 @@
             document.querySelector(".gce1 p").textContent = forside[0].tekst2;
             document.querySelector(".gce1 img").src = forside[0].billedeafchristian.guid;
         }
+
     </script>
     <script src="script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+        AOS.init();
+
+    </script>
+    <script>
+        AOS.init({
+            easing: 'ease-out-back',
+            duration: 1000
+        });
+
+    </script>
 
 
 
-</body></html>
+</body>
+
+</html>
