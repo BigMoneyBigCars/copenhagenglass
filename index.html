@@ -84,7 +84,7 @@
         </nav>
     </header>
     <main id="main">
-        <section id="video-section" class="container-max">
+        <section id="video-section">
             <div class="categoryWrapper splash-overskrift" style="text-align: center; transform: scale(0.8); left: 0;">
                 <a href="#nyhavnsglaspusteri">
                     <h1 data-aos="fade-right" data-aos-duration="3000">Copenhagen Glass</h1>
@@ -107,12 +107,14 @@
         </section>
         <section id="nyhavnsglaspusteri">
             <div class="container-max">
-                <div class="ng1">
-                    <div class="fbg"> <img src="" alt=""></div>
-                    <div class="fbg">
-                        <h2></h2>
-                        <h3></h3>
-                        <p></p>
+                <div class="ng1 flex-reverse flex-container">
+                    <div class="fbg flex-item"> <img src="" alt=""></div>
+                    <div class="fbg flex-item">
+                        <div class="tekst-container">
+                            <h2></h2>
+                            <h3></h3>
+                            <p></p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -120,16 +122,20 @@
 
         <section id="glaspusterchristianedwards">
             <div class="container-max">
-                <div class="gce1">
-                    <div class="fbg"> <img src="" alt=""></div>
-                    <div class="fbg">
-                        <h2></h2>
-                        <h3></h3>
-                        <p></p>
+                <div class="gce1 flex-container">
+                    <div class="fbg flex-item"> <img src="" alt=""></div>
+                    <div class="fbg flex-item">
+                        <div class="tekst-container">
+                            <h2></h2>
+                            <h3></h3>
+                            <p></p>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
+
+
 
 
 
@@ -164,12 +170,11 @@
             document.querySelector(".gce1 p").textContent = forside[0].tekst2;
             document.querySelector(".gce1 img").src = forside[0].billedeafchristian.guid;
         }
-
     </script>
     <script src="script.js"></script>
-    <!--  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
-  <script>
+    <script>
         AOS.init();
     </script>
     <script>
@@ -177,14 +182,12 @@
             easing: 'ease-out-back',
             duration: 1000
         });
-<<<<<<< HEAD
     </script>
 
 
 
 
-=======
-    </script>-->
+
 
     <footer id="footer">
         <div class="container">
@@ -239,6 +242,4 @@
         </div>
         <p>Copyright: Copenhagen Glass 2019</p>
     </footer>
-</body>
-
-</html>
+</body></html>
