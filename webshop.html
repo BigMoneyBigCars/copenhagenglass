@@ -75,6 +75,56 @@
                 <div id="webshop-grid">
                 </div>
             </div>
+
+
+            <div class="popUp-container">
+                <div class="container-max">
+                    <div class="bikePopUp">
+                        <div class="ikoner">
+                            <div class="tilbagesvg"><img src="img/backwardarrow.png" alt="tilbageknap"></div>
+                            <div class="shoppingcartsvg"><img src="img/kurv.png" alt="kurv"></div>
+                        </div>
+
+
+                        <div class="enkelt-produkt-billede">
+                            <img src="img/billedeafvase.png" alt="billede-af-produkt">
+
+                        </div>
+                        <div class="enkelt-produkt-overskrift">
+                            <h1>Signatur Glasvase</h1>
+                            <p>Vaserne er blæst op i klart glas og indfarvet med små glasstykker, hvilket giver det prikkede look under de klare strenge af glas.</p>
+                        </div>
+
+                        <div class="specifikationer">
+                            <p>Vægt 0.980 kg<br>Størrelse 11x9x18 cm</p>
+
+                        </div>
+
+                        <div class="farve-valg">
+                            <h3>Farver</h3>
+                            <div class="farver"> </div>
+                            <div class="farver1"> </div>
+                            <div class="farver2"> </div>
+                            <div class="farver3"> </div>
+
+
+                            <div class="pris">
+                                <p>720.00 DKK</p>
+                            </div>
+                            <button class="buybutton">
+                                <p>Læg i kurv</p>
+                            </button>
+
+
+
+
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
         </section>
     </main>
     <footer id="footer">
@@ -130,14 +180,22 @@
     </footer>
     <template class="test-template">
         <div class="item-container">
-            <img src="" alt="">
+            <div class="singleProdukt">
+                <img src="" alt="">
 
-            <div class="price-container">
-                <div class="title"></div>
-                <button class="button button4">læg i kurv</button>
+                <div class="price-container">
+                    <div class="title"></div>
+                    <button class="button button4">læg i kurv</button>
+                </div>
             </div>
         </div>
     </template>
+
+
+
+
+
+
     <script src="script.js"></script>
     <script>
         document.addEventListener("DOMContentLoaded", getJson);
@@ -147,7 +205,6 @@
         async function getJson() {
             const skabelon = document.querySelector(".test-template");
             const liste = document.querySelector("#webshop-grid");
-
 
             let jsonData = await fetch("https://mostvalue.dk/Copenhagenglass/wordpress/wp-json/wp/v2/Webshop_item");
 
@@ -162,13 +219,83 @@
             const skabelon = document.querySelector(".test-template");
             const liste = document.querySelector("#webshop-grid");
 
-            webshopItems.forEach(item => {
+            webshopItems.forEach((item, index) => {
                 const klon = skabelon.cloneNode(true).content;
+
+
+
                 klon.querySelector("img").src = item.billede.guid;
                 klon.querySelector("img").alt = "slider image";
                 klon.querySelector(".title").innerHTML = item.title.rendered;
+                console.log(index);
+
+                klon.querySelector(".singleProdukt").addEventListener('click', function() {
+                    /*                    showBike(webshopItems[index]);*/
+                    console.log(index);
+
+                })
+
                 liste.appendChild(klon);
             });
+            console.log("hej");
+            events();
         };
+        /*
+
+                document.querySelector(".luk").addEventListener('click', noDisplayBike);
+                $('#wrapper').empty();
+                const skabelon = document.querySelector(".test-template");
+                const liste = document.querySelector("#wrapper");
+                cykler.forEach((cykel, index) => {
+                    const klon = skabelon.cloneNode(true).content;
+
+
+                    klon.querySelector("img").src = cykel.billede.guid;
+                    klon.querySelector("img").alt = "slider image";
+                    klon.querySelector(".title").innerHTML = cykel.title.rendered;
+                    klon.querySelector(".priceGrid").textContent = "Pris " + cykel.pris + " ,-";
+
+                    console.log(index);
+                    klon.querySelector(".box1").addEventListener('click', function() {
+                        showBike(webshopItems[index]);
+                        console.log(index);
+                        document.querySelector(".bikePopUp").style.display = "block";
+                        document.querySelector("body").classList.add("noscroll");
+                        document.querySelector(".bikeImg img").src = cykel.billede.guid;
+                        document.querySelector(".bikeTitle").textContent = cykel.title.rendered;
+                        document.querySelector(".bikePrice").textContent = "Pris " + cykel.pris + " ,-";
+                        document.querySelector(".price").textContent = cykel.pris + " ,-";
+                        document.querySelector(".frameSize").innerHTML = cykel.framesize;
+                        document.querySelector(".weight").innerHTML = cykel.weight;
+                        document.querySelector(".colorCombinations").innerHTML = cykel.colorcombination;
+
+                    })
+
+
+                    liste.appendChild(klon);
+
+                });
+
+        */
+
+
+        function events() {
+            console.log("hej igen");
+            document.querySelector(".tilbagesvg").addEventListener('click', noDisplaySingle);
+            document.querySelector(".singleProdukt").addEventListener('click', displaySingle);
+        }
+
+        function noDisplaySingle() {
+            document.querySelector(".popUp-container").style.display = "none";
+        }
+
+        function displaySingle() {
+            document.querySelector(".popUp-container").style.display = "block";
+        }
+
+        function openSingle() {
+            console.log("hej");
+
+        }
     </script>
 </body></html>

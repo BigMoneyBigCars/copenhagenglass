@@ -72,25 +72,27 @@
     <main id="main">
         <section id="Kontakt">
             <div class="container-max">
-                <h1>Kontakt</h1>
-                <h2>Åbningstider</h2>
-                <div class="aabningstider-container">
-                    <h3>Mandag</h3>
-                    <p class="kmandag"></p>
-                    <h3>Tirsdag</h3>
-                    <p class="ktirsdag"></p>
-                    <h3>Onsdag</h3>
-                    <p class="konsdag"></p>
-                    <h3>Torsdag</h3>
-                    <p class="ktorsdag"></p>
-                    <h3>Fredag</h3>
-                    <p class="kfredag"></p>
-                    <h3>Lørdag</h3>
-                    <p class="kloerdag"></p>
-                    <h3>Søndag</h3>
-                    <p class="ksoendag"></p>
+                <div class="flex-item">
+                    <h1>Kontakt</h1>
+                    <h2>Åbningstider</h2>
+                    <div class="aabningstider-container">
+                        <h3>Mandag</h3>
+                        <p class="kmandag"></p>
+                        <h3>Tirsdag</h3>
+                        <p class="ktirsdag"></p>
+                        <h3>Onsdag</h3>
+                        <p class="konsdag"></p>
+                        <h3>Torsdag</h3>
+                        <p class="ktorsdag"></p>
+                        <h3>Fredag</h3>
+                        <p class="kfredag"></p>
+                        <h3>Lørdag</h3>
+                        <p class="kloerdag"></p>
+                        <h3>Søndag</h3>
+                        <p class="ksoendag"></p>
+                    </div>
                 </div>
-                <div class="google-maps">
+                <div class="google-maps flex-item">
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2249.5102615565215!2d12.589602515898013!3d55.68011598053404!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46525322d44023c7%3A0x37ab900c9154a0ad!2sToldbodgade%204%2C%201253%20K%C3%B8benhavn!5e0!3m2!1sda!2sdk!4v1576182033775!5m2!1sda!2sdk" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
                 </div>
             </div>
@@ -268,8 +270,5 @@
             document.querySelector(".aabningstider-container .kloerdag").textContent = aabningstiderKontakt[0].loerdag;
             document.querySelector(".aabningstider-container .ksoendag").textContent = aabningstiderKontakt[0].soendag;
         }
-
     </script>
-</body>
-
-</html>
+</body></html>

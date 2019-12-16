@@ -155,7 +155,6 @@ nav li {
     animation-name: fade-in-left;
 }
 
-
 /* mobile menu SLUT */
 
 /* Main sectiocs FLEX START */
@@ -280,13 +279,6 @@ nav li {
     justify-content: space-between;
 }
 
-/*.title {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: auto;
-    grid-gap: 6px;
-}*/
-
 .button {
     background-color: #4CAF50;
     /* Green */
@@ -339,6 +331,18 @@ nav li {
 
 /**** singleview ****/
 
+
+.popUp-container {
+    display: none;
+    width: 100vw;
+    background-color: white;
+    position: fixed;
+
+    top: 130px;
+
+    min-height: 1200px;
+}
+
 .tilbagesvg {
     position: static;
     cursor: pointer;
@@ -352,16 +356,26 @@ nav li {
     align-items: center;
     background-color: aliceblue;
 
-    width: 100VW;
+    width: 100%;
     padding-left: 10px;
     padding-right: 10px;
 
 }
 
+.enkelt-produkt-billede {
+    text-align: center;
+}
+
+
+.enkelt-produkt-billede img {
+    max-width: 600px;
+    height: auto;
+}
 
 .item-container {
     margin-top: 25px;
     text-align: center;
+    cursor: pointer;
 }
 
 /***** farver***/
@@ -431,8 +445,8 @@ nav li {
     padding: 20px;
     width: 150px;
     height: 50px;
-    position: relative;
-    left: 100px;
+
+
 
 }
 
