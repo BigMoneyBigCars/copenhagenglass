@@ -104,6 +104,14 @@ li {
 /* Menu Desktop SLUT */
 
 
+#baggrund1 {
+    background-image: url(img/baggrund.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+}
+
 nav h1 {
     font-family: "Roboto", sans-serif;
     font-weight: 300;
