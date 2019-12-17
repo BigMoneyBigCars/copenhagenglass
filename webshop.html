@@ -77,53 +77,51 @@
             </div>
 
 
+
             <div class="popUp-container">
                 <div class="container-max">
-                    <div class="bikePopUp">
-                        <div class="ikoner">
-                            <div class="tilbagesvg"><img src="img/backwardarrow.png" alt="tilbageknap"></div>
-                            <div class="shoppingcartsvg"><img src="img/kurv.png" alt="kurv"></div>
+
+
+
+
+                    <div class="top-container">
+                        <div class="luk"><img src="img/backwardarrow.png" alt="tilbageknap"></div>
+                        <div class="shoppingcartsvg"><img src="img/kurv.png" alt="kurv"></div>
+                    </div>
+
+                    <div class="produkt-container">
+
+                        <div class="produkt-billede">
+                            <img src="img/billedeafvase.png" alt="billede-af-prodzukt">
+
                         </div>
-
-
-                        <div class="enkelt-produkt-billede">
-                            <img src="img/billedeafvase.png" alt="billede-af-produkt">
-
-                        </div>
-                        <div class="enkelt-produkt-overskrift">
+                        <div class="produkt-tekst">
                             <h1>Signatur Glasvase</h1>
                             <p>Vaserne er blæst op i klart glas og indfarvet med små glasstykker, hvilket giver det prikkede look under de klare strenge af glas.</p>
                         </div>
 
                         <div class="specifikationer">
-                            <p>Vægt 0.980 kg<br>Størrelse 11x9x18 cm</p>
-
+                            <p>Vægt 0.980 kg</p>
+                            <p>Størrelse 11x9x18 cm</p>
                         </div>
 
-                        <div class="farve-valg">
+                        <div class="farver">
                             <h3>Farver</h3>
-                            <div class="farver"> </div>
-                            <div class="farver1"> </div>
-                            <div class="farver2"> </div>
-                            <div class="farver3"> </div>
-
+                            <div class="gul"> </div>
+                            <div class="roed"> </div>
 
                             <div class="pris">
                                 <p>720.00 DKK</p>
                             </div>
-                            <button class="buybutton">
+                            <button class="buy-button">
                                 <p>Læg i kurv</p>
                             </button>
-
-
-
-
-
                         </div>
-
                     </div>
+
                 </div>
             </div>
+
 
         </section>
     </main>
@@ -281,7 +279,7 @@
 
         function events() {
             console.log("hej igen");
-            document.querySelector(".tilbagesvg").addEventListener('click', noDisplaySingle);
+            document.querySelector(".luk").addEventListener('click', noDisplaySingle);
             document.querySelector(".singleProdukt").addEventListener('click', displaySingle);
         }
 

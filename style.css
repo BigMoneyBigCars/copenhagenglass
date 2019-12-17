@@ -437,12 +437,12 @@ input[type=submit]:hover {
     min-height: 1200px;
 }
 
-.tilbagesvg {
+.luk {
     position: static;
     cursor: pointer;
 }
 
-.ikoner {
+.top-container {
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-between;
@@ -456,12 +456,12 @@ input[type=submit]:hover {
 
 }
 
-.enkelt-produkt-billede {
+.produkt-billede {
     text-align: center;
 }
 
 
-.enkelt-produkt-billede img {
+.produkt-billede img {
     max-width: 600px;
     height: auto;
 }
@@ -481,37 +481,25 @@ input[type=submit]:hover {
 
 /***** farver***/
 
-.farver {
+
+
+.gul {
     width: 20px;
     height: 20px;
     border: 2px solid black;
-    background-color: black;
+    background-color: #ffeb00;
 
 }
 
-.farver1 {
+.roed {
     width: 20px;
     height: 20px;
     border: 2px solid black;
-    background-color: antiquewhite;
+    background-color: hsl(0, 100%, 50%);
 
 }
 
-.farver2 {
-    width: 20px;
-    height: 20px;
-    border: 2px solid black;
-    background-color: blue;
 
-}
-
-.farver3 {
-    width: 20px;
-    height: 20px;
-    border: 2px solid black;
-    background-color: white;
-
-}
 
 
 
@@ -523,21 +511,21 @@ input[type=submit]:hover {
 
 }
 
-.farve-valg {
+.farver {
     display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
+    flex-wrap: nowrap;
+    flex-direction: column;
     justify-content: space-evenly;
     margin-top: 30px;
 }
 
-.enkelt-produkt-overskrift p {
+.produkt-tekst p {
     padding: 0;
     margin-top: 20px;
 }
 
 /**** læg i kurv knap ***/
-.buybutton {
+.buy-button {
 
 
     background: transparent;
