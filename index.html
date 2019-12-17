@@ -21,7 +21,7 @@
         <nav>
             <div id="menu-desktop" class="menu-desktop-cntainer">
                 <div class="menu-wrapper">
-                    <div class="desktop-logo"><img src="img/logo.png"></div>
+                    <div class="desktop-logo"><img src="img/logo.svg"></div>
                     <h1>Copenhagen Glass</h1>
                     <ul class="header-menu-container">
                         <a href="index.html">
@@ -100,7 +100,7 @@
             </div>
             <div class="splash-max" id="splash">
                 <video class="hero-video cover" playsinline="" muted="" onplaying="this.controls=false" autoplay loop>
-                    <source src="video/splashfilm.mp4" type='video/mp4;'>
+                    <source src="film.mp4" type='video/mp4;'>
                 </video>
             </div>
         </section>
@@ -169,18 +169,21 @@
             document.querySelector(".gce1 p").textContent = forside[0].tekst2;
             document.querySelector(".gce1 img").src = forside[0].billedeafchristian.guid;
         }
+
     </script>
     <script src="script.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
     <script>
         AOS.init();
+
     </script>
     <script>
         AOS.init({
             easing: 'ease-out-back',
             duration: 1000
         });
+
     </script>
 
 
@@ -241,4 +244,6 @@
         </div>
         <p>Copyright: Copenhagen Glass 2019</p>
     </footer>
-</body></html>
+</body>
+
+</html>

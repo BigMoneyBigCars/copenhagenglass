@@ -70,126 +70,100 @@
         </nav>
     </header>
     <main id="main">
-        <section id="Kontakt">
+        <section id="kontakt">
+
             <div class="container-max">
-                <div class="flex-item">
-                    <h1>Kontakt</h1>
-                    <h2>Åbningstider</h2>
-                    <div class="aabningstider-container">
-                        <h3>Mandag</h3>
-                        <p class="kmandag"></p>
-                        <h3>Tirsdag</h3>
-                        <p class="ktirsdag"></p>
-                        <h3>Onsdag</h3>
-                        <p class="konsdag"></p>
-                        <h3>Torsdag</h3>
-                        <p class="ktorsdag"></p>
-                        <h3>Fredag</h3>
-                        <p class="kfredag"></p>
-                        <h3>Lørdag</h3>
-                        <p class="kloerdag"></p>
-                        <h3>Søndag</h3>
-                        <p class="ksoendag"></p>
+                <h1>Kontakt</h1>
+                <div class=" flex-container">
+                    <div class="map-container flex-item">
+                        <div class="google-maps">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2249.5102615565215!2d12.589602515898013!3d55.68011598053404!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46525322d44023c7%3A0x37ab900c9154a0ad!2sToldbodgade%204%2C%201253%20K%C3%B8benhavn!5e0!3m2!1sda!2sdk!4v1576182033775!5m2!1sda!2sdk" frameborder="0" style="border:0" ; allowfullscreen=""></iframe>
+                        </div>
+                    </div>
+
+                    <div class="flex-item info-container">
+                        <div class="tekst-container">
+
+                            <h2>Åbningstider</h2>
+                            <div class="aabningstider-container">
+                                <h3>Mandag</h3>
+                                <p class="kmandag"></p>
+                                <h3>Tirsdag</h3>
+                                <p class="ktirsdag"></p>
+                                <h3>Onsdag</h3>
+                                <p class="konsdag"></p>
+                                <h3>Torsdag</h3>
+                                <p class="ktorsdag"></p>
+                                <h3>Fredag</h3>
+                                <p class="kfredag"></p>
+                                <h3>Lørdag</h3>
+                                <p class="kloerdag"></p>
+                                <h3>Søndag</h3>
+                                <p class="ksoendag"></p>
+                            </div>
+
+                            <div class="butik-container">
+                                <h4>Butik</h4>
+                                <h5>København</h5>
+                                <p>Toldbodgade 4
+                                </p>
+                                <p>1253 København K</p>
+                                <div class="tlf">
+                                    <p>Telefon: 40 17 01 34</p>
+                                </div>
+                                <p>CVR: 38766309</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="google-maps flex-item">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2249.5102615565215!2d12.589602515898013!3d55.68011598053404!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46525322d44023c7%3A0x37ab900c9154a0ad!2sToldbodgade%204%2C%201253%20K%C3%B8benhavn!5e0!3m2!1sda!2sdk!4v1576182033775!5m2!1sda!2sdk" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+
+            </div>
+        </section>
+
+
+
+
+        <section id="mail-form">
+            <div class="container-max ">
+
+                <h3>Kontakt butikken</h3>
+                <div class="mail-container">
+                    <!--  !!ACTION PAGE SKAL SKIFTES UD MED VORES PHP!!-->
+                    <form action="/action_page.php">
+                        <label for="fname">Fornavn</label>
+                        <input type="text" id="fname" name="firstname" placeholder="Fornavn..">
+
+                        <label for="lname">Efternavn</label>
+                        <input type="text" id="lname" name="lastname" placeholder="Efternavn..">
+
+                        <label for="country">Land</label>
+                        <select id="country" name="country">
+                            <option value="vælg">Vælg..</option>
+                            <option value="australia">Australia</option>
+                            <option value="canada">Canada</option>
+                            <option value="usa">USA</option>
+                            <option value="denmark">Denmark</option>
+                            <option value="sweden">Sweden</option>
+                        </select>
+
+                        <label for="country">Emne</label>
+                        <select id="country" name="country">
+                            <option value="vælg">Vælg..</option>
+                            <option value="teambuilding">Teambuilding</option>
+                            <option value="polterabend">Polterabend</option>
+                            <option value="pfs">Produkt forespørgsel</option>
+                            <option value="shv">Særlig henvendelse</option>
+                            <option value="andet">Andet</option>
+                        </select>
+
+                        <label for="subject">Besked</label>
+                        <textarea id="subject" name="subject" placeholder="Skriv her.." style="height:200px"></textarea>
+
+                        <input type="submit" value="Send">
+                    </form>
                 </div>
             </div>
-            <div id="webshop-grid"></div>
         </section>
-        <template class="test-template">
-            <div class="title"></div>
-        </template>
-
-
-
-        <div class="row contact-content">
-
-            <div class="col-seven tab-full animate-this">
-
-                <h5>Skriv en mail</h5>
-
-                <!-- form -->
-                <form name="contactForm" id="contactForm" method="post">
-
-                    <div class="form-field">
-                        <input name="contactName" type="text" id="contactName" placeholder="Navn" value="" minlength="2" required="">
-                    </div>
-
-                    <div class="row">
-                        <div class="col-six tab-full">
-                            <div class="form-field">
-                                <input name="contactEmail" type="email" id="contactEmail" placeholder="Email" value="" required="">
-                            </div>
-                        </div>
-                        <div class="col-six tab-full">
-                            <div class="form-field">
-                                <input name="contactSubject" type="text" id="contactSubject" placeholder="Emne" value="">
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="form-field">
-                        <textarea name="contactMessage" id="contactMessage" placeholder="Besked" rows="10" cols="50" required=""></textarea>
-                    </div>
-
-                    <div class="form-field">
-                        <button class="submitform">Send</button>
-
-                        <div id="submit-loader">
-                            <div class="text-loader">Sender...</div>
-                            <div class="s-loader">
-                                <div class="bounce1"></div>
-                                <div class="bounce2"></div>
-                                <div class="bounce3"></div>
-                            </div>
-                        </div>
-                    </div>
-
-                </form> <!-- end form -->
-
-                <!-- contact-warning -->
-                <div id="message-warning"></div>
-
-                <!-- contact-success -->
-                <div id="message-success">
-                    <i class="fa fa-check"></i>Din besked er blevet sendt, mange tak!<br>
-                </div>
-
-            </div> <!-- end col-seven -->
-
-            <div class="col-four tab-full contact-info end animate-this">
-
-                <h5>Kontakt Information</h5>
-
-                <div class="cinfo">
-                    <h6>Her finder du os</h6>
-                    <p>
-                        Peter Bangs Vej 18<br>
-                        2000 Frederiksberg<br>
-                        København, Danmark
-                    </p>
-                </div> <!-- end cinfo -->
-
-                <div class="cinfo">
-                    <h6>E-mail</h6>
-                    <p>
-                        info@kogacenter.dk<br>
-
-                    </p>
-                </div> <!-- end cinfo -->
-
-                <div class="cinfo">
-                    <h6>Ring til butikken</h6>
-                    <p>
-                        Phone: (+45) 38 86 43 25
-                    </p>
-                </div>
-
-            </div> <!-- end cinfo -->
-
-        </div>
 
 
 
@@ -270,5 +244,8 @@
             document.querySelector(".aabningstider-container .kloerdag").textContent = aabningstiderKontakt[0].loerdag;
             document.querySelector(".aabningstider-container .ksoendag").textContent = aabningstiderKontakt[0].soendag;
         }
+
     </script>
-</body></html>
+</body>
+
+</html>

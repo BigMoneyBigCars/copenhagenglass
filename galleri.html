@@ -70,11 +70,17 @@
         </nav>
     </header>
     <main id="main">
-        <section id="SECTION-NAVN">
+
+        <!-- Skriv jeres ting her -->
+
+
+        <section id="galleri">
             <div class="container-max">
-                <!-- Skriv jeres ting her -->
+                <div id="galleri-grid">
+                </div>
             </div>
         </section>
+
     </main>
     <footer id="footer">
         <div class="container">
@@ -128,5 +134,58 @@
         </div>
         <p>Copyright: Copenhagen Glass 2019</p>
     </footer>
+
+    <template class="test-template">
+        <div class="item-container">
+            <div class="singleProdukt">
+                <img src="" alt="">
+
+
+                <div class="title"></div>
+
+
+            </div>
+        </div>
+    </template>
     <script src="script.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", getJson);
+
+        let galleriItems;
+
+        async function getJson() {
+
+
+            let jsonData = await fetch("https://mostvalue.dk/Copenhagenglass/wordpress/wp-json/wp/v2/Galleri");
+
+            galleriItems = await jsonData.json();
+            console.log(galleriItems);
+
+            visGalleri();
+
+        };
+
+
+        function visGalleri() {
+            const skabelon = document.querySelector(".test-template");
+            const liste = document.querySelector("#galleri-grid");
+
+            galleriItems.forEach(item => {
+                const klon = skabelon.cloneNode(true).content;
+
+
+                klon.querySelector("img").src = item.billede.guid;
+                klon.querySelector("img").alt = "slider image";
+                klon.querySelector(".title").innerHTML = item.title.rendered;
+
+
+
+
+                liste.appendChild(klon);
+            });
+            console.log("hej");
+
+        };
+    </script>
 </body></html>

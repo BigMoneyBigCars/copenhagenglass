@@ -172,12 +172,16 @@ nav li {
     text-align: left;
 }
 
+.info-container {
+    padding-left: 100px;
+}
+
 .flex-container img {}
 
 .flex-item {
     flex-grow: 1;
     flex-basis: 300px;
-    margin: auto 100px;
+    margin: 0 auto;
 }
 
 
@@ -263,6 +267,14 @@ nav li {
 
 
 
+/* Galleri -side */
+
+#galleri-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: auto;
+    grid-gap: 20px;
+}
 
 
 /* webshop-side */
@@ -271,6 +283,14 @@ nav li {
     grid-template-columns: repeat(2, 1fr);
     grid-auto-rows: auto;
     grid-gap: 20px;
+}
+
+#webshop-grid img {
+    min-width: 10px;
+    max-width: 600px;
+    min-height: 10px;
+    max-height: 600px;
+
 }
 
 .price-container {
@@ -322,11 +342,18 @@ nav li {
 }
 
 
+#kontakt {
+    margin-top: 160px;
+}
 
+#kontakt aabningstider-container {
+    text-align: center;
+}
 
 .google-maps {
     position: relative;
-    padding-bottom: 75%;
+    padding-top: 60%;
+
     /* This is the aspect ratio */
     height: 0;
     overflow: hidden;
@@ -336,9 +363,51 @@ nav li {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100% !important;
-    height: 100% !important;
+    width: 100%;
+    height: 100%;
 }
+
+
+
+#mail-form {
+    max-width: 1180px;
+    margin: 0 auto;
+}
+
+input[type=text],
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+
+input[type=submit] {
+    background-color: black;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: dimgrey;
+    color: whitesmoke;
+}
+
+.mail-container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+
 
 /*****OM SECTION DONE*****/
 
