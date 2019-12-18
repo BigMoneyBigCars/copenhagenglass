@@ -18,29 +18,34 @@
 <body>
     <header>
         <nav>
-            <div id="menu-desktop" class="menu-desktop-cntainer">
-                <div class="menu-wrapper">
-                    <div class="desktop-logo"><img src="img/logo_copy_2.svg"></div>
-                    <h1>Copenhagen Glass</h1>
-
+            <div id="menu-desktop" class="menu-desktop-container">
+                <div class="menu-wrapper  headerBaggrund">
                     <ul class="header-menu-container">
-                        <a href="index.html">
-                            <li>Forside</li>
-                        </a>
-                        <a href="galleri.html">
-                            <li>Galleri</li>
-                        </a>
-
-                        <a href="events.html">
-                            <li>Events</li>
-                        </a>
-
-                        <a href="kontakt.html">
-                            <li>Kontakt</li>
-                        </a>
-                        <a href="webshop.html">
-                            <li>Webshop</li>
-                        </a>
+                        <div class="fs-menu">
+                            <a href="index.html">
+                                <li>Forside</li>
+                            </a>
+                            <a href="galleri.html">
+                                <li>Galleri</li>
+                            </a>
+                        </div>
+                        <div class="logo-menu desktop-logo"><img src="img/endeligLogo.svg"></div>
+                        <div class="ek-menu">
+                            <a href="events.html">
+                                <li class="active">Events</li>
+                            </a>
+                            <a href="kontakt.html">
+                                <li>Kontakt</li>
+                            </a>
+                        </div>
+                        <div class="w-menu">
+                            <a href="webshop.html">
+                                <li>Webshop</li>
+                            </a>
+                        </div>
+                        <div class="s-menu">
+                            <img src="img/kurv.png">
+                        </div>
                     </ul>
                 </div>
             </div>
@@ -82,24 +87,20 @@
         <h1></h1>
         <section id="teambuilding">
             <div class="container-max">
-                <div class="tb1 flex-reverse flex-container">
+                <div class="tb1 flex-container">
                     <div class="fbg flex-item"> <img src="" alt=""></div>
                     <div class="fbg flex-item">
                         <div class="tekst-container">
                             <h2></h2>
                             <h3></h3>
                             <p></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="tb2 flex-container">
-                    <div class="fbg flex-item"> <img src="" alt=""></div>
-                    <div class="fbg flex-item">
-                        <div class="tekst-container">
                             <p></p>
+                            <a href="kontakt.html"><button>Kontakt Butik</button></a>
+
                         </div>
                     </div>
                 </div>
+
             </div>
         </section>
 
@@ -112,6 +113,7 @@
                             <h2></h2>
                             <h3></h3>
                             <p></p>
+                            <p></p>
                         </div>
                     </div>
                 </div>
@@ -119,8 +121,13 @@
                     <div class="fbg flex-item"> <img src="" alt=""></div>
                     <div class="fbg flex-item">
                         <div class="tekst-container">
+                            <h2></h2>
+                            <h3></h3>
                             <p></p>
+                            <p></p>
+
                             <a href="https://www.copenhagenglass.dk/shop/gavekort-til-glaspustning/" target="_blank">
+
                                 <p>GAVEKORT TIL GLASPUSTNING</p>
                             </a>
                         </div>
@@ -139,7 +146,7 @@
         <div class="container">
             <div class="butik-container">
                 <h4>Butik</h4>
-                <h5>København</h5>
+
                 <p>Toldbodgade 4
                 </p>
                 <p>1253 København K</p>
@@ -150,10 +157,20 @@
             </div>
             <div class="kontakt">
                 <h4>Booking</h4>
-                <p>Vdr. Events, kontakt butikken</p>
-                <button>Kontakt Butik</button>
+                <a href="events.html">
+                    <p>Events</p>
+                </a>
+                <a href="events.html">
+                    <p>Polterabend</p>
+                </a>
 
-                <a href="#">
+
+
+                <a href="kontakt.html">
+                    <button>Kontakt Butik</button>
+                </a>
+
+                <a href="webshop.html">
                     <h6>Køb et gavekort</h6>
                 </a>
             </div>
@@ -208,17 +225,27 @@
             document.querySelector(".tb1 h2").textContent = teambuilding[0].overskrift1;
             document.querySelector(".tb1 h3").textContent = teambuilding[0].underoverskrift1;
             document.querySelector(".tb1 p").textContent = teambuilding[0].tekst1;
+            document.querySelector(".tb1 p+p").textContent = teambuilding[0].tekst1_afsnit;
             document.querySelector(".tb1 img").src = teambuilding[0].billede1.guid;
-            document.querySelector(".tb2 p").textContent = teambuilding[0].tekst2;
-            document.querySelector(".tb2 img").src = teambuilding[0].billede2.guid;
+
         }
 
         function visPolterabend() {
             document.querySelector(".pa1 h2").textContent = polterabend[0].overskrift1;
             document.querySelector(".pa1 h3").textContent = polterabend[0].underoverskrift1;
             document.querySelector(".pa1 p").textContent = polterabend[0].tekst1;
+            document.querySelector(".pa1 p+p").textContent = polterabend[0].tekst1_afsnit;
             document.querySelector(".pa1 img").src = polterabend[0].billede1.guid;
+
+
+
+            document.querySelector(".pa2 h2").textContent = polterabend[0].overskrift2;
+            document.querySelector(".pa2 h3").textContent = polterabend[0].underoverskrift2;
             document.querySelector(".pa2 p").textContent = polterabend[0].tekst2;
+            document.querySelector(".pa2 p").textContent = polterabend[0].beliggenhed_tekst;
+            document.querySelector(".pa2 p").textContent = polterabend[0].beliggenhed_tekst;
+
+
             document.querySelector(".pa2 img").src = polterabend[0].billede2.guid;
 
 

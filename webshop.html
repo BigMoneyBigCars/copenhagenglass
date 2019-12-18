@@ -16,27 +16,34 @@
 <body>
     <header>
         <nav>
-            <div id="menu-desktop" class="menu-desktop-cntainer">
-                <div class="menu-wrapper">
-                    <div class="desktop-logo"><img src="img/logo_copy_2.svg"></div>
-
+            <div id="menu-desktop" class="menu-desktop-container">
+                <div class="menu-wrapper  headerBaggrund">
                     <ul class="header-menu-container">
-                        <a href="index.html">
-                            <li>Forside</li>
-                        </a>
-                        <a href="galleri.html">
-                            <li>Galleri</li>
-                        </a>
-                        <a href="events.html">
-                            <li>Events</li>
-                        </a>
-
-                        <a href="kontakt.html">
-                            <li>Kontakt</li>
-                        </a>
-                        <a href="webshop.html">
-                            <li>Webshop</li>
-                        </a>
+                        <div class="fs-menu">
+                            <a href="index.html">
+                                <li>Forside</li>
+                            </a>
+                            <a href="galleri.html">
+                                <li>Galleri</li>
+                            </a>
+                        </div>
+                        <div class="logo-menu desktop-logo"><img src="img/endeligLogo.svg"></div>
+                        <div class="ek-menu">
+                            <a href="events.html">
+                                <li>Events</li>
+                            </a>
+                            <a href="kontakt.html">
+                                <li>Kontakt</li>
+                            </a>
+                        </div>
+                        <div class="w-menu">
+                            <a href="webshop.html">
+                                <li class="active">Webshop</li>
+                            </a>
+                        </div>
+                        <div class="s-menu">
+                            <img src="img/kurv.png">
+                        </div>
                     </ul>
                 </div>
             </div>
@@ -110,6 +117,11 @@
 
                                 <h1></h1>
                                 <p></p>
+                                <div>
+                                    <h2>Bemærk:</h2>
+                                    <p class="bemaerk"></p>
+                                </div>
+
                                 <div class="specifikationer">
                                     <div class="flex">
                                         <h6>Vægt:</h6>
@@ -149,7 +161,7 @@
         <div class="container">
             <div class="butik-container">
                 <h4>Butik</h4>
-                <h5>København</h5>
+
                 <p>Toldbodgade 4
                 </p>
                 <p>1253 København K</p>
@@ -160,15 +172,27 @@
             </div>
             <div class="kontakt">
                 <h4>Booking</h4>
-                <p>Vdr. Events, kontakt butikken</p>
-                <button>Kontakt Butik</button>
-                <a href="#">
+                <a href="events.html">
+                    <p>Events</p>
+                </a>
+                <a href="events.html">
+                    <p>Polterabend</p>
+                </a>
+
+
+
+                <a href="kontakt.html">
+                    <button>Kontakt Butik</button>
+                </a>
+
+                <a href="webshop.html">
                     <h6>Køb et gavekort</h6>
                 </a>
             </div>
             <div class="aabningstid">
                 <h4>Åbningstider</h4>
                 <div class="aabningstiden">
+
                     <h3>Mandag</h3>
                     <p class="mandag"></p>
                     <h3>Tirsdag</h3>
@@ -195,8 +219,8 @@
             <i class="fa fa-envelope" style="font-size:24px" aria-hidden="true"></i>
         </div>
         <p>Copyright: Copenhagen Glass 2019</p>
-    </footer>
 
+    </footer>
 
 
 
@@ -237,7 +261,6 @@
                     /*                    showBike(webshopItems[index]);*/
                     visSingleProdukt(webshopItems[index]);
 
-
                     console.log(index);
 
 
@@ -247,6 +270,9 @@
                     document.querySelector(".produkt-billede img").src = item.billede.guid;
                     document.querySelector(".tekst-container h1").textContent = item.title.rendered;
                     document.querySelector(".tekst-container p").textContent = item.beskrivelse;
+                    document.querySelector(".bemaerk").textContent = item.beskrivelse_bemaerk;
+
+
                     document.querySelector(".specifikationer h6").textContent = item.vaegt;
                     document.querySelector(".specifikationer p").textContent = item.stoerrelse;
                     document.querySelector(".buy-container h2").textContent = "Pris: " + item.pris + " DKK";
@@ -307,5 +333,8 @@
                             console.log("hej");
 
                         }*/
+
     </script>
-</body></html>
+</body>
+
+</html>

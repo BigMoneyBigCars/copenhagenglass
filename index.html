@@ -19,25 +19,34 @@
     <header>
 
         <nav>
-            <div id="menu-desktop" class="menu-desktop-cntainer">
-                <div class="menu-wrapper headerBaggrund">
-                    <div class="desktop-logo"><img src="img/logo_copy_2.svg"></div>
+            <div id="menu-desktop" class="menu-desktop-container">
+                <div class="menu-wrapper  headerBaggrund">
                     <ul class="header-menu-container">
-                        <a href="index.html">
-                            <li>Forside</li>
-                        </a>
-                        <a href="galleri.html">
-                            <li>Galleri</li>
-                        </a>
-                        <a href="events.html">
-                            <li>Events</li>
-                        </a>
-                        <a href="kontakt.html">
-                            <li>Kontakt</li>
-                        </a>
-                        <a href="webshop.html">
-                            <li>Webshop</li>
-                        </a>
+                        <div class="fs-menu">
+                            <a href="index.html">
+                                <li class="active">Forside</li>
+                            </a>
+                            <a href="galleri.html">
+                                <li>Galleri</li>
+                            </a>
+                        </div>
+                        <div class="logo-menu desktop-logo"><img src="img/endeligLogo.svg"></div>
+                        <div class="ek-menu">
+                            <a href="events.html">
+                                <li>Events</li>
+                            </a>
+                            <a href="kontakt.html">
+                                <li>Kontakt</li>
+                            </a>
+                        </div>
+                        <div class="w-menu">
+                            <a href="webshop.html">
+                                <li>Webshop</li>
+                            </a>
+                        </div>
+                        <div class="s-menu">
+                            <img src="img/kurv.png">
+                        </div>
                     </ul>
                 </div>
             </div>
@@ -84,18 +93,19 @@
     <main id="main" class="baggrund1">
         <section id="video-section" class="">
             <div class="categoryWrapper splash-overskrift" style="text-align: center; transform: scale(0.8); left: 0;">
-                <a href="#nyhavnsglaspusteri">
-                    <h1 data-aos="fade-right" data-aos-duration="3000">Copenhagen Glass</h1>
-                </a>
-                <button>
-                    <span>
+
+                <h1 data-aos="fade-right" data-aos-duration="3000">Copenhagen Glass</h1>
+                <a div data-aos="fade-up" data-aos-duration="3000" class="cta-knap" href="#glaspusterchristianedwards">
+                    <button>
                         <span>
-                            <a div data-aos="fade-up" data-aos-duration="3000" class="cta-knap" href="#glaspusterchristianedwards">
+                            <span>
+
                                 Læs mere
-                            </a>
+
+                            </span>
                         </span>
-                    </span>
-                </button>
+                    </button>
+                </a>
             </div>
             <div class="splash-max" id="splash">
                 <video class="hero-video cover" playsinline="" muted="" onplaying="this.controls=false" autoplay loop>
@@ -112,6 +122,10 @@
                             <h2></h2>
                             <h3></h3>
                             <p></p>
+                            <p></p>
+                            <p></p>
+                            <a href="events.html"><button>Se Events</button>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -127,22 +141,47 @@
                             <h2></h2>
                             <h3></h3>
                             <p></p>
+                            <p></p>
+                            <p></p>
+
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
+        <section id="banner">
 
+            <div class="banner-picture">
+                <div class="banner-tekst">
+                    <h2></h2>
+                    <p></p>
 
+                    <a href="galleri.html"><button>Se Galleri</button>
+                    </a>
+                </div>
+            </div>
+        </section> <!-- SnapWidget -->
 
-
-
-
-        <!-- SnapWidget -->
-
+        <section id="signature">
+            <div class="container-max">
+                <div class="gce1 flex-container">
+                    <div class="fbg flex-item"> <img src="" alt=""></div>
+                    <div class="fbg flex-item">
+                        <div class="tekst-container">
+                            <h2></h2>
+                            <h3></h3>
+                            <p></p>
+                            <p></p>
+                            <p></p>
+                            <a href="webshop.html"><button>Se Webshop</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
         <section id="instagram">
-
             <a href="https://www.instagram.com/explore/locations/5280909/nyhavns-glaspusteri/" target="_blank"> <iframe src="https://snapwidget.com/embed/770512" class="snapwidget-widget" allowtransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden; pointer-events: none;  width:375px; height:70vh"></iframe></a>
         </section>
     </main>
@@ -161,11 +200,29 @@
             document.querySelector(".ng1 h2").textContent = forside[0].overskrift1;
             document.querySelector(".ng1 h3").textContent = forside[0].underoverskrift1;
             document.querySelector(".ng1 p").textContent = forside[0].tekst1;
+            document.querySelector(".ng1 p+p").textContent = forside[0].tekst1_afsnit;
+            document.querySelector(".ng1 p+p+p").textContent = forside[0].tekst1_afsnit2;
             document.querySelector(".ng1 img").src = forside[0].splashvideo.guid;
+
+
+            document.querySelector("#banner h2").textContent = forside[0].banner_overskrift;
+            document.querySelector("#banner p").textContent = forside[0].banner_tekst;
+
+            document.querySelector("#signature img").src = forside[0].signature_billede.guid;
+            document.querySelector("#signature h2").textContent = forside[0].signature_overskrift;
+            document.querySelector("#signature h3").textContent = forside[0].signature_underoverskrift;
+            document.querySelector("#signature p").textContent = forside[0].signature_beskrivelse;
+
+            document.querySelector("#signature p+p").textContent = forside[0].signature_afsnit;
+
+            document.querySelector("#signature p+p+p").textContent = forside[0].signature_afsnit2;
+
 
             document.querySelector(".gce1 h2").textContent = forside[0].overskrift2;
             document.querySelector(".gce1 h3").textContent = forside[0].underoverskrift2;
             document.querySelector(".gce1 p").textContent = forside[0].tekst2;
+            document.querySelector(".gce1 p+p").textContent = forside[0].tekst2_afsnit;
+            document.querySelector(".gce1 p+p+p").textContent = forside[0].tekst2_afsnit2;
             document.querySelector(".gce1 img").src = forside[0].billedeafchristian.guid;
         }
     </script>
@@ -191,7 +248,7 @@
         <div class="container">
             <div class="butik-container">
                 <h4>Butik</h4>
-                <h5>København</h5>
+
                 <p>Toldbodgade 4
                 </p>
                 <p>1253 København K</p>
@@ -202,17 +259,27 @@
             </div>
             <div class="kontakt">
                 <h4>Booking</h4>
-                <p>Vdr. Events </p>
+                <a href="events.html">
+                    <p>Events</p>
+                </a>
+                <a href="events.html">
+                    <p>Polterabend</p>
+                </a>
 
-                <p>Kontakt butikken</p>
-                <button>Kontakt Butik</button>
-                <a href="#">
+
+
+                <a href="kontakt.html">
+                    <button>Kontakt Butik</button>
+                </a>
+
+                <a href="webshop.html">
                     <h6>Køb et gavekort</h6>
                 </a>
             </div>
             <div class="aabningstid">
                 <h4>Åbningstider</h4>
                 <div class="aabningstiden">
+
                     <h3>Mandag</h3>
                     <p class="mandag"></p>
                     <h3>Tirsdag</h3>
@@ -239,5 +306,6 @@
             <i class="fa fa-envelope" style="font-size:24px" aria-hidden="true"></i>
         </div>
         <p>Copyright: Copenhagen Glass 2019</p>
+
     </footer>
 </body></html>
