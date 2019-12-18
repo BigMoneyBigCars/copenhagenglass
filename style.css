@@ -23,7 +23,7 @@ body {
 h2 {
     font-family: 'Roboto', sans-serif;
     font-weight: bold;
-    font-size: 45px;
+
 }
 
 img {
@@ -62,7 +62,7 @@ li {
     position: fixed;
     top: 0;
     display: none;
-    grid-template-columns: 1fr 1fr 5fr 1fr;
+    grid-template-columns: 1fr 5fr 0.3fr;
     grid-template-rows: 130px;
     justify-items: center;
     -webkit-box-align: center;
@@ -103,8 +103,13 @@ li {
 
 /* Menu Desktop SLUT */
 
+.headerBaggrund {
+    background-image: url(img/baggrund.png);
+    background-size: cover;
 
-#baggrund1 {
+}
+
+.baggrund1 {
     background-image: url(img/baggrund.png);
     background-size: cover;
     background-repeat: no-repeat;
@@ -177,11 +182,14 @@ nav li {
     justify-content: center;
     align-items: center;
     text-align: center;
-    min-height: 500px;
+    min-height: 400px;
 }
 
 .tekst-container {
     text-align: left;
+    padding-left: 10px;
+    padding-right: 10px;
+
 }
 
 .info-container {
@@ -192,7 +200,7 @@ nav li {
 
 .flex-item {
     flex-grow: 1;
-    flex-basis: 300px;
+    flex-basis: 400px;
     margin: 0 auto;
 }
 
@@ -232,7 +240,14 @@ nav li {
 
 
 
-
+section h1 {
+    padding-top: 20px;
+    padding-left: 10px;
+    font-size: 28px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    padding-bottom: 20px
+}
 
 /***** OM SECTION ****/
 
@@ -241,30 +256,36 @@ nav li {
 .fbg h2 {
     text-transform: uppercase;
     letter-spacing: 0.4px;
-    margin-top: 20px;
+    margin-top: 10px;
+    font-size: 26px;
 }
 
 .fbg p {
     padding: 2px;
-    padding-top: 20px;
+
     line-height: 28px;
     margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    font-family: "Helvetica", sans-serif;
+
 }
 
 .fbg h3 {
-    margin-top: 20px;
-    font-family: 'Roboto thin100', sans-serif;
-    font-size: 20px;
-    font-weight: 100;
-    font-size: 30px;
+    margin-top: 7px;
+    font-family: "Roboto", sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+
 }
 
 #teambuilding img,
 #polterabend img,
 #nyhavnsglaspusteri img,
-#glaspusterchristianedwards img {
-    width: auto;
-    height: 400px;
+#glaspusterchristianedwards img {}
+
+#nyhavnsglaspusteri {
+    padding-top: 37px;
 }
 
 #events p,
@@ -277,55 +298,67 @@ nav li {
     font-size: 19px;
 }
 
+#nyhavnsglaspusteri,
+#teambuilding {}
+
+#video-section {
+    padding-top: 0;
+}
 
 
 /* Galleri -side */
 
 #galleri-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
     grid-auto-rows: auto;
-    grid-gap: 20px;
+    grid-column-gap: 3px;
+    grid-row-gap: 1.5px;
+
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 75px;
 }
 
 
 /* webshop-side */
 #webshop-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
     grid-auto-rows: auto;
     grid-gap: 20px;
+
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 75px;
 }
 
-#webshop-grid img {
-    min-width: 10px;
-    max-width: 600px;
-    min-height: 10px;
-    max-height: 600px;
 
+#webshop h3 {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    letter-spacing: 1px;
+    padding-left: 5px;
+    font-size: 12px
 }
 
 .price-container {
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-between;
-    margin-left: 5px;
-    margin-right: 10px;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    align-items: center;
 }
 
 .price-container .button {
     cursor: pointer;
     width: 130px;
-    height: 40px;
-    border: 2px solid black;
-    border-radius: 25px;
+    height: 30px;
+    border: 1px solid black;
+    border-radius: 2px;
     background-color: none;
-    background-color: transparent;
+    background-color: #f5f5f5;
     cursor: pointer;
-    margin-bottom: 10px;
-    margin-top: 10px;
+
     transition: ease-in-out 0.3s;
 }
 
@@ -423,18 +456,23 @@ input[type=submit]:hover {
 
 /*****OM SECTION DONE*****/
 
-/**** singleview ****/
+/**** popUp ****/
+.noscroll {
+    overflow: hidden;
+}
 
+.popUp-container .container-max {
+    max-width: 720px;
+}
 
 .popUp-container {
     display: none;
     width: 100vw;
     background-color: white;
     position: fixed;
-
-    top: 130px;
-
-    min-height: 1200px;
+    z-index: 300;
+    top: 75px;
+    height: 100vw;
 }
 
 .luk {
@@ -446,11 +484,12 @@ input[type=submit]:hover {
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-between;
-    height: 50PX;
+    min-height: 50px;
     align-items: center;
     background-color: aliceblue;
 
     width: 100%;
+    padding-top: 30px;
     padding-left: 10px;
     padding-right: 10px;
 
@@ -461,23 +500,18 @@ input[type=submit]:hover {
 }
 
 
-.produkt-billede img {
-    max-width: 600px;
-    height: auto;
+
+.produkt-container {
+    background-color: aquamarine;
 }
 
+.produkt-billede img {}
+
 .item-container {
-    margin-top: 25px;
     text-align: center;
     cursor: pointer;
 }
 
-
-.item-container p {
-    font-size: 16px;
-    font-family: "Roboto";
-
-}
 
 /***** farver***/
 
@@ -505,7 +539,7 @@ input[type=submit]:hover {
 
 .pris p {
     width: 100%;
-    padding: 20px;
+
     font-size: 30px;
     float: right;
 
@@ -514,26 +548,52 @@ input[type=submit]:hover {
 .farver {
     display: flex;
     flex-wrap: nowrap;
-    flex-direction: column;
-    justify-content: space-evenly;
-    margin-top: 30px;
+    flex-direction: row;
+
 }
 
-.produkt-tekst p {
-    padding: 0;
-    margin-top: 20px;
+.popUp-container .tekst-container p,
+.popUp-container .tekst-container h6 {
+    font-family: "Helvetica", sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    padding-left: 10px;
+
+}
+
+.specifikationer,
+.farver {
+    padding-top: 20px;
+
+}
+
+.flex {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
 }
 
 /**** læg i kurv knap ***/
+
+
+.buy-container {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    padding-right: 40px;
+    padding-left: 40px;
+    padding-bottom: 30px;
+    padding-top: 40px
+}
+
 .buy-button {
 
-
     background: transparent;
-    border-radius: 25px;
-    border: 2px solid black;
-    padding: 20px;
-    width: 150px;
-    height: 50px;
+    border-radius: 2px;
+    border: 1px solid black;
+
+    width: 130px;
+    height: 40px;
 
 
 
@@ -550,12 +610,14 @@ input[type=submit]:hover {
 
 
 main {
-    margin-top: 75px;
+    padding-top: 75px;
+
+
 }
 
 .container-max {
-    width: 75%;
-    max-width: 1920px;
+    width: 100%;
+    max-width: 1440px;
     margin: 0 auto;
 }
 
@@ -747,146 +809,9 @@ footer button p:hover {
 /**** footer ****/
 
 
-/* Media queries */
-/** FORSIDE **/
-/** forside knap og headline mobil ***/
 
-@media screen and (min-width: 375px) {
-    .cta-knap {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        justify-content: center;
-        font-size: 20px;
-
-    }
-
-    .fa-facebook-square:hover,
-    .fa-instagram:hover,
-    .fa-envelope:hover {
-        color: white;
-        transform: scale(1.2);
-    }
-
-    .footer-container {
-        width: 100vw;
-        background-color: rgba(117, 117, 119, 0.76);
-        display: block;
-        padding-top: 10px;
-        padding-bottom: 10px;
-    }
-
-    .social-icons i {
-        cursor: pointer;
-        transition: ease-in-out 0.3s;
-        margin-left: 10px;
-        margin-right: 10px;
-        margin-top: 10px;
-        margin-bottom: 10px;
-    }
-
-    /**** footer ****/
-
-}
-
-/* Media queries */
-/** FORSIDE **/
-/** forside knap og headline mobil ***/
-
-@media screen and (min-width: 375px) {
-    .cta-knap {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        justify-content: center;
-        font-size: 20px;
-    }
-
-    .categoryWrapper {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        justify-content: center;
-        margin: 0 auto;
-        position: relative;
-        left: 10px;
-
-    }
-
-    .hero-video {
-        pointer-events: all;
-    }
-
-    .categoryWrapper span {
-        position: absolute;
-        top: 0px;
-        left: 0px;
-        margin-top: 20px;
-
-
-    }
-
-    .categoryWrapper a {
-        text-align: center;
-        position: relative;
-
-    }
-
-    .categoryWrapper button {
-        top: 20px;
-
-    }
-
-    span::after {
-        -webkit-transform: none;
-        transform: none;
-    }
-}
-
-/*** forside knap og headline mobil slut ***/
 
 /**** events side ***/
-
-
-
-#polterabend {
-    margin-top: 50px;
-}
-
-.tb2 {
-    margin-top: 50px;
-}
-
-.pa2 {
-    margin-top: 50px;
-}
-
-.tb1 {
-    margin-top: 50px;
-}
-
-.pa1 {
-    margin-top: 50px;
-}
-
-.pa2 p {
-    padding: 0px;
-    padding-bottom: 0px;
-    padding-top: 20px;
-    line-height: 25px;
-    font-family: "Helvetica", sans-serif;
-    font-size: 19px;
-    margin-bottom: 20px;
-    width: 80%;
-    /*** slet linket fra backend og hardcode det istedet ***/
-
-}
 
 
 
@@ -903,6 +828,7 @@ footer button p:hover {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
+
 
 }
 
@@ -1188,13 +1114,161 @@ footer button p:hover {
 
 /***** SPLASH SECTION slut ****/
 
+#instagram {
+    display: none;
+}
+
+/* Media queries */
+/** FORSIDE **/
+/** forside knap og headline mobil ***/
+
+@media screen and (min-width: 375px) {
+    .cta-knap {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        font-size: 20px;
+
+    }
+
+    .fa-facebook-square:hover,
+    .fa-instagram:hover,
+    .fa-envelope:hover {
+        color: white;
+        transform: scale(1.2);
+    }
+
+    .footer-container {
+        width: 100vw;
+        background-color: rgba(117, 117, 119, 0.76);
+        display: block;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .social-icons i {
+        cursor: pointer;
+        transition: ease-in-out 0.3s;
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    /**** footer ****/
+
+}
+
+/* Media queries */
+/** FORSIDE **/
+/** forside knap og headline mobil ***/
+
+@media screen and (min-width: 375px) {
+    .cta-knap {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        font-size: 20px;
+    }
+
+    .categoryWrapper {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        margin: 0 auto;
+        position: relative;
+        left: 10px;
+
+    }
+
+    .hero-video {
+        pointer-events: all;
+    }
+
+    .categoryWrapper span {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        margin-top: 20px;
 
 
+    }
 
-@media screen and (min-width: 750px) {
+    .categoryWrapper a {
+        text-align: center;
+        position: relative;
+
+    }
+
+    .categoryWrapper button {
+        top: 20px;
+
+    }
+
+    span::after {
+        -webkit-transform: none;
+        transform: none;
+    }
+}
+
+/*** forside knap og headline mobil slut ***/
+
+@media screen and (min-width: 650px) {
+
+    .flex-container img {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 650px) {
+    .tekst-container {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    #webshop-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #galleri-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (min-width: 800px) {
     .menu-wrapper {
         display: grid;
     }
+
+    .fbg h2 {
+        text-transform: uppercase;
+        letter-spacing: 0.4px;
+
+
+    }
+
+    .popUp-container {
+        margin-top: 55px;
+    }
+
+    #video-section {
+        margin-top: -20px;
+    }
+
+    .container-max {
+        width: 75%;
+    }
+
+
 
     .butik-container,
     .kontakt,
@@ -1220,7 +1294,7 @@ footer button p:hover {
     }
 
     main {
-        margin-top: 130px;
+        margin-top: 75px;
     }
 
 
@@ -1229,4 +1303,40 @@ footer button p:hover {
     }
 
 
+}
+
+@media screen and (min-width: 950px) {
+    .container-max {}
+}
+
+@media screen and (min-width: 1050px) {
+    .container-max {}
+}
+
+@media screen and (min-width: 1050px) {
+    .flex-container img {
+        max-width: 400px;
+        height: auto;
+    }
+
+    .tekst-container {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}
+
+
+@media screen and (min-width: 1340px) {
+    .tekst-container {
+        padding-left: 70px;
+        padding-right: 70px;
+    }
+
+    #webshop-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    #galleri-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }

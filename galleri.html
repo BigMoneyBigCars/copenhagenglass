@@ -8,7 +8,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,700&display=swap" rel="style.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Copenhagen Glass</title>
 </head>
@@ -16,8 +15,8 @@
 <body>
     <header>
         <nav>
-            <div id="menu-desktop" class="menu-desktop-cntainer">
-                <div class="menu-wrapper">
+            <div id="menu-desktop" class="menu-desktop-container">
+                <div class="menu-wrapper  headerBaggrund">
                     <div class="desktop-logo"><img src="img/logo_copy_2.svg"></div>
                     <h1>Copenhagen Glass</h1>
                     <ul class="header-menu-container">
@@ -69,13 +68,14 @@
             </div>
         </nav>
     </header>
-    <main id="main">
+    <main id="main" class="baggrund1">
 
         <!-- Skriv jeres ting her -->
 
 
         <section id="galleri">
             <div class="container-max">
+                <h1>Galleri</h1>
                 <div id="galleri-grid">
                 </div>
             </div>
@@ -141,7 +141,7 @@
                 <img src="" alt="">
 
 
-                <div class="title"></div>
+
 
 
             </div>
@@ -177,7 +177,7 @@
 
                 klon.querySelector("img").src = item.billede.guid;
                 klon.querySelector("img").alt = "slider image";
-                klon.querySelector(".title").innerHTML = item.title.rendered;
+
 
 
 

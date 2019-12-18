@@ -20,9 +20,8 @@
 
         <nav>
             <div id="menu-desktop" class="menu-desktop-cntainer">
-                <div class="menu-wrapper">
+                <div class="menu-wrapper headerBaggrund">
                     <div class="desktop-logo"><img src="img/logo_copy_2.svg"></div>
-                    <h1>Copenhagen Glass</h1>
                     <ul class="header-menu-container">
                         <a href="index.html">
                             <li>Forside</li>
@@ -100,7 +99,7 @@
             </div>
             <div class="splash-max" id="splash">
                 <video class="hero-video cover" playsinline="" muted="" onplaying="this.controls=false" autoplay loop>
-                    <source src="film.mp4" type='video/mp4;'>
+                    <source src="video/glaspuster.mov" type='video/mp4;'>
                 </video>
             </div>
         </section>
@@ -162,7 +161,7 @@
             document.querySelector(".ng1 h2").textContent = forside[0].overskrift1;
             document.querySelector(".ng1 h3").textContent = forside[0].underoverskrift1;
             document.querySelector(".ng1 p").textContent = forside[0].tekst1;
-            document.querySelector(".ng1 img").src = forside[0].billedeafchristian.guid;
+            document.querySelector(".ng1 img").src = forside[0].splashvideo.guid;
 
             document.querySelector(".gce1 h2").textContent = forside[0].overskrift2;
             document.querySelector(".gce1 h3").textContent = forside[0].underoverskrift2;

@@ -19,7 +19,7 @@
             <div id="menu-desktop" class="menu-desktop-cntainer">
                 <div class="menu-wrapper">
                     <div class="desktop-logo"><img src="img/logo_copy_2.svg"></div>
-                    <h1>Copenhagen Glass</h1>
+
                     <ul class="header-menu-container">
                         <a href="index.html">
                             <li>Forside</li>
@@ -69,57 +69,77 @@
             </div>
         </nav>
     </header>
-    <main id="main">
+    <main id="main" class="baggrund1">
         <section id="webshop">
             <div class="container-max">
+                <h1>Webshop</h1>
                 <div id="webshop-grid">
                 </div>
             </div>
+            <template class="webshop-template">
+                <div class="item-container">
+                    <div class="singleProdukt">
+                        <img src="" alt="">
 
-
-
-            <div class="popUp-container">
-                <div class="container-max">
-
-
-
-
-                    <div class="top-container">
-                        <div class="luk"><img src="img/backwardarrow.png" alt="tilbageknap"></div>
-                        <div class="shoppingcartsvg"><img src="img/kurv.png" alt="kurv"></div>
-                    </div>
-
-                    <div class="produkt-container">
-
-                        <div class="produkt-billede">
-                            <img src="img/billedeafvase.png" alt="billede-af-prodzukt">
-
-                        </div>
-                        <div class="produkt-tekst">
-                            <h1>Signatur Glasvase</h1>
-                            <p>Vaserne er blæst op i klart glas og indfarvet med små glasstykker, hvilket giver det prikkede look under de klare strenge af glas.</p>
-                        </div>
-
-                        <div class="specifikationer">
-                            <p>Vægt 0.980 kg</p>
-                            <p>Størrelse 11x9x18 cm</p>
-                        </div>
-
-                        <div class="farver">
-                            <h3>Farver</h3>
-                            <div class="gul"> </div>
-                            <div class="roed"> </div>
-
-                            <div class="pris">
-                                <p>720.00 DKK</p>
-                            </div>
-                            <button class="buy-button">
-                                <p>Læg i kurv</p>
+                        <div class="price-container">
+                            <h3 class="title"></h3>
+                            <button class="button">
+                                <h3>Se Produkt</h3>
                             </button>
                         </div>
                     </div>
-
                 </div>
+            </template>
+
+            <div class="popUp-container">
+                <div class="container-max">
+                    <div class="produkt-container">
+                        <div class="top-container">
+                            <div class="luk"><img src="img/backwardarrow.png" alt="tilbageknap"></div>
+                            <div class="shoppingcartsvg"><img src="img/kurv.png" alt="kurv"></div>
+                        </div>
+
+                        <div class="produkt-container">
+
+                            <div class="produkt-billede">
+                                <img src="" alt="billede-af-produkt">
+
+                            </div>
+
+                            <div class="tekst-container">
+
+                                <h1></h1>
+                                <p></p>
+                                <div class="specifikationer">
+                                    <div class="flex">
+                                        <h6>Vægt:</h6>
+                                        <p></p>
+                                    </div>
+                                    <div>
+                                        <h6>Størrelse: </h6>
+                                        <p></p>
+                                    </div>
+
+                                </div>
+
+                                <div class="farver">
+                                    <h6>Farver</h6>
+
+
+                                </div>
+                                <div class="buy-container">
+
+                                    <h2></h2>
+
+                                    <button class="buy-button">
+                                        <p>Læg i kurv</p>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
 
 
@@ -176,18 +196,9 @@
         </div>
         <p>Copyright: Copenhagen Glass 2019</p>
     </footer>
-    <template class="test-template">
-        <div class="item-container">
-            <div class="singleProdukt">
-                <img src="" alt="">
 
-                <div class="price-container">
-                    <div class="title"></div>
-                    <button class="button">Se Produkt</button>
-                </div>
-            </div>
-        </div>
-    </template>
+
+
 
 
 
@@ -197,30 +208,25 @@
     <script src="script.js"></script>
     <script>
         document.addEventListener("DOMContentLoaded", getJson);
-
         let webshopItems;
 
         async function getJson() {
-            const skabelon = document.querySelector(".test-template");
-            const liste = document.querySelector("#webshop-grid");
-
             let jsonData = await fetch("https://mostvalue.dk/Copenhagenglass/wordpress/wp-json/wp/v2/Webshop_item");
 
             webshopItems = await jsonData.json();
             console.log(webshopItems);
-
             visWebshop();
 
         };
 
         function visWebshop() {
-            const skabelon = document.querySelector(".test-template");
+
+            document.querySelector(".luk").addEventListener('click', noDisplaySingle);
+            const skabelon = document.querySelector(".webshop-template");
             const liste = document.querySelector("#webshop-grid");
 
             webshopItems.forEach((item, index) => {
                 const klon = skabelon.cloneNode(true).content;
-
-
 
                 klon.querySelector("img").src = item.billede.guid;
                 klon.querySelector("img").alt = "slider image";
@@ -229,71 +235,77 @@
 
                 klon.querySelector(".singleProdukt").addEventListener('click', function() {
                     /*                    showBike(webshopItems[index]);*/
+                    visSingleProdukt(webshopItems[index]);
+
+
                     console.log(index);
+
+
+                    document.querySelector(".popUp-container").style.display = "block";
+                    document.querySelector("body").classList.add("noscroll");
+
+                    document.querySelector(".produkt-billede img").src = item.billede.guid;
+                    document.querySelector(".tekst-container h1").textContent = item.title.rendered;
+                    document.querySelector(".tekst-container p").textContent = item.beskrivelse;
+                    document.querySelector(".specifikationer h6").textContent = item.vaegt;
+                    document.querySelector(".specifikationer p").textContent = item.stoerrelse;
+                    document.querySelector(".buy-container h2").textContent = "Pris: " + item.pris + " DKK";
+
+
+
+
 
                 })
 
                 liste.appendChild(klon);
             });
-            console.log("hej");
-            events();
+
+
         };
-        /*
-
-                document.querySelector(".luk").addEventListener('click', noDisplayBike);
-                $('#wrapper').empty();
-                const skabelon = document.querySelector(".test-template");
-                const liste = document.querySelector("#wrapper");
-                cykler.forEach((cykel, index) => {
-                    const klon = skabelon.cloneNode(true).content;
 
 
-                    klon.querySelector("img").src = cykel.billede.guid;
-                    klon.querySelector("img").alt = "slider image";
-                    klon.querySelector(".title").innerHTML = cykel.title.rendered;
-                    klon.querySelector(".priceGrid").textContent = "Pris " + cykel.pris + " ,-";
-
-                    console.log(index);
-                    klon.querySelector(".box1").addEventListener('click', function() {
-                        showBike(webshopItems[index]);
-                        console.log(index);
-                        document.querySelector(".bikePopUp").style.display = "block";
-                        document.querySelector("body").classList.add("noscroll");
-                        document.querySelector(".bikeImg img").src = cykel.billede.guid;
-                        document.querySelector(".bikeTitle").textContent = cykel.title.rendered;
-                        document.querySelector(".bikePrice").textContent = "Pris " + cykel.pris + " ,-";
-                        document.querySelector(".price").textContent = cykel.pris + " ,-";
-                        document.querySelector(".frameSize").innerHTML = cykel.framesize;
-                        document.querySelector(".weight").innerHTML = cykel.weight;
-                        document.querySelector(".colorCombinations").innerHTML = cykel.colorcombination;
-
-                    })
 
 
-                    liste.appendChild(klon);
+        function visSingleProdukt(data) {
 
-                });
+            console.log(data);
 
-        */
+            const skabelonSingle = document.querySelector(".popUp-container");
+            const listeSingle = document.querySelector("#popUp-container");
 
 
-        function events() {
-            console.log("hej igen");
-            document.querySelector(".luk").addEventListener('click', noDisplaySingle);
-            document.querySelector(".singleProdukt").addEventListener('click', displaySingle);
+            const klon = skabelonSingle.cloneNode(true).content;
+            console.log(klon);
+            /*    klon.querySelector(".price").textContent = data.pris + " ,-";
+                klon.querySelector(".frameSize").innerHTML = data.framesize;
+                klon.querySelector(".weight").innerHTML = data.weight;
+
+                klon.querySelector(".colorCombinations").innerHTML = data.colorcombination;
+            klon.querySelector(".produkt-billede img").src = data.billede.guid; */
+
+
+
+
+
         }
-
+        /*
+                function events() {
+                    document.querySelector(".luk").addEventListener('click', noDisplaySingle);
+                    document.querySelector(".singleProdukt").addEventListener('click', displaySingle);
+                }
+*/
         function noDisplaySingle() {
             document.querySelector(".popUp-container").style.display = "none";
+            document.querySelector("body").classList.remove("noscroll");
         }
+        /*
+                        function displaySingle() {
+                            document.querySelector(".popUp-container").style.display = "block";
+                        }
 
-        function displaySingle() {
-            document.querySelector(".popUp-container").style.display = "block";
-        }
+                        function openSingle() {
+                            console.log("hej");
 
-        function openSingle() {
-            console.log("hej");
-
-        }
+                        }*/
     </script>
 </body></html>
