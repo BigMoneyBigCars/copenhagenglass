@@ -17,74 +17,35 @@
 
 <body>
     <header>
-
         <nav>
             <div id="menu-desktop" class="menu-desktop-container">
                 <div class="menu-wrapper  headerBaggrund">
-                    <ul class="header-menu-container">
-                        <div class="fs-menu">
-                            <a href="index.html">
-                                <li class="active">Forside</li>
-                            </a>
-                            <a href="galleri.html">
-                                <li>Galleri</li>
-                            </a>
-                        </div>
-                        <div class="logo-menu desktop-logo"><img src="img/endeligLogo.svg"></div>
-                        <div class="ek-menu">
-                            <a href="events.html">
-                                <li>Events</li>
-                            </a>
-                            <a href="kontakt.html">
-                                <li>Kontakt</li>
-                            </a>
-                        </div>
-                        <div class="w-menu">
-                            <a href="webshop.html">
-                                <li>Webshop</li>
-                            </a>
-                        </div>
-                        <div class="s-menu">
-                            <img src="img/kurv.png">
-                        </div>
-                    </ul>
+                    <div class="header-menu-container">
+                        <a href="index.html">Forside</a>
+                        <a href="galleri.html">Galleri</a>
+                        <a href="index.html" class="desktop-logo"><img src="img/logo-trans.png"></a>
+                        <a href="events.html">Events</a>
+                        <a href="kontakt.html">Kontakt</a>
+                    </div>
+                    <a href="webshop.html">Webshop</a>
+                    <div class="kurv-menu">
+                        <a href="index.html"><img src="img/kurv.png" class="kurv"></a></div>
                 </div>
             </div>
-            <div id="menu-mobile">
+            <div id="menu-mobile" class="headerBaggrund">
                 <a href="index.html">
-                    <div class="mobil-logo"></div>
+                    <div class="mobil-logo"> <img src="img/logo-trans.png" alt="Logo Copenhagen GLass"></div>
                 </a>
-                <p>Copenhagen Glass</p>
+
                 <div class="menu__toggler"><span></span></div>
-                <div class="mobile-menu-dropdown">
+                <div class="mobile-menu-dropdown headerBaggrund">
+                    <div class="mobil-logo"> <img src="img/logo-trans.png" alt="Logo Copenhagen GLass"></div>
                     <ul class="atags-mobile-menu">
-
-
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#nyhavnsglaspusteri">About</a></li>
-                        <li><a href="#">Gallery</a></li>
-                        <li><a href="#">Contact</a></li>
-
-
-                        <a href="index.html">
-                            <li>Forside</li>
-                        </a>
-                        <a href="galleri.html">
-                            <li>Galleri</li>
-                        </a>
-                        <a href="events.html">
-                            <li>Events</li>
-                        </a>
-
-                        <a href="kontakt.html">
-                            <li>Kontakt</li>
-                        </a>
-                        <a href="webshop.html">
-                            <li>Webshop</li>
-                        </a>
-
-
-
+                        <a href="index.html">Forside</a>
+                        <a href="galleri.html">Galleri</a>
+                        <a href="events.html">Events</a>
+                        <a href="kontakt.html">Kontakt</a>
+                        <a href="webshop.html">Webshop</a>
                     </ul>
                 </div>
             </div>
@@ -95,12 +56,12 @@
             <div class="categoryWrapper splash-overskrift" style="text-align: center; transform: scale(0.8); left: 0;">
 
                 <h1 data-aos="fade-right" data-aos-duration="3000">Copenhagen Glass</h1>
-                <a div data-aos="fade-up" data-aos-duration="3000" class="cta-knap" href="#glaspusterchristianedwards">
+                <a div data-aos="fade-up" data-aos-duration="3000" class="cta-knap" href="galleri.html">
                     <button>
                         <span>
                             <span>
 
-                                Læs mere
+                                Se galleri
 
                             </span>
                         </span>
@@ -109,14 +70,14 @@
             </div>
             <div class="splash-max" id="splash">
                 <video class="hero-video cover" playsinline="" muted="" onplaying="this.controls=false" autoplay loop>
-                    <source src="video/glaspuster.mov" type='video/mp4;'>
+                    <source src="video/glaspustersplash.mov" type='video/mp4;'>
                 </video>
             </div>
         </section>
         <section id="nyhavnsglaspusteri">
             <div class="container-max">
                 <div class="ng1 flex-reverse flex-container">
-                    <div class="fbg flex-item"> <img src="" alt=""></div>
+                    <div class="fbg flex-item"><img src="" alt=""></div>
                     <div class="fbg flex-item">
                         <div class="tekst-container">
                             <h2></h2>
@@ -244,7 +205,7 @@
 
 
 
-    <footer id="footer">
+    <footer id="footer" class="headerBaggrund">
         <div class="container">
             <div class="butik-container">
                 <h4>Butik</h4>
@@ -269,7 +230,7 @@
 
 
                 <a href="kontakt.html">
-                    <button>Kontakt Butik</button>
+                    <h6>Kontakt Butik</h6>
                 </a>
 
                 <a href="webshop.html">

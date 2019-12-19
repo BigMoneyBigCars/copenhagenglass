@@ -20,66 +20,36 @@
         <nav>
             <div id="menu-desktop" class="menu-desktop-container">
                 <div class="menu-wrapper  headerBaggrund">
-                    <ul class="header-menu-container">
-                        <div class="fs-menu">
-                            <a href="index.html">
-                                <li>Forside</li>
-                            </a>
-                            <a href="galleri.html">
-                                <li>Galleri</li>
-                            </a>
-                        </div>
-                        <div class="logo-menu desktop-logo"><img src="img/endeligLogo.svg"></div>
-                        <div class="ek-menu">
-                            <a href="events.html">
-                                <li class="active">Events</li>
-                            </a>
-                            <a href="kontakt.html">
-                                <li>Kontakt</li>
-                            </a>
-                        </div>
-                        <div class="w-menu">
-                            <a href="webshop.html">
-                                <li>Webshop</li>
-                            </a>
-                        </div>
-                        <div class="s-menu">
-                            <img src="img/kurv.png">
-                        </div>
-                    </ul>
+                    <div class="header-menu-container">
+                        <a href="index.html">Forside</a>
+                        <a href="galleri.html">Galleri</a>
+                        <a href="index.html" class="desktop-logo"><img src="img/logo-trans.png"></a>
+                        <a href="events.html">Events</a>
+                        <a href="kontakt.html">Kontakt</a>
+                    </div>
+                    <a href="webshop.html">Webshop</a>
+                    <div class="kurv-menu">
+                        <a href="index.html"><img src="img/kurv.png" class="kurv"></a></div>
                 </div>
             </div>
-            <div id="menu-mobile">
+            <div id="menu-mobile" class="headerBaggrund">
                 <a href="index.html">
-                    <div class="mobil-logo"></div>
+                    <div class="mobil-logo"> <img src="img/logo-trans.png" alt="Logo Copenhagen GLass"></div>
                 </a>
-                <p>Copenhagen Glass</p>
 
                 <div class="menu__toggler"><span></span></div>
-                <div class="mobile-menu-dropdown">
+                <div class="mobile-menu-dropdown headerBaggrund">
+                    <div class="mobil-logo"> <img src="img/logo-trans.png" alt="Logo Copenhagen GLass"></div>
                     <ul class="atags-mobile-menu">
-                        <a href="index.html">
-                            <li>Forside</li>
-                        </a>
-                        <a href="galleri.html">
-                            <li>Galleri</li>
-                        </a>
-                        <a href="events.html">
-                            <li>Events</li>
-                        </a>
-
-                        <a href="kontakt.html">
-                            <li>Kontakt</li>
-                        </a>
-                        <a href="webshop.html">
-                            <li>Webshop</li>
-                        </a>
+                        <a href="index.html">Forside</a>
+                        <a href="galleri.html">Galleri</a>
+                        <a href="events.html">Events</a>
+                        <a href="kontakt.html">Kontakt</a>
+                        <a href="webshop.html">Webshop</a>
                     </ul>
                 </div>
             </div>
-
         </nav>
-
 
     </header>
 
@@ -114,6 +84,7 @@
                             <h3></h3>
                             <p></p>
                             <p></p>
+                            <p></p>
                         </div>
                     </div>
                 </div>
@@ -142,7 +113,7 @@
     </main>
 
 
-    <footer id="footer">
+    <footer id="footer" class="headerBaggrund">
         <div class="container">
             <div class="butik-container">
                 <h4>Butik</h4>
@@ -235,15 +206,19 @@
             document.querySelector(".pa1 h3").textContent = polterabend[0].underoverskrift1;
             document.querySelector(".pa1 p").textContent = polterabend[0].tekst1;
             document.querySelector(".pa1 p+p").textContent = polterabend[0].tekst1_afsnit;
+
+
+
             document.querySelector(".pa1 img").src = polterabend[0].billede1.guid;
 
 
 
             document.querySelector(".pa2 h2").textContent = polterabend[0].overskrift2;
             document.querySelector(".pa2 h3").textContent = polterabend[0].underoverskrift2;
+
             document.querySelector(".pa2 p").textContent = polterabend[0].tekst2;
-            document.querySelector(".pa2 p").textContent = polterabend[0].beliggenhed_tekst;
-            document.querySelector(".pa2 p").textContent = polterabend[0].beliggenhed_tekst;
+            document.querySelector(".pa2 p+p").textContent = polterabend[0].gavekort_tekst;
+
 
 
             document.querySelector(".pa2 img").src = polterabend[0].billede2.guid;

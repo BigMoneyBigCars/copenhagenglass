@@ -18,59 +18,32 @@
         <nav>
             <div id="menu-desktop" class="menu-desktop-container">
                 <div class="menu-wrapper  headerBaggrund">
-                    <ul class="header-menu-container">
-                        <div class="fs-menu">
-                            <a href="index.html">
-                                <li>Forside</li>
-                            </a>
-                            <a href="galleri.html">
-                                <li>Galleri</li>
-                            </a>
-                        </div>
-                        <div class="logo-menu desktop-logo"><img src="img/endeligLogo.svg"></div>
-                        <div class="ek-menu">
-                            <a href="events.html">
-                                <li>Events</li>
-                            </a>
-                            <a href="kontakt.html">
-                                <li>Kontakt</li>
-                            </a>
-                        </div>
-                        <div class="w-menu">
-                            <a href="webshop.html">
-                                <li class="active">Webshop</li>
-                            </a>
-                        </div>
-                        <div class="s-menu">
-                            <img src="img/kurv.png">
-                        </div>
-                    </ul>
+                    <div class="header-menu-container">
+                        <a href="index.html">Forside</a>
+                        <a href="galleri.html">Galleri</a>
+                        <a href="index.html" class="desktop-logo"><img src="img/logo-trans.png"></a>
+                        <a href="events.html">Events</a>
+                        <a href="kontakt.html">Kontakt</a>
+                    </div>
+                    <a href="webshop.html">Webshop</a>
+                    <div class="kurv-menu">
+                        <a href="index.html"><img src="img/kurv.png" class="kurv"></a></div>
                 </div>
             </div>
-            <div id="menu-mobile">
+            <div id="menu-mobile" class="headerBaggrund">
                 <a href="index.html">
-                    <div class="mobil-logo"><img src="img/logo.png"></div>
+                    <div class="mobil-logo"> <img src="img/logo-trans.png" alt="Logo Copenhagen GLass"></div>
                 </a>
-                <p>Copenhagen Glass</p>
-                <div class="menu__toggler"><span></span></div>
-                <div class="mobile-menu-dropdown">
-                    <ul class="atags-mobile-menu">
-                        <a href="index.html">
-                            <li>Forside</li>
-                        </a>
-                        <a href="galleri.html">
-                            <li>Galleri</li>
-                        </a>
-                        <a href="events.html">
-                            <li>Events</li>
-                        </a>
 
-                        <a href="kontakt.html">
-                            <li>Kontakt</li>
-                        </a>
-                        <a href="webshop.html">
-                            <li>Webshop</li>
-                        </a>
+                <div class="menu__toggler"><span></span></div>
+                <div class="mobile-menu-dropdown headerBaggrund">
+                    <div class="mobil-logo"> <img src="img/logo-trans.png" alt="Logo Copenhagen GLass"></div>
+                    <ul class="atags-mobile-menu">
+                        <a href="index.html">Forside</a>
+                        <a href="galleri.html">Galleri</a>
+                        <a href="events.html">Events</a>
+                        <a href="kontakt.html">Kontakt</a>
+                        <a href="webshop.html">Webshop</a>
                     </ul>
                 </div>
             </div>
@@ -85,26 +58,27 @@
             </div>
             <template class="webshop-template">
                 <div class="item-container">
-                    <div class="singleProdukt">
-                        <img src="" alt="">
-
-                        <div class="price-container">
-                            <h3 class="title"></h3>
-                            <button class="button">
-                                <h3>Se Produkt</h3>
-                            </button>
+                    <div class="webshop-item-container">
+                        <div class="singleProdukt">
+                            <img src="" alt="">
                         </div>
+
+                    </div>
+                    <div class="price-container">
+                        <h3 class="title"></h3>
+                        <button class="button">
+                            Se Produkt</button>
                     </div>
                 </div>
             </template>
 
-            <div class="popUp-container">
+            <div class="popUp-container headerBaggrund">
                 <div class="container-max">
                     <div class="produkt-container">
-                        <div class="top-container">
-                            <div class="luk"><img src="img/backwardarrow.png" alt="tilbageknap"></div>
-                            <div class="shoppingcartsvg"><img src="img/kurv.png" alt="kurv"></div>
-                        </div>
+
+                        <div class="luk"><img src="img/luk.png" alt="tilbageknap"></div>
+
+
 
                         <div class="produkt-container">
 
@@ -122,29 +96,12 @@
                                     <p class="bemaerk"></p>
                                 </div>
 
-                                <div class="specifikationer">
-                                    <div class="flex">
-                                        <h6>Vægt:</h6>
-                                        <p></p>
-                                    </div>
-                                    <div>
-                                        <h6>Størrelse: </h6>
-                                        <p></p>
-                                    </div>
-
-                                </div>
-
-                                <div class="farver">
-                                    <h6>Farver</h6>
-
-
-                                </div>
                                 <div class="buy-container">
 
                                     <h2></h2>
 
                                     <button class="buy-button">
-                                        <p>Læg i kurv</p>
+                                        Læg i kurv
                                     </button>
                                 </div>
                             </div>
@@ -157,7 +114,7 @@
 
         </section>
     </main>
-    <footer id="footer">
+    <footer id="footer" class="headerBaggrund">
         <div class="container">
             <div class="butik-container">
                 <h4>Butik</h4>
@@ -235,7 +192,7 @@
         let webshopItems;
 
         async function getJson() {
-            let jsonData = await fetch("https://mostvalue.dk/Copenhagenglass/wordpress/wp-json/wp/v2/Webshop_item");
+            let jsonData = await fetch("https://mostvalue.dk/Copenhagenglass/wordpress/wp-json/wp/v2/Webshop_item?per_page=20");
 
             webshopItems = await jsonData.json();
             console.log(webshopItems);
@@ -273,13 +230,8 @@
                     document.querySelector(".bemaerk").textContent = item.beskrivelse_bemaerk;
 
 
-                    document.querySelector(".specifikationer h6").textContent = item.vaegt;
-                    document.querySelector(".specifikationer p").textContent = item.stoerrelse;
+
                     document.querySelector(".buy-container h2").textContent = "Pris: " + item.pris + " DKK";
-
-
-
-
 
                 })
 

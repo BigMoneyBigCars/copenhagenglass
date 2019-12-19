@@ -51,13 +51,13 @@ li {
     position: fixed;
     top: 0;
     display: none;
-    grid-template-columns: 1fr;
-    grid-template-rows: 130px;
+    grid-template-columns: 80px 150px auto 150px 80px;
+    grid-template-rows: 100px;
     justify-items: center;
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    height: 130px;
+    height: 100px;
     width: 100vw;
     -webkit-transition: height .5s cubic-bezier(.19, 1, .22, 1);
     transition: height .5s cubic-bezier(.19, 1, .22, 1);
@@ -66,49 +66,57 @@ li {
     border-bottom: 1px solid black;
 }
 
-.fs-menu {
-    grid-column: 4 / span 3;
-}
-
-.logo-menu {
-    grid-column: 7 / span 1;
-}
-
-.ek-menu {
-    grid-column: 9 / span 3;
-}
-
-.w-menu {
-    grid-column: 12 / span 1;
-}
-
-.s-menu {
-    grid-column: 13 / span 1;
-}
-
 
 .header-menu-container {
-    display: grid;
-    width: 100vw;
-    grid-template-columns: repeat(13, 1fr);
-    grid-template-rows: 130px;
+
+    grid-column: 3 / span 1;
+    display: flex;
     justify-content: center;
     align-items: center;
 
+    flex-wrap: nowrap;
+    flex-direction: row;
 
 }
 
+.kurv-menu {
+    justify-self: start;
+    margin-top: 5px;
 
 
-.s-menu img {
-    width: 30px;
+}
+
+.kurv-menu img {
+    height: 21px;
+    width: auto;
+}
+
+.header-menu-container a {
+    display: inline-block;
+    color: black;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+.header-menu-container .webshop-menu {
+    justify-content: flex-end;
+    grid-column: 3 / span 1;
+}
+
+.header-menu-container .kurv {
     height: 30px;
+    width: 30p;
 }
 
-.header-menu-container:nth-child(1) {
-    /*    grid-column-start: 1;
-    grid-column-end: 4;*/
+.webshop-menu a {
+    display: inline-block;
+    color: black;
+    text-decoration: none;
+    list-style-type: none;
+
+    border: none;
 }
+
 
 .header-menu-container li {
     text-align: center;
@@ -127,11 +135,16 @@ li {
 .header-menu-container a {
     text-decoration: none;
     list-style-type: none;
+    margin-right: 15px;
+    padding-right: 15px;
 }
 
 .desktop-logo img {
-    height: 100px;
+    height: 80px;
     width: auto;
+
+
+
 }
 
 /* Menu Desktop SLUT */
@@ -156,11 +169,19 @@ nav h1 {
     font-size: 28px;
 }
 
-nav li {
+nav a {
     font-family: "Roboto";
     font-weight: 400;
     font-size: 18px;
-    letter-spacing: 2px
+    letter-spacing: 2px;
+    color: black;
+    text-decoration: none;
+
+}
+
+nav .header-menu-container a:nth-child(1),
+nav .header-menu-container a:nth-child(4) {
+    border-right: 0.5px solid black;
 }
 
 
@@ -170,13 +191,20 @@ nav li {
     position: absolute;
     z-index: 998;
     color: black;
-    background: rgb(240, 240, 240);
-    height: 100vh;
+
+    height: 100%;
     display: inline-block;
     -webkit-transition: 200ms left cubic-bezier(0.77, 0, 0.175, 1);
     transition: 200ms left cubic-bezier(0.77, 0, 0.175, 1);
     width: 500px;
     left: -500px;
+    text-align: center;
+
+}
+
+.mobile-menu-dropdown ul {
+
+    text-align: left;
     padding: 50px;
 }
 
@@ -184,12 +212,20 @@ nav li {
     left: 0;
     top: 0;
     width: 100%;
+    height: 100vh;
 }
 
+.mobile-menu-dropdown .mobil-logo img {
+    height: 55px;
+    width: auto;
+    padding-left: 5px;
+    margin-top: 75px;
+}
 
 .mobil-logo img {
-    height: 60px;
+    height: 55px;
     width: auto;
+
 }
 
 .flex-reverse {
@@ -203,6 +239,10 @@ nav li {
     list-style: none;
     -webkit-animation-name: fade-in-left;
     animation-name: fade-in-left;
+
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
 }
 
 /* mobile menu SLUT */
@@ -225,8 +265,11 @@ nav li {
 
 }
 
-.info-container {
-    padding-left: 100px;
+.info-container {}
+
+.info-container h2 {
+    padding-bottom: 20px;
+    font-size: 26px;
 }
 
 .flex-container img {}
@@ -244,6 +287,20 @@ nav li {
 
 
 /*** forside ***/
+#nyhavnsglaspusteri,
+#glaspusterchristianedwards,
+#signature {
+    margin-top: 50px;
+}
+
+#glaspusterchristianedwards {
+    margin-bottom: 50px;
+}
+
+#signature,
+#polterabend {
+    padding-bottom: 50px;
+}
 
 
 .banner-picture {
@@ -259,7 +316,7 @@ nav li {
 }
 
 .banner-tekst {
-    width: 350px;
+    width: 100%;
     color: #f5f5f5;
     font-size: 18px;
     font-family: "Helvetica", sans-serif;
@@ -284,25 +341,26 @@ nav li {
 #banner button,
 #nyhavnsglaspusteri button,
 #teambuilding button,
-#signature button {
+#signature button,
+.price-container .button,
+.buy-button {
     color: #f5f5f5;
     background-color: grey;
     background: none;
-
     cursor: pointer;
     width: 130px;
     height: 30px;
     border: 1px solid white;
     border-radius: 5px;
-
     cursor: pointer;
-
     transition: ease-in-out 0.3s;
 }
 
 #nyhavnsglaspusteri button,
 #teambuilding button,
-#signature button {
+#signature button,
+.price-container .button,
+.buy-button {
     border: 1px solid black;
     border-radius: 5px;
     color: black;
@@ -312,10 +370,16 @@ nav li {
 #banner button:hover,
 #nyhavnsglaspusteri button:hover,
 #teambuilding button:hover,
-#signature button:hover {
+#signature button:hover,
+.price-container .button:hover,
+.buy-button:hover {
     background-color: rgba(245, 245, 245, 0.47);
     color: black;
     transform: scale(1.1);
+}
+
+#banner button {
+    margin-top: 15px;
 }
 
 /**** instagram embed ***/
@@ -347,12 +411,14 @@ nav li {
 
 
 section h1 {
-    padding-top: 20px;
+    padding-top: 30px;
     padding-left: 10px;
     font-size: 28px;
     font-family: "Roboto", sans-serif;
-    font-weight: 500;
-    padding-bottom: 20px
+    font-weight: 600;
+    padding-bottom: 30px;
+    text-transform: uppercase;
+
 }
 
 /***** OM SECTION ****/
@@ -435,6 +501,22 @@ section h1 {
     padding-bottom: 75px;
 }
 
+.singleProdukt {
+    transition: ease-in-out 0.3s;
+
+}
+
+.singleProdukt:hover {
+    transform: scale(1.05);
+}
+
+
+.webshop-item-container,
+.galleri-item-container {
+    overflow: hidden;
+}
+
+
 
 /* webshop-side */
 #webshop-grid {
@@ -454,7 +536,7 @@ section h1 {
     font-weight: 400;
     letter-spacing: 1px;
     padding-left: 5px;
-    font-size: 12px
+    font-size: 20px
 }
 
 .price-container {
@@ -464,28 +546,7 @@ section h1 {
     align-items: center;
 }
 
-.price-container .button {
-    cursor: pointer;
-    width: 130px;
-    height: 30px;
-    border: 1px solid black;
-    border-radius: 2px;
-    background-color: none;
-    background-color: #f5f5f5;
-    cursor: pointer;
 
-    transition: ease-in-out 0.3s;
-}
-
-.price-container button:hover {
-    border: 3px solid white;
-    background-color: black;
-    color: white;
-}
-
-.price-container button p:hover {
-    color: white;
-}
 
 .button4 {
     background-color: white;
@@ -497,22 +558,39 @@ section h1 {
 
 .aabningstider-container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-auto-rows: auto;
+    grid-template-columns: repeat(2, 150px);
+    grid-template-rows: repeat(7, 30px);
+    padding-bottom: 30px;
 }
 
 
 #kontakt aabningstider-container {
     text-align: center;
+    font-size: 18px;
+
+}
+
+#kontakt p,
+#kontakt h3 {
+    font-size: 18px;
+    font-weight: 300;
+}
+
+#kontakt h2 {
+    padding-bottom: 20px;
+    font-weight: 300;
 }
 
 .google-maps {
     position: relative;
-    padding-top: 60%;
+    padding-top: 99%;
+
 
     /* This is the aspect ratio */
     height: 0;
     overflow: hidden;
+    grid-row: 3 / span 2;
+    grid-column: 1 / span 2;
 }
 
 .google-maps iframe {
@@ -523,11 +601,43 @@ section h1 {
     height: 100%;
 }
 
+.grid-container .butik-container {
+    grid-row: 2 / span 1;
+    grid-column: 1 / span 1;
+    margin: 0;
+}
 
+.butik-container .tekst-container {
+    margin: 0;
+
+}
+
+.grid-container .tekst-container {
+    margin: 0;
+    padding: 0;
+}
 
 #mail-form {
     max-width: 1180px;
     margin: 0 auto;
+
+
+    grid-row: 3 / span 2;
+    grid-column: 3 / span 2;
+    padding-bottom: 35px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: repeat(3, 1fr);
+    justify-content: center;
+    grid-gap: 25px;
+
+}
+
+.grid-container .butik-container h2 {
+    padding-bottom: 20px;
 }
 
 input[type=text],
@@ -583,38 +693,39 @@ input[type=submit]:hover {
     background-color: white;
     position: fixed;
     z-index: 300;
-    top: 75px;
-    height: 100vw;
+    top: 45px;
+    height: 100%;
 }
 
 .luk {
-    position: static;
+    position: fixed;
+    margin-left: 20px;
+    top: 130px;
+    height: 40px;
+    width: 40px;
     cursor: pointer;
 }
 
-.top-container {
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    min-height: 50px;
-    align-items: center;
-    background-color: aliceblue;
 
-    width: 100%;
-    padding-top: 30px;
-    padding-left: 10px;
-    padding-right: 10px;
-
-}
 
 .produkt-billede {
     text-align: center;
 }
 
 
+.flex-test-billede {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 10px;
+    width: 100%;
+
+}
 
 .produkt-container {
-    background-color: aquamarine;
+    background-color: rgb(245, 245, 245);
+    height: 80vh;
+    overflow-y: scroll;
 }
 
 .produkt-billede img {}
@@ -669,8 +780,20 @@ input[type=submit]:hover {
     font-family: "Helvetica", sans-serif;
     font-size: 16px;
     font-weight: 300;
-    padding-left: 10px;
 
+
+    padding-bottom: 20px;
+
+}
+
+.popUp-container h1 {
+    padding-left: 0;
+
+}
+
+.popUp-container h2 {
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 .specifikationer,
@@ -692,10 +815,8 @@ input[type=submit]:hover {
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-between;
-    padding-right: 40px;
-    padding-left: 40px;
-    padding-bottom: 30px;
-    padding-top: 40px
+
+
 }
 
 .buy-button {
@@ -703,9 +824,9 @@ input[type=submit]:hover {
     background: transparent;
     border-radius: 2px;
     border: 1px solid black;
-
+    height: 50px;
     width: 130px;
-    height: 40px;
+
 
 
 
@@ -722,7 +843,7 @@ input[type=submit]:hover {
 
 
 main {
-    padding-top: 50px;
+    padding-top: 75px;
 
 
 }
@@ -740,14 +861,15 @@ main {
     height: 75px;
     border-bottom: 1px solid black;
     display: grid;
-    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-columns: 1fr 1fr;
     justify-content: left;
-    padding-left: 15px;
+
     align-items: center;
     position: fixed;
     width: 100vw;
     z-index: 200;
     top: 0;
+
 
 
 }
@@ -757,7 +879,7 @@ main {
 
 footer {
     text-align: center;
-    background-color: #efefef;
+    background-color: rgba(201, 190, 180, 0);
     padding-top: 25px;
     padding-bottom: 25px;
     font-family: "Roboto", sans-serif;
@@ -1353,6 +1475,8 @@ footer button p:hover {
 
     .flex-container img {
         width: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
     }
 }
 
@@ -1381,6 +1505,10 @@ footer button p:hover {
         letter-spacing: 0.4px;
 
 
+    }
+
+    main {
+        padding-top: 50px;
     }
 
     .popUp-container {
@@ -1421,7 +1549,7 @@ footer button p:hover {
     }
 
     main {
-        margin-top: 75px;
+        margin-top: 70px;
     }
 
 
@@ -1436,6 +1564,8 @@ footer button p:hover {
     .container-max {}
 
     .banner-tekst {
+
+        width: 400px;
         top: 300px;
         left: 200px;
     }
@@ -1447,8 +1577,8 @@ footer button p:hover {
 
 @media screen and (min-width: 1050px) {
     .flex-container img {
-        max-width: 400px;
-        height: auto;
+        padding-left: 30px;
+        padding-right: 30px;
     }
 
     .tekst-container {
@@ -1459,6 +1589,12 @@ footer button p:hover {
 
 
 @media screen and (min-width: 1340px) {
+
+    .flex-container img {
+        padding-left: 70px;
+        padding-right: 70px;
+    }
+
     .tekst-container {
         padding-left: 70px;
         padding-right: 70px;

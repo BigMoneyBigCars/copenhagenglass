@@ -17,60 +17,32 @@
         <nav>
             <div id="menu-desktop" class="menu-desktop-container">
                 <div class="menu-wrapper  headerBaggrund">
-                    <ul class="header-menu-container">
-                        <div class="fs-menu">
-                            <a href="index.html">
-                                <li>Forside</li>
-                            </a>
-                            <a href="galleri.html">
-                                <li class="active">Galleri</li>
-                            </a>
-                        </div>
-                        <div class="logo-menu desktop-logo"><img src="img/logo_copy_2.svg"></div>
-                        <div class="ek-menu">
-                            <a href="events.html">
-                                <li>Events</li>
-                            </a>
-                            <a href="kontakt.html">
-                                <li>Kontakt</li>
-                            </a>
-                        </div>
-                        <div class="w-menu">
-                            <a href="webshop.html">
-                                <li>Webshop</li>
-                            </a>
-                        </div>
-                        <div class="s-menu">
-                            <img src="img/kurv.png">
-                        </div>
-                    </ul>
+                    <div class="header-menu-container">
+                        <a href="index.html">Forside</a>
+                        <a href="galleri.html">Galleri</a>
+                        <a href="index.html" class="desktop-logo"><img src="img/logo-trans.png"></a>
+                        <a href="events.html">Events</a>
+                        <a href="kontakt.html">Kontakt</a>
+                    </div>
+                    <a href="webshop.html">Webshop</a>
+                    <div class="kurv-menu">
+                        <a href="index.html"><img src="img/kurv.png" class="kurv"></a></div>
                 </div>
             </div>
-
-            <div id="menu-mobile">
+            <div id="menu-mobile" class="headerBaggrund">
                 <a href="index.html">
-                    <div class="mobil-logo"><img src="img/endeligLogo.svg"></div>
+                    <div class="mobil-logo"> <img src="img/logo-trans.png" alt="Logo Copenhagen GLass"></div>
                 </a>
-                <p>Copenhagen Glass</p>
-                <div class="menu__toggler"><span></span></div>
-                <div class="mobile-menu-dropdown">
-                    <ul class="atags-mobile-menu">
-                        <a href="index.html">
-                            <li>Forside</li>
-                        </a>
-                        <a href="galleri.html">
-                            <li>Galleri</li>
-                        </a>
-                        <a href="events.html">
-                            <li>Events</li>
-                        </a>
 
-                        <a href="kontakt.html">
-                            <li>Kontakt</li>
-                        </a>
-                        <a href="webshop.html">
-                            <li>Webshop</li>
-                        </a>
+                <div class="menu__toggler"><span></span></div>
+                <div class="mobile-menu-dropdown headerBaggrund">
+                    <div class="mobil-logo"> <img src="img/logo-trans.png" alt="Logo Copenhagen GLass"></div>
+                    <ul class="atags-mobile-menu">
+                        <a href="index.html">Forside</a>
+                        <a href="galleri.html">Galleri</a>
+                        <a href="events.html">Events</a>
+                        <a href="kontakt.html">Kontakt</a>
+                        <a href="webshop.html">Webshop</a>
                     </ul>
                 </div>
             </div>
@@ -84,13 +56,16 @@
         <section id="galleri">
             <div class="container-max">
                 <h1>Galleri</h1>
+
+
+
                 <div id="galleri-grid">
                 </div>
             </div>
         </section>
 
     </main>
-    <footer id="footer">
+    <footer id="footer " class="headerBaggrund">
         <div class="container">
             <div class="butik-container">
                 <h4>Butik</h4>
@@ -156,13 +131,16 @@
     </footer>
     <template class="test-template">
         <div class="item-container">
-            <div class="singleProdukt">
-                <img src="" alt="">
+
+            <div class="galleri-item-container">
+                <div class="singleProdukt">
+                    <img src="" alt="">
 
 
 
 
 
+                </div>
             </div>
         </div>
     </template>
@@ -176,7 +154,7 @@
         async function getJson() {
 
 
-            let jsonData = await fetch("https://mostvalue.dk/Copenhagenglass/wordpress/wp-json/wp/v2/Galleri");
+            let jsonData = await fetch("https://mostvalue.dk/Copenhagenglass/wordpress/wp-json/wp/v2/Galleri?per_page=20");
 
             galleriItems = await jsonData.json();
             console.log(galleriItems);
