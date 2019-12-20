@@ -6,10 +6,8 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="burgermenu.css">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:100,700&display=swap" rel="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,700&display=swap" rel="style">
 
-    <meta name="description" content=“Copenhagen Glass, ligger centralt i Nyhavns hyggelige gader. Kom ned og besøg butikken på Toldbodgade 4, og se Christian Edwards unikke produkter. En sjov og anderledes dag med firmaet, kæreste, venner eller familie. Kom og oplev Copenhagen Glass` utrolige univers, se mere på copenhagenglass.dk ”>
-    <meta name="keywords" content="copenhagen glass, glass, nyhavns glaspusteri, glaskunst, kunst, glas, polterabend, teambuilding, glas, glassblowing, glassart, glaspusteri, christian edwards">
 
     <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
@@ -28,33 +26,42 @@
             <div id="menu-desktop" class="menu-desktop-container">
                 <div class="menu-wrapper  headerBaggrund">
                     <div class="header-menu-container">
-                        <a href="index.html">Forside</a>
+                        <a href="index.html" class="active">Forside</a>
                         <a href="galleri.html">Galleri</a>
-                        <a href="index.html" class="desktop-logo"><img src="img/logo-trans.png"></a>
-                        <a href="events.html" class="active">Events</a>
+                        <a href="index.html" class="desktop-logo"><img src="img/logo-trans.png" alt="Logo Copenhagen glass"></a>
+                        <a href="events.html">Events</a>
                         <a href="kontakt.html">Kontakt</a>
                     </div>
                     <a href="webshop.html">Webshop</a>
                     <div class="kurv-menu">
-                        <a href="index.html"><img src="img/kurv.png" class="kurv"></a></div>
+                        <a href="index.html"><img src="img/kurv.png" class="kurv" alt="shopping kurv"></a></div>
                 </div>
             </div>
+
+
             <div id="menu-mobile" class="headerBaggrund">
                 <a href="index.html">
                     <div class="mobil-logo"> <img src="img/logo-trans.png" alt="Logo Copenhagen GLass"></div>
                 </a>
                 <div class="menu__toggler"><span></span></div>
                 <div class="mobile-menu-dropdown headerBaggrund">
-                    <div class="mobil-logo"> <img src="img/logo-trans.png" alt="Logo Copenhagen GLass"></div>
-                    <ul class="atags-mobile-menu">
-                        <a href="index.html">Forside</a>
+                    <a href="index.html">
+                        <div class="mobil-logo"> <img src="img/logo-trans.png" alt="Logo Copenhagen GLass"></div>
+                    </a>
+                    <div class="atags-mobile-menu">
+                        <a href="index.html" class="active">Forside</a>
+                        <!--active classen er color:#f5f5f5 -->
                         <a href="galleri.html">Galleri</a>
-                        <a href="events.html" class="active">Events</a>
+                        <a href="events.html">Events</a>
                         <a href="kontakt.html">Kontakt</a>
                         <a href="webshop.html">Webshop</a>
-                    </ul>
+                    </div>
                 </div>
             </div>
+
+
+
+
         </nav>
     </header>
     <main id="main" class="headerBaggrund">
@@ -68,7 +75,7 @@
                     <!--  -->
                     <div class="tb1 flex-container">
                         <!--  -->
-                        <div class="fbg flex-item"> <img src="" alt=""></div><!--  -->
+                        <div class="fbg flex-item"> <img src="#" alt=""></div><!--  -->
                         <div class="fbg flex-item">
                             <!--  -->
                             <div class="tekst-container">
@@ -76,15 +83,14 @@
                                 <h3></h3>
                                 <p></p>
                                 <p></p>
-                                <a href="kontakt.html"><button>Kontakt Butik</button></a>
+                                <form action="kontakt.html"><button>Kontakt Butik</button>
+                                </form>
                             </div>
                         </div>
                     </div>
                 </article>
             </div>
         </section>
-
-
 
         <section id="polterabend">
             <!-- Vores polterabend section   -   alt indhold i disse indhentes med javascript via REST API -->
@@ -94,7 +100,7 @@
                     <!-- Article rundt om indholdet for at SEO-optimere websiden -->
                     <div class="pa1 flex-reverse flex-container">
                         <!-- sætter classen flex-container og flex-reverse rundt om vores indhold. -->
-                        <div class="fbg flex-item"> <img src="" alt=""></div> <!-- sætter flex-item på vores element der skal flex'e -->
+                        <div class="fbg flex-item"> <img src="#" alt=""></div> <!-- sætter flex-item på vores element der skal flex'e -->
                         <div class="fbg flex-item">
                             <!-- sætter flex-item på vores element der skal flex'e -->
                             <div class="tekst-container">
@@ -108,7 +114,7 @@
                     </div>
                     <div class="pa2 flex-container">
                         <!-- Ny flex-container  - Har ikke flex-reverse-->
-                        <div class="fbg flex-item"> <img src="" alt=""></div>
+                        <div class="fbg flex-item"> <img src="#" alt=""></div>
                         <div class="fbg flex-item">
                             <!--  -->
                             <div class="tekst-container">
@@ -153,9 +159,10 @@
                 <a href="events.html">
                     <p>Polterabend</p>
                 </a>
-                <a href="kontakt.html">
+
+                <form action="kontakt.html">
                     <button>Kontakt Butik</button>
-                </a>
+                </form>
 
                 <a href="webshop.html">
                     <h6>Køb et gavekort</h6>
@@ -164,7 +171,6 @@
             <div class="aabningstid">
                 <h4>Åbningstider</h4>
                 <div class="aabningstiden">
-
                     <h3>Mandag</h3>
                     <p class="mandag"></p>
                     <h3>Tirsdag</h3>
@@ -182,16 +188,17 @@
                 </div>
             </div>
         </div>
-        <a href="kontakt.html"> <button class="mobile-footer">
-                <p>Kontakt Butik</p>
-            </button></a>
+        <form action="kontakt.html">
+            <button class="mobile-footer">
+                Kontakt Butik
+            </button>
+        </form>
         <div class="social-icons">
             <i class="fa fa-facebook-square" style="font-size:24px"></i>
             <i class="fa fa-instagram" style="font-size:24px"></i>
             <i class="fa fa-envelope" style="font-size:24px" aria-hidden="true"></i>
         </div>
         <p>Copyright: Copenhagen Glass 2019</p>
-
     </footer>
     <script>
         document.addEventListener("DOMContentLoaded", getJson);
@@ -236,9 +243,6 @@
             document.querySelector(".pa2 img").src = polterabend[0].billede2.guid;
             document.querySelector(".pa2 img").alt = "Christian Edwards Copenhagen Glass";
         }
-
     </script>
     <script src="script.js"></script>
-</body>
-
-</html>
+</body></html>

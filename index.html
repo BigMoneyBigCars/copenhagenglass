@@ -6,9 +6,8 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="burgermenu.css">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:100,700&display=swap" rel="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,700&display=swap" rel="style">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <meta name="description" content=“Copenhagen Glass, ligger centralt i Nyhavns hyggelige gader. Kom ned og besøg butikken på Toldbodgade 4, og se Christian Edwards unikke produkter. En sjov og anderledes dag med firmaet, kæreste, venner eller familie. Kom og oplev Copenhagen Glass` utrolige univers, se mere på copenhagenglass.dk ”>
     <meta name="keywords" content="copenhagen glass, glass, nyhavns glaspusteri, glaskunst, kunst, glas, polterabend, teambuilding, glas, glassblowing, glassart, glaspusteri, christian edwards">
 
 
@@ -30,13 +29,13 @@
                     <div class="header-menu-container">
                         <a href="index.html" class="active">Forside</a>
                         <a href="galleri.html">Galleri</a>
-                        <a href="index.html" class="desktop-logo"><img src="img/logo-trans.png"></a>
+                        <a href="index.html" class="desktop-logo"><img src="img/logo-trans.png" alt="Logo Copenhagen glass"></a>
                         <a href="events.html">Events</a>
                         <a href="kontakt.html">Kontakt</a>
                     </div>
                     <a href="webshop.html">Webshop</a>
                     <div class="kurv-menu">
-                        <a href="index.html"><img src="img/kurv.png" class="kurv"></a></div>
+                        <a href="index.html"><img src="img/kurv.png" class="kurv" alt="shopping kurv"></a></div>
                 </div>
             </div>
 
@@ -50,39 +49,30 @@
                     <a href="index.html">
                         <div class="mobil-logo"> <img src="img/logo-trans.png" alt="Logo Copenhagen GLass"></div>
                     </a>
-                    <ul class="atags-mobile-menu">
+                    <div class="atags-mobile-menu">
                         <a href="index.html" class="active">Forside</a>
                         <!--active classen er color:#f5f5f5 -->
                         <a href="galleri.html">Galleri</a>
                         <a href="events.html">Events</a>
                         <a href="kontakt.html">Kontakt</a>
                         <a href="webshop.html">Webshop</a>
-                    </ul>
+                    </div>
                 </div>
             </div>
-
-
-
-
         </nav>
     </header>
     <main id="main" class="headerBaggrund">
         <section id="video-section" class="">
             <div class="categoryWrapper splash-overskrift" style="text-align: center; transform: scale(0.8); left: 0;">
                 <h1>Copenhagen Glass</h1>
-                <a class="cta-knap" href="galleri.html">
-                    <button>
-                        <span>
-                            <span>
-                                Se galleri
-                            </span>
-                        </span>
-                    </button>
-                </a>
+                <form action="galleri.html">
+                    <button class="cta-knap">Se Galleri</button>
+                </form>
+
             </div>
             <div class="splash-max" id="splash">
                 <video class="hero-video cover" playsinline="" muted="" onplaying="this.controls=false" autoplay loop>
-                    <source src="video/glaspustersplash.mov" type='video/mp4;'>
+                    <source src="video/glaspustersplash.mov">
                 </video>
             </div>
         </section>
@@ -90,7 +80,7 @@
             <div class="container-max">
                 <article>
                     <div class="ng1 flex-reverse flex-container">
-                        <div class="fbg flex-item"><img src="" alt=""></div>
+                        <div class="fbg flex-item"><img src="#" alt=""></div>
                         <div class="fbg flex-item">
                             <div class="tekst-container">
                                 <h2></h2>
@@ -98,8 +88,10 @@
                                 <p></p>
                                 <p></p>
                                 <p></p>
-                                <a href="events.html"><button>Se Events</button>
-                                </a>
+                                <form action="events.html">
+                                    <button>Se Events</button>
+                                </form>
+
                             </div>
                         </div>
                     </div>
@@ -111,7 +103,7 @@
                 <article>
 
                     <div class="gce1 flex-container">
-                        <div class="fbg flex-item"> <img src="" alt=""></div>
+                        <div class="fbg flex-item"> <img src="#" alt=""></div>
                         <div class="fbg flex-item">
                             <div class="tekst-container">
                                 <h2></h2>
@@ -132,8 +124,10 @@
                     <h2></h2>
                     <p></p>
 
-                    <a href="galleri.html"><button>Se Galleri</button>
-                    </a>
+                    <form action="galleri.html">
+                        <button>Se Galleri</button>
+                    </form>
+
                 </div>
             </div>
         </section>
@@ -141,7 +135,7 @@
             <div class="container-max">
                 <article>
                     <div class="gce1 flex-container">
-                        <div class="fbg flex-item"> <img src="" alt=""></div>
+                        <div class="fbg flex-item"> <img src="#" alt=""></div>
                         <div class="fbg flex-item">
                             <div class="tekst-container">
                                 <h2></h2>
@@ -149,8 +143,10 @@
                                 <p></p>
                                 <p></p>
                                 <p></p>
-                                <a href="webshop.html"><button>Se Webshop</button>
-                                </a>
+                                <form action="webshop.html">
+                                    <button>Se Webshop</button>
+                                </form>
+
                             </div>
                         </div>
                     </div>
@@ -265,9 +261,11 @@
                 </div>
             </div>
         </div>
-        <a href="kontakt.html"> <button class="mobile-footer">
-                <p>Kontakt Butik</p>
-            </button></a>
+        <form action="kontakt.html">
+            <button class="mobile-footer">
+                Kontakt Butik
+            </button>
+        </form>
         <div class="social-icons">
             <i class="fa fa-facebook-square" style="font-size:24px"></i>
             <i class="fa fa-instagram" style="font-size:24px"></i>
