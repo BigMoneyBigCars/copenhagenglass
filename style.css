@@ -551,7 +551,7 @@ section h1 {
 .grid-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-rows: auto;
     justify-content: center;
     grid-gap: 25px;
 
@@ -1425,7 +1425,7 @@ footer button p:hover {
     .grid-container {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: repeat(3, 1fr);
+        grid-template-rows: auto;
         justify-content: center;
         grid-gap: 25px;
 
