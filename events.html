@@ -8,11 +8,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,700&display=swap" rel="style.css">
 
-    <!--<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">-->
+    <meta name="description" content=“Copenhagen Glass, ligger centralt i Nyhavns hyggelige gader. Kom ned og besøg butikken på Toldbodgade 4, og se Christian Edwards unikke produkter. En sjov og anderledes dag med firmaet, kæreste, venner eller familie. Kom og oplev Copenhagen Glass` utrolige univers, se mere på copenhagenglass.dk ”>
+    <meta name="keywords" content="copenhagen glass, glass, nyhavns glaspusteri, glaskunst, kunst, glas, polterabend, teambuilding, glas, glassblowing, glassart, glaspusteri, christian edwards">
 
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Copenhagen Glass</title>
-
 </head>
 
 <body>
@@ -24,7 +31,7 @@
                         <a href="index.html">Forside</a>
                         <a href="galleri.html">Galleri</a>
                         <a href="index.html" class="desktop-logo"><img src="img/logo-trans.png"></a>
-                        <a href="events.html">Events</a>
+                        <a href="events.html" class="active">Events</a>
                         <a href="kontakt.html">Kontakt</a>
                     </div>
                     <a href="webshop.html">Webshop</a>
@@ -36,83 +43,92 @@
                 <a href="index.html">
                     <div class="mobil-logo"> <img src="img/logo-trans.png" alt="Logo Copenhagen GLass"></div>
                 </a>
-
                 <div class="menu__toggler"><span></span></div>
                 <div class="mobile-menu-dropdown headerBaggrund">
                     <div class="mobil-logo"> <img src="img/logo-trans.png" alt="Logo Copenhagen GLass"></div>
                     <ul class="atags-mobile-menu">
                         <a href="index.html">Forside</a>
                         <a href="galleri.html">Galleri</a>
-                        <a href="events.html">Events</a>
+                        <a href="events.html" class="active">Events</a>
                         <a href="kontakt.html">Kontakt</a>
                         <a href="webshop.html">Webshop</a>
                     </ul>
                 </div>
             </div>
         </nav>
-
     </header>
-
-    <main id="main" class="baggrund1">
+    <main id="main" class="headerBaggrund">
         <h1></h1>
-        <section id="teambuilding">
-            <div class="container-max">
-                <div class="tb1 flex-container">
-                    <div class="fbg flex-item"> <img src="" alt=""></div>
-                    <div class="fbg flex-item">
-                        <div class="tekst-container">
-                            <h2></h2>
-                            <h3></h3>
-                            <p></p>
-                            <p></p>
-                            <a href="kontakt.html"><button>Kontakt Butik</button></a>
 
+
+        <section id="teambuilding">
+            <!--  -->
+            <div class="container-max">
+                <article>
+                    <!--  -->
+                    <div class="tb1 flex-container">
+                        <!--  -->
+                        <div class="fbg flex-item"> <img src="" alt=""></div><!--  -->
+                        <div class="fbg flex-item">
+                            <!--  -->
+                            <div class="tekst-container">
+                                <h2></h2>
+                                <h3></h3>
+                                <p></p>
+                                <p></p>
+                                <a href="kontakt.html"><button>Kontakt Butik</button></a>
+                            </div>
                         </div>
                     </div>
-                </div>
-
+                </article>
             </div>
         </section>
+
+
 
         <section id="polterabend">
+            <!-- Vores polterabend section   -   alt indhold i disse indhentes med javascript via REST API -->
             <div class="container-max">
-                <div class="pa1 flex-reverse flex-container">
-                    <div class="fbg flex-item"> <img src="" alt=""></div>
-                    <div class="fbg flex-item">
-                        <div class="tekst-container">
-                            <h2></h2>
-                            <h3></h3>
-                            <p></p>
-                            <p></p>
-                            <p></p>
+                <!-- sætter .container-max rundt om vores indhold -->
+                <article>
+                    <!-- Article rundt om indholdet for at SEO-optimere websiden -->
+                    <div class="pa1 flex-reverse flex-container">
+                        <!-- sætter classen flex-container og flex-reverse rundt om vores indhold. -->
+                        <div class="fbg flex-item"> <img src="" alt=""></div> <!-- sætter flex-item på vores element der skal flex'e -->
+                        <div class="fbg flex-item">
+                            <!-- sætter flex-item på vores element der skal flex'e -->
+                            <div class="tekst-container">
+                                <h2></h2>
+                                <h3></h3>
+                                <p></p>
+                                <p></p>
+                                <p></p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="pa2 flex-container">
-                    <div class="fbg flex-item"> <img src="" alt=""></div>
-                    <div class="fbg flex-item">
-                        <div class="tekst-container">
-                            <h2></h2>
-                            <h3></h3>
-                            <p></p>
-                            <p></p>
-
-                            <a href="https://www.copenhagenglass.dk/shop/gavekort-til-glaspustning/" target="_blank">
-
-                                <p>GAVEKORT TIL GLASPUSTNING</p>
-                            </a>
+                    <div class="pa2 flex-container">
+                        <!-- Ny flex-container  - Har ikke flex-reverse-->
+                        <div class="fbg flex-item"> <img src="" alt=""></div>
+                        <div class="fbg flex-item">
+                            <!--  -->
+                            <div class="tekst-container">
+                                <!-- vores container til alt indhold som er tekst -->
+                                <h2></h2>
+                                <h3></h3>
+                                <p></p>
+                                <p></p>
+                                <a href="https://www.copenhagenglass.dk/shop/gavekort-til-glaspustning/" target="_blank">
+                                    <p>KØB GAVEKORT TIL GLASPUSTNING</p>
+                                </a>
+                            </div>
                         </div>
-
                     </div>
-                </div>
+                </article>
             </div>
         </section>
-
 
 
     </main>
-
-
     <footer id="footer" class="headerBaggrund">
         <div class="container">
             <div class="butik-container">
@@ -125,6 +141,9 @@
                     <p>Telefon: 40 17 01 34</p>
                 </div>
                 <p>CVR: 38766309</p>
+                <a href="https://mostvalue.dk/Copenhagenglass/CPHglass/Handelsbetingelser.pdf" target="_blank">
+                    <h6>Handelsebetingelser</h6>
+                </a>
             </div>
             <div class="kontakt">
                 <h4>Booking</h4>
@@ -134,9 +153,6 @@
                 <a href="events.html">
                     <p>Polterabend</p>
                 </a>
-
-
-
                 <a href="kontakt.html">
                     <button>Kontakt Butik</button>
                 </a>
@@ -198,6 +214,7 @@
             document.querySelector(".tb1 p").textContent = teambuilding[0].tekst1;
             document.querySelector(".tb1 p+p").textContent = teambuilding[0].tekst1_afsnit;
             document.querySelector(".tb1 img").src = teambuilding[0].billede1.guid;
+            document.querySelector(".tb1 img").alt = "Christian Edwards Copenhagen Glass";
 
         }
 
@@ -207,11 +224,8 @@
             document.querySelector(".pa1 p").textContent = polterabend[0].tekst1;
             document.querySelector(".pa1 p+p").textContent = polterabend[0].tekst1_afsnit;
 
-
-
             document.querySelector(".pa1 img").src = polterabend[0].billede1.guid;
-
-
+            document.querySelector(".pa1 img").alt = "Christian Edwards Copenhagen Glass";
 
             document.querySelector(".pa2 h2").textContent = polterabend[0].overskrift2;
             document.querySelector(".pa2 h3").textContent = polterabend[0].underoverskrift2;
@@ -219,27 +233,12 @@
             document.querySelector(".pa2 p").textContent = polterabend[0].tekst2;
             document.querySelector(".pa2 p+p").textContent = polterabend[0].gavekort_tekst;
 
-
-
             document.querySelector(".pa2 img").src = polterabend[0].billede2.guid;
-
-
+            document.querySelector(".pa2 img").alt = "Christian Edwards Copenhagen Glass";
         }
+
     </script>
     <script src="script.js"></script>
-    <!-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>-->
+</body>
 
-    <!--    <script>
-        AOS.init();
-    </script>
-    <script>
-        AOS.init({
-            easing: 'ease-out-back',
-            duration: 1000
-        });
-<<<<<<< HEAD
-    </script>-->
-
-
-
-</body></html>
+</html>

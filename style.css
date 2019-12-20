@@ -37,132 +37,6 @@ li {
     color: black;
 }
 
-
-
-/* Menu Desktop start */
-
-
-
-
-
-#menu-desktop {}
-
-.menu-wrapper {
-    position: fixed;
-    top: 0;
-    display: none;
-    grid-template-columns: 80px 150px auto 150px 80px;
-    grid-template-rows: 100px;
-    justify-items: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    height: 100px;
-    width: 100vw;
-    -webkit-transition: height .5s cubic-bezier(.19, 1, .22, 1);
-    transition: height .5s cubic-bezier(.19, 1, .22, 1);
-    background-color: #f5f5f5;
-    z-index: 200;
-    border-bottom: 1px solid black;
-}
-
-
-.header-menu-container {
-
-    grid-column: 3 / span 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    flex-wrap: nowrap;
-    flex-direction: row;
-
-}
-
-.kurv-menu {
-    justify-self: start;
-    margin-top: 5px;
-
-
-}
-
-.kurv-menu img {
-    height: 21px;
-    width: auto;
-}
-
-.header-menu-container a {
-    display: inline-block;
-    color: black;
-    text-decoration: none;
-    list-style-type: none;
-}
-
-.header-menu-container .webshop-menu {
-    justify-content: flex-end;
-    grid-column: 3 / span 1;
-}
-
-.header-menu-container .kurv {
-    height: 30px;
-    width: 30p;
-}
-
-.webshop-menu a {
-    display: inline-block;
-    color: black;
-    text-decoration: none;
-    list-style-type: none;
-
-    border: none;
-}
-
-
-.header-menu-container li {
-    text-align: center;
-    display: inline-block;
-    margin-left: 30px;
-
-    text-transform: uppercase;
-    transition: ease-in-out 0.1s;
-}
-
-.header-menu-container li:hover {
-    text-decoration: underline;
-    transform: scale(1.02);
-}
-
-.header-menu-container a {
-    text-decoration: none;
-    list-style-type: none;
-    margin-right: 15px;
-    padding-right: 15px;
-}
-
-.desktop-logo img {
-    height: 80px;
-    width: auto;
-
-
-
-}
-
-/* Menu Desktop SLUT */
-
-.headerBaggrund {
-    background-image: url(img/baggrund.png);
-    background-size: cover;
-
-}
-
-.baggrund1 {
-    background-image: url(img/baggrund.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 100%;
-    width: 100%;
-}
-
 nav h1 {
     font-family: "Roboto", sans-serif;
     font-weight: 300;
@@ -176,22 +50,131 @@ nav a {
     letter-spacing: 2px;
     color: black;
     text-decoration: none;
+}
 
+.noscroll {
+    overflow-x: hidden;
+}
+
+.header-menu-container .active,
+.menu-wrapper .active {
+    color: #f5f5f5;
+}
+
+/* Menu Desktop START */
+
+#menu-desktop {}
+
+.menu-wrapper {
+    /* Containeren til vores desktop-menu - Grid struktur og fixed */
+    position: fixed;
+    top: 0;
+    display: none;
+    grid-template-columns: 80px 150px auto 150px 80px;
+    /* Selve grid strukturen */
+    grid-template-rows: 100px;
+    justify-items: center;
+    /*justify'er alle elementer  .menu-wrapper i centrum */
+    align-items: center;
+    /*sætter alle items i .menu-wrapper i centrum */
+    width: 100vw;
+    background-color: #f5f5f5;
+    z-index: 200;
+    border-bottom: 1px solid black;
+}
+
+.header-menu-container {
+    /* Containeren til vores menu-punkter */
+    grid-column: 3 / span 1;
+    /* Definerer hvor containeren skal starte i grid'et, og hvor langt det skal strække sig */
+    display: flex;
+    align-items: center;
+    margin-left: 15px;
+}
+
+.header-menu-container a {
+    color: black;
+    text-decoration: none;
+    list-style-type: none;
+    transition: ease-in-out 0.3s;
+}
+
+.kurv-menu {
+    justify-self: start;
+    /* definerer at vores indkøbskurv skal ligge sig i starten af dens grid-box, modsat centrum som alle andre ligger i */
+    margin-top: 5px;
+}
+
+
+.header-menu-container .kurv {
+    height: 30px;
+    width: 30p;
+}
+
+.header-menu-container a {
+    text-decoration: none;
+    list-style-type: none;
 }
 
 nav .header-menu-container a:nth-child(1),
 nav .header-menu-container a:nth-child(4) {
     border-right: 0.5px solid black;
+    padding-right: 15px;
 }
 
+nav .header-menu-container a {
+    margin: 10px;
+}
+
+.kurv-menu {
+    justify-self: start;
+    margin-top: 5px;
+}
+
+.kurv-menu img {
+    height: 21px;
+    width: auto;
+}
+
+.desktop-logo img {
+    height: 80px;
+    width: auto;
+}
+
+.header-menu-container a:hover,
+.menu-wrapper a:hover {
+    text-decoration: underline;
+    transform: scale(1.05);
+}
+
+.headerBaggrund {
+    background-image: url(img/baggrund.png);
+    background-size: cover;
+}
+
+/* Menu Desktop SLUT */
 
 
 /* mobile menu START */
+
+#menu-mobile {
+    background-color: #ffffff;
+    height: 75px;
+    border-bottom: 1px solid black;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: left;
+    align-items: center;
+    position: fixed;
+    width: 100vw;
+    z-index: 200;
+    top: 0;
+}
+
 .mobile-menu-dropdown {
     position: absolute;
     z-index: 998;
     color: black;
-
     height: 100%;
     display: inline-block;
     -webkit-transition: 200ms left cubic-bezier(0.77, 0, 0.175, 1);
@@ -199,11 +182,9 @@ nav .header-menu-container a:nth-child(4) {
     width: 500px;
     left: -500px;
     text-align: center;
-
 }
 
 .mobile-menu-dropdown ul {
-
     text-align: left;
     padding: 50px;
 }
@@ -228,10 +209,6 @@ nav .header-menu-container a:nth-child(4) {
 
 }
 
-.flex-reverse {
-    flex-direction: row-reverse;
-}
-
 .atags-mobile-menu a {
     display: block;
     margin-bottom: 30px;
@@ -247,46 +224,70 @@ nav .header-menu-container a:nth-child(4) {
 
 /* mobile menu SLUT */
 
-/* Main sectiocs FLEX START */
+/* Main sections FLEX START */
+
 
 .flex-container {
+    /* display flex & wrap til de elementer som skal være containere for elementer der skal flex'e */
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    /* centrere indhold */
     align-items: center;
+    /* centrere indhold */
     text-align: center;
+    /* centrere indhold */
     min-height: 400px;
 }
 
-.tekst-container {
-    text-align: left;
-    padding-left: 10px;
-    padding-right: 10px;
-
-}
-
-.info-container {}
-
-.info-container h2 {
-    padding-bottom: 20px;
-    font-size: 26px;
-}
-
-.flex-container img {}
-
 .flex-item {
+    /* definerer hvor stor en del element skal optage (flex-grow), og definerer hvor stor basis elementet skal have til rådighed inden det flex'er */
     flex-grow: 1;
     flex-basis: 400px;
     margin: 0 auto;
 }
 
+.flex-reverse {
+    /* flex'er elementet modsat */
+    flex-direction: row-reverse;
+}
+
+.tekst-container {
+    /* Definerer hvordan tekst i vores sectioner skal ligge sig */
+    text-align: left;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
 
 /* Main sectiocs FLEX SLUT */
 
+/*** forside  START***/
 
+main {
+    padding-top: 75px;
+}
 
+.container-max {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+}
 
-/*** forside ***/
+section h1 {
+    padding-top: 30px;
+    padding-left: 10px;
+    font-size: 28px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 600;
+    padding-bottom: 30px;
+    text-transform: uppercase;
+}
+
+#nyhavnsglaspusteri {
+    padding-top: 37px;
+}
+
 #nyhavnsglaspusteri,
 #glaspusterchristianedwards,
 #signature {
@@ -302,7 +303,11 @@ nav .header-menu-container a:nth-child(4) {
     padding-bottom: 50px;
 }
 
+#video-section {
+    padding-top: 0;
+}
 
+/* Banner Section START */
 .banner-picture {
     background-image: url(img/banner.png);
     background-size: cover;
@@ -310,9 +315,6 @@ nav .header-menu-container a:nth-child(4) {
     width: 100%;
     background-repeat: no-repeat;
     background-position: center;
-
-
-
 }
 
 .banner-tekst {
@@ -324,7 +326,6 @@ nav .header-menu-container a:nth-child(4) {
     position: relative;
     left: 10px;
     top: 80px;
-
 }
 
 .banner-tekst h2 {
@@ -334,10 +335,15 @@ nav .header-menu-container a:nth-child(4) {
     font-family: "Roboto", sans-serif;
     padding-bottom: 10px;
     filter: brightness(1.7);
-
-
 }
 
+#banner button {
+    margin-top: 15px;
+}
+
+/* Banner Section SLUT */
+
+/* Main button styling START */
 #banner button,
 #nyhavnsglaspusteri button,
 #teambuilding button,
@@ -378,53 +384,33 @@ nav .header-menu-container a:nth-child(4) {
     transform: scale(1.1);
 }
 
-#banner button {
-    margin-top: 15px;
-}
+/* Main button styling SLUT */
 
 /**** instagram embed ***/
 
-.snapwidget-widget {
-    -webkit-transform: scale(0.8);
-    transform: scale(0.8);
-    margin: 0 auto;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
+#instagram {
+    padding-top: 50px;
+    text-align: center;
+
 }
 
-.snapwidget-widget:hover {
-    -webkit-transform: scale(0.9);
-    transform: scale(0.9);
-    cursor: pointer;
-    -webkit-transition: 1s ease-in;
-    transition: 1s ease-in;
-}
-
-/***** FLEX ***/
-
-
-
-section h1 {
-    padding-top: 30px;
-    padding-left: 10px;
-    font-size: 28px;
-    font-family: "Roboto", sans-serif;
-    font-weight: 600;
+#instagram h2 {
     padding-bottom: 30px;
-    text-transform: uppercase;
-
 }
 
-/***** OM SECTION ****/
+.instagram-container {
+    display: flex;
+    justify-content: center;
+}
+
+.instagram-container img {
 
 
+    margin-bottom: 50px;
+}
 
+
+/* #glaspuster christian Edwards classes & styling START */
 .fbg h2 {
     text-transform: uppercase;
     letter-spacing: 0.4px;
@@ -434,13 +420,11 @@ section h1 {
 
 .fbg p {
     padding: 2px;
-
     line-height: 28px;
     margin-top: 20px;
     margin-bottom: 20px;
     font-size: 16px;
     font-family: "Helvetica", sans-serif;
-
 }
 
 .fbg a,
@@ -460,34 +444,9 @@ section h1 {
 
 }
 
-#teambuilding img,
-#polterabend img,
-#nyhavnsglaspusteri img,
-#glaspusterchristianedwards img {}
+/* #glaspuster christian Edwards & styling SLUT */
 
-#nyhavnsglaspusteri {
-    padding-top: 37px;
-}
-
-#events p,
-#forside p {
-    padding: 40px;
-    padding-bottom: 0px;
-    padding-top: 20px;
-    line-height: 25px;
-    font-family: "Helvetica", sans-serif;
-    font-size: 19px;
-}
-
-#nyhavnsglaspusteri,
-#teambuilding {}
-
-#video-section {
-    padding-top: 0;
-}
-
-
-/* Galleri -side */
+/* Galleri side START */
 
 #galleri-grid {
     display: grid;
@@ -495,7 +454,6 @@ section h1 {
     grid-auto-rows: auto;
     grid-column-gap: 3px;
     grid-row-gap: 1.5px;
-
     padding-left: 10px;
     padding-right: 10px;
     padding-bottom: 75px;
@@ -503,33 +461,29 @@ section h1 {
 
 .singleProdukt {
     transition: ease-in-out 0.3s;
-
 }
 
 .singleProdukt:hover {
     transform: scale(1.05);
 }
 
-
 .webshop-item-container,
 .galleri-item-container {
     overflow: hidden;
 }
 
+/* Galleri side SLUT */
 
-
-/* webshop-side */
+/* Webshop side START */
 #webshop-grid {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     grid-auto-rows: auto;
     grid-gap: 20px;
-
     padding-left: 10px;
     padding-right: 10px;
     padding-bottom: 75px;
 }
-
 
 #webshop h3 {
     font-family: "Roboto", sans-serif;
@@ -539,6 +493,27 @@ section h1 {
     font-size: 20px
 }
 
+.webshop-title-container p {
+    font-family: "helvetica", sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    justify-self: end;
+}
+
+.webshop-title-container {
+    margin-right: 35px;
+    display: grid;
+    grid-template-columns: auto auto 30px;
+    align-items: center;
+}
+
+.webshop-title-container img {
+    padding-left: 20px;
+
+    height: 30px;
+    width: auto;
+}
+
 .price-container {
     display: flex;
     flex-wrap: nowrap;
@@ -546,15 +521,73 @@ section h1 {
     align-items: center;
 }
 
-
-
 .button4 {
     background-color: white;
     color: black;
     border: 2px solid #e7e7e7;
 }
 
-/* kontakt side */
+.betalingsmetoder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.betalingsmetoder img {
+    height: 30px;
+    width: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-bottom: 40px;
+}
+
+
+
+/* Webshop side SLUT */
+
+/* Kontakt side START */
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: repeat(3, 1fr);
+    justify-content: center;
+    grid-gap: 25px;
+
+}
+
+.grid-container .butik-container {
+    grid-row: 2 / span 1;
+    grid-column: 1 / span 2;
+    margin: 0;
+}
+
+
+.google-maps {
+    position: relative;
+    padding-top: 99%;
+    height: 0;
+    overflow: hidden;
+    grid-row: 3 / span 1;
+    grid-column: 1 / span 2;
+}
+
+#mail-form {
+    max-width: 1180px;
+    margin: 0 auto;
+    grid-row: 4 / span 1;
+    grid-column: 1 / span 2;
+    padding-bottom: 35px;
+}
+
+.butik-container .tekst-container {
+    margin: 0;
+}
+
+.grid-container .tekst-container {
+    margin: 0;
+    padding: 0;
+}
 
 .aabningstider-container {
     display: grid;
@@ -563,11 +596,14 @@ section h1 {
     padding-bottom: 30px;
 }
 
+.info-container h2 {
+    padding-bottom: 20px;
+    font-size: 26px;
+}
 
 #kontakt aabningstider-container {
     text-align: center;
     font-size: 18px;
-
 }
 
 #kontakt p,
@@ -581,17 +617,6 @@ section h1 {
     font-weight: 300;
 }
 
-.google-maps {
-    position: relative;
-    padding-top: 99%;
-
-
-    /* This is the aspect ratio */
-    height: 0;
-    overflow: hidden;
-    grid-row: 3 / span 2;
-    grid-column: 1 / span 2;
-}
 
 .google-maps iframe {
     position: absolute;
@@ -601,40 +626,42 @@ section h1 {
     height: 100%;
 }
 
-.grid-container .butik-container {
-    grid-row: 2 / span 1;
-    grid-column: 1 / span 1;
-    margin: 0;
+.kontakt h5,
+.kontakt p,
+.kontakt a {
+    color: black;
+    text-decoration: none;
+    list-style-type: none;
 }
 
-.butik-container .tekst-container {
-    margin: 0;
-
+.kontakt a p:hover {
+    text-decoration: underline;
+    font-weight: 500;
 }
 
-.grid-container .tekst-container {
-    margin: 0;
-    padding: 0;
+.kontakt h6:hover {
+    text-decoration: underline;
 }
 
-#mail-form {
-    max-width: 1180px;
-    margin: 0 auto;
-
-
-    grid-row: 3 / span 2;
-    grid-column: 3 / span 2;
-    padding-bottom: 35px;
+.kontakt h6,
+.butik-container h6 {
+    text-decoration: underline;
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: black;
+    font-weight: 500;
+    transition: ease-in-out 0.3s;
 }
 
-.grid-container {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-auto-rows: repeat(3, 1fr);
-    justify-content: center;
-    grid-gap: 25px;
 
+
+
+.mail-container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
 }
+
 
 .grid-container .butik-container h2 {
     padding-bottom: 20px;
@@ -667,27 +694,16 @@ input[type=submit]:hover {
     color: whitesmoke;
 }
 
-.mail-container {
-    border-radius: 5px;
-    background-color: #f2f2f2;
-    padding: 20px;
-}
+/* Kontakt side SLUT */
 
 
-
-/*****OM SECTION DONE*****/
-
-/**** popUp ****/
-.noscroll {
-    overflow-x: hidden;
-}
+/**** popUp START ****/
 
 .popUp-container .container-max {
     max-width: 720px;
 }
 
 .popUp-container {
-
     display: none;
     width: 100vw;
     background-color: white;
@@ -706,20 +722,8 @@ input[type=submit]:hover {
     cursor: pointer;
 }
 
-
-
 .produkt-billede {
     text-align: center;
-}
-
-
-.flex-test-billede {
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    min-height: 10px;
-    width: 100%;
-
 }
 
 .produkt-container {
@@ -728,51 +732,15 @@ input[type=submit]:hover {
     overflow-y: scroll;
 }
 
-.produkt-billede img {}
-
 .item-container {
     text-align: center;
     cursor: pointer;
 }
 
-
-/***** farver***/
-
-
-
-.gul {
-    width: 20px;
-    height: 20px;
-    border: 2px solid black;
-    background-color: #ffeb00;
-
-}
-
-.roed {
-    width: 20px;
-    height: 20px;
-    border: 2px solid black;
-    background-color: hsl(0, 100%, 50%);
-
-}
-
-
-
-
-
 .pris p {
     width: 100%;
-
     font-size: 30px;
     float: right;
-
-}
-
-.farver {
-    display: flex;
-    flex-wrap: nowrap;
-    flex-direction: row;
-
 }
 
 .popUp-container .tekst-container p,
@@ -780,15 +748,11 @@ input[type=submit]:hover {
     font-family: "Helvetica", sans-serif;
     font-size: 16px;
     font-weight: 300;
-
-
     padding-bottom: 20px;
-
 }
 
 .popUp-container h1 {
     padding-left: 0;
-
 }
 
 .popUp-container h2 {
@@ -796,10 +760,8 @@ input[type=submit]:hover {
     padding-bottom: 10px;
 }
 
-.specifikationer,
-.farver {
+.specifikationer {
     padding-top: 20px;
-
 }
 
 .flex {
@@ -808,32 +770,21 @@ input[type=submit]:hover {
     flex-direction: row;
 }
 
-/**** læg i kurv knap ***/
-
-
 .buy-container {
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-between;
-
-
 }
 
 .buy-button {
-
     background: transparent;
     border-radius: 2px;
     border: 1px solid black;
     height: 50px;
     width: 130px;
-
-
-
-
 }
 
 .buybutton p {
-
     font-family: "Roboto", sans-serif;
     font-size: 20px;
     padding: 0px;
@@ -841,42 +792,10 @@ input[type=submit]:hover {
     bottom: 8px;
 }
 
-
-main {
-    padding-top: 75px;
+/**** popUp SLUT ****/
 
 
-}
-
-.container-max {
-    width: 100%;
-    max-width: 1440px;
-    margin: 0 auto;
-}
-
-
-
-#menu-mobile {
-    background-color: #ffffff;
-    height: 75px;
-    border-bottom: 1px solid black;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    justify-content: left;
-
-    align-items: center;
-    position: fixed;
-    width: 100vw;
-    z-index: 200;
-    top: 0;
-
-
-
-}
-
-/* Footer */
-
-
+/* Footer START */
 footer {
     text-align: center;
     background-color: rgba(201, 190, 180, 0);
@@ -903,19 +822,14 @@ footer button {
     background-color: none;
     background-color: transparent;
     cursor: pointer;
-
     transition: ease-in-out 0.3s;
 }
 
 footer h4 {
     font-size: 22px;
     font-weight: 600;
-
     padding-bottom: 25px;
 }
-
-
-
 
 footer p,
 footer h3 {
@@ -924,12 +838,9 @@ footer h3 {
 
 footer button p {
     color: black;
-
 }
 
-
 footer button:hover {
-
     border: 3px solid white;
     background-color: black;
     color: white;
@@ -944,8 +855,6 @@ footer button p:hover {
     align-content: center;
 }
 
-
-
 .butik-container,
 .kontakt,
 .aabningstid {
@@ -953,40 +862,6 @@ footer button p:hover {
     flex-grow: 1;
     flex-basis: 100px;
     margin: 0 auto;
-
-}
-
-.kontakt h5,
-.kontakt p,
-
-.kontakt a {
-    color: black;
-    text-decoration: none;
-    list-style-type: none;
-
-
-}
-
-.kontakt a p:hover {
-    text-decoration: underline;
-    font-weight: 500;
-}
-
-.kontakt h6:hover {
-
-    text-decoration: underline;
-}
-
-.kontakt h6 {
-    text-decoration: underline;
-
-    margin-bottom: 10px;
-    font-size: 16px;
-    color: black;
-    font-weight: 500;
-    transition: ease-in-out 0.3s;
-
-
 }
 
 .butik-container h5,
@@ -995,21 +870,16 @@ footer button p:hover {
     padding-bottom: 10px;
 }
 
-
 .aabningstiden {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(7, 27px);
-
 }
 
 .aabningstiden h3 {
     padding-right: 20px;
 }
 
-#menu-mobile {
-    height: 75px;
-}
 
 .footer-container a,
 .footer-container p {
@@ -1049,13 +919,7 @@ footer button p:hover {
     margin-bottom: 20px;
 }
 
-/**** footer ****/
-
-
-
-
-/**** events side ***/
-
+/**** footer SLUT ****/
 
 
 /****** SPLASH SECTION ***/
@@ -1071,7 +935,6 @@ footer button p:hover {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
-
 
 }
 
@@ -1136,10 +999,9 @@ footer button p:hover {
     object-fit: cover;
 }
 
-/***** KNAP PÅ VIDEO ****/
+/***** KNAP PÅ VIDEO START ****/
 
 .categoryWrapper {
-
 
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1159,7 +1021,6 @@ footer button p:hover {
     left: 0;
     right: 0;
     bottom: 0;
-
     content: '';
     opacity: 0;
     -webkit-transition: opacity 0.9s ease 0s;
@@ -1227,13 +1088,10 @@ footer button p:hover {
     left: 50%;
     width: 20px;
     height: 0;
-
     border: 1px solid white;
     border-left: none;
     border-bottom: none;
-
     -webkit-transition: height 0.15s ease-out, width 0.15s ease-out 0.15s;
-
     transition: height 0.15s ease-out, width 0.15s ease-out 0.15s;
 }
 
@@ -1251,13 +1109,11 @@ footer button p:hover {
     right: 50%;
     width: 20px;
     height: 0;
-
     border: 1px solid white;
     border-right: none;
     border-bottom: none;
 
     -webkit-transition: height 0.15s ease-out, width 0.15s ease-out 0.15s;
-
     transition: height 0.15s ease-out, width 0.15s ease-out 0.15s;
 }
 
@@ -1276,7 +1132,6 @@ footer button p:hover {
     width: 1px;
     height: 1px;
     opacity: 0;
-
 }
 
 .categoryWrapper:hover button > span > span:before {
@@ -1296,7 +1151,6 @@ footer button p:hover {
     width: 1px;
     height: 1px;
     opacity: 0;
-
 }
 
 .categoryWrapper:hover button > span > span:after {
@@ -1355,10 +1209,10 @@ footer button p:hover {
     font-family: "Roboto", sans-serif;
 }
 
-/***** SPLASH SECTION slut ****/
+/***** KNAP PÅ VIDEO SLUT ****/
 
 #instagram {
-    display: none;
+    display: block;
 }
 
 /* Media queries */
@@ -1374,14 +1228,6 @@ footer button p:hover {
         -ms-flex-pack: center;
         justify-content: center;
         font-size: 20px;
-
-    }
-
-    .fa-facebook-square:hover,
-    .fa-instagram:hover,
-    .fa-envelope:hover {
-        color: white;
-        transform: scale(1.2);
     }
 
     .footer-container {
@@ -1401,20 +1247,6 @@ footer button p:hover {
         margin-bottom: 10px;
     }
 
-    /**** footer ****/
-
-}
-
-.active {
-    color: white;
-
-}
-
-/* Media queries */
-/** FORSIDE **/
-/** forside knap og headline mobil ***/
-
-@media screen and (min-width: 375px) {
     .cta-knap {
         display: -webkit-box;
         display: -ms-flexbox;
@@ -1435,7 +1267,6 @@ footer button p:hover {
         margin: 0 auto;
         position: relative;
         left: 10px;
-
     }
 
     .hero-video {
@@ -1447,8 +1278,6 @@ footer button p:hover {
         top: 0px;
         left: 0px;
         margin-top: 20px;
-
-
     }
 
     .categoryWrapper a {
@@ -1472,7 +1301,6 @@ footer button p:hover {
 /*** forside knap og headline mobil slut ***/
 
 @media screen and (min-width: 650px) {
-
     .flex-container img {
         width: 100%;
         padding-left: 20px;
@@ -1503,8 +1331,6 @@ footer button p:hover {
     .fbg h2 {
         text-transform: uppercase;
         letter-spacing: 0.4px;
-
-
     }
 
     main {
@@ -1522,12 +1348,6 @@ footer button p:hover {
     .container-max {
         width: 75%;
     }
-
-
-
-    .butik-container,
-    .kontakt,
-    .aabningstid {}
 
     .mobile-footer {
         display: none;
@@ -1552,27 +1372,27 @@ footer button p:hover {
         margin-top: 70px;
     }
 
-
     .footer button p {
         text-decoration: underline;
     }
 
+    .betalingsmetoder .mobilepay {
+        height: 80px;
+        width: auto;
+    }
+
+    .betalingsmetoder img {
+        height: 50px;
+    }
 
 }
 
 @media screen and (min-width: 950px) {
-    .container-max {}
-
     .banner-tekst {
-
         width: 400px;
         top: 300px;
         left: 200px;
     }
-}
-
-@media screen and (min-width: 1050px) {
-    .container-max {}
 }
 
 @media screen and (min-width: 1050px) {
@@ -1585,8 +1405,40 @@ footer button p:hover {
         padding-left: 30px;
         padding-right: 30px;
     }
-}
 
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-auto-rows: repeat(3, 1fr);
+        justify-content: center;
+        grid-gap: 25px;
+
+    }
+
+    .grid-container .butik-container {
+        grid-row: 2 / span 1;
+        grid-column: 1 / span 1;
+        margin: 0;
+    }
+
+
+    .google-maps {
+        position: relative;
+        padding-top: 99%;
+        height: 0;
+        overflow: hidden;
+        grid-row: 3 / span 2;
+        grid-column: 1 / span 2;
+    }
+
+    #mail-form {
+        max-width: 1180px;
+        margin: 0 auto;
+        grid-row: 3 / span 2;
+        grid-column: 3 / span 2;
+        padding-bottom: 35px;
+    }
+}
 
 @media screen and (min-width: 1340px) {
 

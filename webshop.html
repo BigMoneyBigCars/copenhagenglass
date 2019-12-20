@@ -7,8 +7,17 @@
     <link rel="stylesheet" href="burgermenu.css">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,700&display=swap" rel="style.css">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <meta name="description" content=“Copenhagen Glass, ligger centralt i Nyhavns hyggelige gader. Kom ned og besøg butikken på Toldbodgade 4, og se Christian Edwards unikke produkter. En sjov og anderledes dag med firmaet, kæreste, venner eller familie. Kom og oplev Copenhagen Glass` utrolige univers, se mere på copenhagenglass.dk ”>
+    <meta name="keywords" content="copenhagen glass, glass, nyhavns glaspusteri, glaskunst, kunst, glas, polterabend, teambuilding, glas, glassblowing, glassart, glaspusteri, christian edwards">
 
+
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Copenhagen Glass</title>
 </head>
@@ -34,7 +43,6 @@
                 <a href="index.html">
                     <div class="mobil-logo"> <img src="img/logo-trans.png" alt="Logo Copenhagen GLass"></div>
                 </a>
-
                 <div class="menu__toggler"><span></span></div>
                 <div class="mobile-menu-dropdown headerBaggrund">
                     <div class="mobil-logo"> <img src="img/logo-trans.png" alt="Logo Copenhagen GLass"></div>
@@ -49,57 +57,51 @@
             </div>
         </nav>
     </header>
-    <main id="main" class="baggrund1">
+
+    <main id="main" class="headerBaggrund">
         <section id="webshop">
             <div class="container-max">
-                <h1>Webshop</h1>
+                <div class="webshop-title-container">
+                    <h1>Webshop</h1>
+                    <p>Fri fragt ved køb over 500kr </p><img src="img/fragt-bil.svg" alt="Fri fragt over 500kr billede">
+                </div>
                 <div id="webshop-grid">
                 </div>
             </div>
             <template class="webshop-template">
-                <div class="item-container">
-                    <div class="webshop-item-container">
-                        <div class="singleProdukt">
-                            <img src="" alt="">
+                <article>
+                    <div class="item-container">
+                        <div class="webshop-item-container">
+                            <div class="singleProdukt">
+                                <img src="" alt="">
+                            </div>
+
                         </div>
-
+                        <div class="price-container">
+                            <h3 class="title"></h3>
+                            <button class="button">
+                                Se Produkt</button>
+                        </div>
                     </div>
-                    <div class="price-container">
-                        <h3 class="title"></h3>
-                        <button class="button">
-                            Se Produkt</button>
-                    </div>
-                </div>
+                </article>
             </template>
-
             <div class="popUp-container headerBaggrund">
                 <div class="container-max">
                     <div class="produkt-container">
-
                         <div class="luk"><img src="img/luk.png" alt="tilbageknap"></div>
-
-
-
                         <div class="produkt-container">
-
                             <div class="produkt-billede">
                                 <img src="" alt="billede-af-produkt">
-
                             </div>
-
                             <div class="tekst-container">
-
                                 <h1></h1>
                                 <p></p>
                                 <div>
                                     <h2>Bemærk:</h2>
                                     <p class="bemaerk"></p>
                                 </div>
-
                                 <div class="buy-container">
-
                                     <h2></h2>
-
                                     <button class="buy-button">
                                         Læg i kurv
                                     </button>
@@ -108,11 +110,15 @@
                         </div>
                     </div>
                 </div>
-
             </div>
-
-
         </section>
+
+        <div class="betalingsmetoder">
+
+            <img src="img/paypal.svg" alt="paypal betalingsmetode">
+            <img src="img/visa.svg" alt="visa betalingsmetode">
+            <img src="img/mobilepay.svg" class="mobilepay" alt="mobilepay betalingsmetode">
+        </div>
     </main>
     <footer id="footer" class="headerBaggrund">
         <div class="container">
@@ -126,6 +132,9 @@
                     <p>Telefon: 40 17 01 34</p>
                 </div>
                 <p>CVR: 38766309</p>
+                <a href="https://mostvalue.dk/Copenhagenglass/CPHglass/Handelsbetingelser.pdf" target="_blank">
+                    <h6>Handelsebetingelser</h6>
+                </a>
             </div>
             <div class="kontakt">
                 <h4>Booking</h4>
@@ -135,13 +144,9 @@
                 <a href="events.html">
                     <p>Polterabend</p>
                 </a>
-
-
-
                 <a href="kontakt.html">
                     <button>Kontakt Butik</button>
                 </a>
-
                 <a href="webshop.html">
                     <h6>Køb et gavekort</h6>
                 </a>
@@ -149,7 +154,6 @@
             <div class="aabningstid">
                 <h4>Åbningstider</h4>
                 <div class="aabningstiden">
-
                     <h3>Mandag</h3>
                     <p class="mandag"></p>
                     <h3>Tirsdag</h3>
@@ -176,117 +180,66 @@
             <i class="fa fa-envelope" style="font-size:24px" aria-hidden="true"></i>
         </div>
         <p>Copyright: Copenhagen Glass 2019</p>
-
     </footer>
-
-
-
-
-
-
-
-
     <script src="script.js"></script>
     <script>
-        document.addEventListener("DOMContentLoaded", getJson);
-        let webshopItems;
+        document.addEventListener("DOMContentLoaded", getJson); // Kalder getJson når vinduet er loadet.
 
-        async function getJson() {
-            let jsonData = await fetch("https://mostvalue.dk/Copenhagenglass/wordpress/wp-json/wp/v2/Webshop_item?per_page=20");
+        let webshopItems = []; // variablen "webshopItems" er nu et array
+
+
+
+        async function getJson() { // I denne variabel hentes json ind
+
+            let url = "https://mostvalue.dk/Copenhagenglass/wordpress/wp-json/wp/v2/Webshop_item?per_page=20"
+
+            let jsonData = await fetch(url); // Definerer den url
 
             webshopItems = await jsonData.json();
+
             console.log(webshopItems);
+
             visWebshop();
-
-        };
-
-        function visWebshop() {
-
-            document.querySelector(".luk").addEventListener('click', noDisplaySingle);
-            const skabelon = document.querySelector(".webshop-template");
-            const liste = document.querySelector("#webshop-grid");
-
-            webshopItems.forEach((item, index) => {
-                const klon = skabelon.cloneNode(true).content;
-
-                klon.querySelector("img").src = item.billede.guid;
-                klon.querySelector("img").alt = "slider image";
-                klon.querySelector(".title").innerHTML = item.title.rendered;
-                console.log(index);
-
-                klon.querySelector(".singleProdukt").addEventListener('click', function() {
-                    /*                    showBike(webshopItems[index]);*/
-                    visSingleProdukt(webshopItems[index]);
-
-                    console.log(index);
-
-
-                    document.querySelector(".popUp-container").style.display = "block";
-                    document.querySelector("body").classList.add("noscroll");
-
-                    document.querySelector(".produkt-billede img").src = item.billede.guid;
-                    document.querySelector(".tekst-container h1").textContent = item.title.rendered;
-                    document.querySelector(".tekst-container p").textContent = item.beskrivelse;
-                    document.querySelector(".bemaerk").textContent = item.beskrivelse_bemaerk;
-
-
-
-                    document.querySelector(".buy-container h2").textContent = "Pris: " + item.pris + " DKK";
-
-                })
-
-                liste.appendChild(klon);
-            });
-
-
         };
 
 
+        function visWebshop() { // Denne funktion viser indholdet i vores webshop
+
+            const skabelon = document.querySelector(".webshop-template"); // definerer skabelon til at være .webshop-template i vores html
+
+            const liste = document.querySelector("#webshop-grid"); // definerer liste til at være #webshop-grid i vores html
+
+            webshopItems.forEach((item, index) => { // gennemløber array'et samt index'et
+
+                const klon = skabelon.cloneNode(true).content; // variablen "klon" kloner nu skabelon(vores template) fra html'en
+
+                klon.querySelector("img").src = item.billede.guid; // indsætter data'en med endpointen "billede.guid" i færste img tag i voores html-template
+                klon.querySelector("img").alt = item.slug; // indsætter alt-teksten i færste img tag i voores html-template
+                klon.querySelector(".title").innerHTML = item.title.rendered; // indsætter data'en med endpointen "titel.rendered" i elementet .title
+                klon.querySelector(".singleProdukt").addEventListener('click', function() { // tilføjer click-eventlisteners på elementer men classen .singleProdukt
 
 
-        function visSingleProdukt(data) {
+                    document.querySelector(".produkt-billede img").src = item.billede.guid; // indsætter data i vores popUp, udfra hvilket produkt der bliver trykket på
+                    document.querySelector(".tekst-container h1").textContent = item.title.rendered; //--
+                    document.querySelector(".tekst-container p").textContent = item.beskrivelse; //--
+                    document.querySelector(".bemaerk").textContent = item.beskrivelse_bemaerk; //--
+                    document.querySelector(".buy-container h2").textContent = "Pris: " + item.pris + " DKK"; //--
 
-            console.log(data);
+                    document.querySelector(".popUp-container").style.display = "block"; // skifter vores popUp vindue fra display: none til display: block
 
-            const skabelonSingle = document.querySelector(".popUp-container");
-            const listeSingle = document.querySelector("#popUp-container");
+                    document.querySelector("body").classList.add("noscroll"); // tilføjer overflow: hidden) til body, og fjerner muligheden for at scrolle imens popUp'en er åben
 
-
-            const klon = skabelonSingle.cloneNode(true).content;
-            console.log(klon);
-            /*    klon.querySelector(".price").textContent = data.pris + " ,-";
-                klon.querySelector(".frameSize").innerHTML = data.framesize;
-                klon.querySelector(".weight").innerHTML = data.weight;
-
-                klon.querySelector(".colorCombinations").innerHTML = data.colorcombination;
-            klon.querySelector(".produkt-billede img").src = data.billede.guid; */
-
-
-
-
-
-        }
-        /*
-                function events() {
                     document.querySelector(".luk").addEventListener('click', noDisplaySingle);
-                    document.querySelector(".singleProdukt").addEventListener('click', displaySingle);
-                }
-*/
+                    // tilføjer click eventlister til vores tilbage/luk pil og kalder "noDisplaySingle" //
+                })
+                liste.appendChild(klon); // kloner til vores destination, som er vores "#Webshop-grid"
+            });
+        };
+
         function noDisplaySingle() {
-            document.querySelector(".popUp-container").style.display = "none";
-            document.querySelector("body").classList.remove("noscroll");
+            document.querySelector(".popUp-container").style.display = "none"; // skifter vores popUp vindue fra display: block til display: none
+            document.querySelector("body").classList.remove("noscroll"); // Fjerner overflow: hidden) til body, og tilføjer muligheden for at scrolle imens popUp'en er lukket
+
         }
-        /*
-                        function displaySingle() {
-                            document.querySelector(".popUp-container").style.display = "block";
-                        }
-
-                        function openSingle() {
-                            console.log("hej");
-
-                        }*/
-
     </script>
-</body>
-
-</html>
+</body></html>

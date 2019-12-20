@@ -7,12 +7,19 @@
     <link rel="stylesheet" href="burgermenu.css">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,700&display=swap" rel="style.css">
-
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Copenhagen Glass</title>
+    <meta name="description" content=“Copenhagen Glass, ligger centralt i Nyhavns hyggelige gader. Kom ned og besøg butikken på Toldbodgade 4, og se Christian Edwards unikke produkter. En sjov og anderledes dag med firmaet, kæreste, venner eller familie. Kom og oplev Copenhagen Glass` utrolige univers, se mere på copenhagenglass.dk ”>
+    <meta name="keywords" content="copenhagen glass, glass, nyhavns glaspusteri, glaskunst, kunst, glas, polterabend, teambuilding, glas, glassblowing, glassart, glaspusteri, christian edwards">
 
+
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <title>Copenhagen Glass</title>
 </head>
 
 <body>
@@ -21,7 +28,7 @@
             <div id="menu-desktop" class="menu-desktop-container">
                 <div class="menu-wrapper  headerBaggrund">
                     <div class="header-menu-container">
-                        <a href="index.html">Forside</a>
+                        <a href="index.html" class="active">Forside</a>
                         <a href="galleri.html">Galleri</a>
                         <a href="index.html" class="desktop-logo"><img src="img/logo-trans.png"></a>
                         <a href="events.html">Events</a>
@@ -32,16 +39,20 @@
                         <a href="index.html"><img src="img/kurv.png" class="kurv"></a></div>
                 </div>
             </div>
+
+
             <div id="menu-mobile" class="headerBaggrund">
                 <a href="index.html">
                     <div class="mobil-logo"> <img src="img/logo-trans.png" alt="Logo Copenhagen GLass"></div>
                 </a>
-
                 <div class="menu__toggler"><span></span></div>
                 <div class="mobile-menu-dropdown headerBaggrund">
-                    <div class="mobil-logo"> <img src="img/logo-trans.png" alt="Logo Copenhagen GLass"></div>
+                    <a href="index.html">
+                        <div class="mobil-logo"> <img src="img/logo-trans.png" alt="Logo Copenhagen GLass"></div>
+                    </a>
                     <ul class="atags-mobile-menu">
-                        <a href="index.html">Forside</a>
+                        <a href="index.html" class="active">Forside</a>
+                        <!--active classen er color:#f5f5f5 -->
                         <a href="galleri.html">Galleri</a>
                         <a href="events.html">Events</a>
                         <a href="kontakt.html">Kontakt</a>
@@ -49,20 +60,21 @@
                     </ul>
                 </div>
             </div>
+
+
+
+
         </nav>
     </header>
-    <main id="main" class="baggrund1">
+    <main id="main" class="headerBaggrund">
         <section id="video-section" class="">
             <div class="categoryWrapper splash-overskrift" style="text-align: center; transform: scale(0.8); left: 0;">
-
-                <h1 data-aos="fade-right" data-aos-duration="3000">Copenhagen Glass</h1>
-                <a div data-aos="fade-up" data-aos-duration="3000" class="cta-knap" href="galleri.html">
+                <h1>Copenhagen Glass</h1>
+                <a class="cta-knap" href="galleri.html">
                     <button>
                         <span>
                             <span>
-
                                 Se galleri
-
                             </span>
                         </span>
                     </button>
@@ -76,43 +88,45 @@
         </section>
         <section id="nyhavnsglaspusteri">
             <div class="container-max">
-                <div class="ng1 flex-reverse flex-container">
-                    <div class="fbg flex-item"><img src="" alt=""></div>
-                    <div class="fbg flex-item">
-                        <div class="tekst-container">
-                            <h2></h2>
-                            <h3></h3>
-                            <p></p>
-                            <p></p>
-                            <p></p>
-                            <a href="events.html"><button>Se Events</button>
-                            </a>
+                <article>
+                    <div class="ng1 flex-reverse flex-container">
+                        <div class="fbg flex-item"><img src="" alt=""></div>
+                        <div class="fbg flex-item">
+                            <div class="tekst-container">
+                                <h2></h2>
+                                <h3></h3>
+                                <p></p>
+                                <p></p>
+                                <p></p>
+                                <a href="events.html"><button>Se Events</button>
+                                </a>
+                            </div>
                         </div>
                     </div>
-                </div>
+                </article>
             </div>
         </section>
-
         <section id="glaspusterchristianedwards">
             <div class="container-max">
-                <div class="gce1 flex-container">
-                    <div class="fbg flex-item"> <img src="" alt=""></div>
-                    <div class="fbg flex-item">
-                        <div class="tekst-container">
-                            <h2></h2>
-                            <h3></h3>
-                            <p></p>
-                            <p></p>
-                            <p></p>
+                <article>
 
+                    <div class="gce1 flex-container">
+                        <div class="fbg flex-item"> <img src="" alt=""></div>
+                        <div class="fbg flex-item">
+                            <div class="tekst-container">
+                                <h2></h2>
+                                <h3></h3>
+                                <p></p>
+                                <p></p>
+                                <p></p>
+
+                            </div>
                         </div>
                     </div>
-                </div>
+                </article>
             </div>
         </section>
-
         <section id="banner">
-
             <div class="banner-picture">
                 <div class="banner-tekst">
                     <h2></h2>
@@ -122,28 +136,37 @@
                     </a>
                 </div>
             </div>
-        </section> <!-- SnapWidget -->
-
+        </section>
         <section id="signature">
             <div class="container-max">
-                <div class="gce1 flex-container">
-                    <div class="fbg flex-item"> <img src="" alt=""></div>
-                    <div class="fbg flex-item">
-                        <div class="tekst-container">
-                            <h2></h2>
-                            <h3></h3>
-                            <p></p>
-                            <p></p>
-                            <p></p>
-                            <a href="webshop.html"><button>Se Webshop</button>
-                            </a>
+                <article>
+                    <div class="gce1 flex-container">
+                        <div class="fbg flex-item"> <img src="" alt=""></div>
+                        <div class="fbg flex-item">
+                            <div class="tekst-container">
+                                <h2></h2>
+                                <h3></h3>
+                                <p></p>
+                                <p></p>
+                                <p></p>
+                                <a href="webshop.html"><button>Se Webshop</button>
+                                </a>
+                            </div>
                         </div>
                     </div>
-                </div>
+                </article>
             </div>
         </section>
         <section id="instagram">
-            <a href="https://www.instagram.com/explore/locations/5280909/nyhavns-glaspusteri/" target="_blank"> <iframe src="https://snapwidget.com/embed/770512" class="snapwidget-widget" allowtransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden; pointer-events: none;  width:375px; height:70vh"></iframe></a>
+            <div class="container-max">
+                <h2>Se også min instagram</h2>
+                <div class="instagram-container"> <a href="https://www.instagram.com/explore/locations/763603741/" target="_blank">
+
+                    </a>
+                    <a href="https://www.instagram.com/explore/locations/763603741/" target="_blank">
+                        <img src="img/insta.png" alt="instagram billede"></a>
+                </div>
+            </div>
         </section>
     </main>
     <script>
@@ -164,12 +187,14 @@
             document.querySelector(".ng1 p+p").textContent = forside[0].tekst1_afsnit;
             document.querySelector(".ng1 p+p+p").textContent = forside[0].tekst1_afsnit2;
             document.querySelector(".ng1 img").src = forside[0].splashvideo.guid;
+            document.querySelector(".ng1 img").alt = "Christian Edwards Copenhagen Glass";
 
 
             document.querySelector("#banner h2").textContent = forside[0].banner_overskrift;
             document.querySelector("#banner p").textContent = forside[0].banner_tekst;
 
             document.querySelector("#signature img").src = forside[0].signature_billede.guid;
+            document.querySelector("#signature img").alt = "Christian Edwards Copenhagen Glass";
             document.querySelector("#signature h2").textContent = forside[0].signature_overskrift;
             document.querySelector("#signature h3").textContent = forside[0].signature_underoverskrift;
             document.querySelector("#signature p").textContent = forside[0].signature_beskrivelse;
@@ -185,31 +210,14 @@
             document.querySelector(".gce1 p+p").textContent = forside[0].tekst2_afsnit;
             document.querySelector(".gce1 p+p+p").textContent = forside[0].tekst2_afsnit2;
             document.querySelector(".gce1 img").src = forside[0].billedeafchristian.guid;
+            document.querySelector(".gce1 img").alt = "Christian Edwards Copenhagen Glass";
         }
     </script>
     <script src="script.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
-    <script>
-        AOS.init();
-    </script>
-    <script>
-        AOS.init({
-            easing: 'ease-out-back',
-            duration: 1000
-        });
-    </script>
-
-
-
-
-
-
     <footer id="footer" class="headerBaggrund">
         <div class="container">
             <div class="butik-container">
                 <h4>Butik</h4>
-
                 <p>Toldbodgade 4
                 </p>
                 <p>1253 København K</p>
@@ -217,6 +225,9 @@
                     <p>Telefon: 40 17 01 34</p>
                 </div>
                 <p>CVR: 38766309</p>
+                <a href="https://mostvalue.dk/Copenhagenglass/CPHglass/Handelsbetingelser.pdf" target="_blank">
+                    <h6>Handelsebetingelser</h6>
+                </a>
             </div>
             <div class="kontakt">
                 <h4>Booking</h4>
@@ -226,21 +237,17 @@
                 <a href="events.html">
                     <p>Polterabend</p>
                 </a>
-
-
-
                 <a href="kontakt.html">
                     <h6>Kontakt Butik</h6>
                 </a>
-
                 <a href="webshop.html">
                     <h6>Køb et gavekort</h6>
                 </a>
+
             </div>
             <div class="aabningstid">
                 <h4>Åbningstider</h4>
                 <div class="aabningstiden">
-
                     <h3>Mandag</h3>
                     <p class="mandag"></p>
                     <h3>Tirsdag</h3>
@@ -267,6 +274,5 @@
             <i class="fa fa-envelope" style="font-size:24px" aria-hidden="true"></i>
         </div>
         <p>Copyright: Copenhagen Glass 2019</p>
-
     </footer>
 </body></html>
