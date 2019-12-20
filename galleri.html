@@ -142,17 +142,16 @@
 
     <script>
         document.addEventListener("DOMContentLoaded", getJson);
-        let galleriItems = [];
+        let galleriItems;
         async function getJson() {
 
             let jsonData = await fetch("https://mostvalue.dk/Copenhagenglass/wordpress/wp-json/wp/v2/Galleri?per_page=20");
 
             galleriItems = await jsonData.json();
-
             console.log(galleriItems);
-
             visGalleri();
         };
+
 
         function visGalleri() {
             const skabelon = document.querySelector(".test-template");
@@ -169,8 +168,5 @@
 
 
         };
-
     </script>
-</body>
-
-</html>
+</body></html>

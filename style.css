@@ -737,6 +737,10 @@ input[type=submit]:hover {
     cursor: pointer;
 }
 
+#galleri .item-container {
+    cursor: default;
+}
+
 .pris p {
     width: 100%;
     font-size: 30px;

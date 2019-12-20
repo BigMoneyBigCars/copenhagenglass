@@ -187,19 +187,17 @@
 
         let webshopItems = []; // variablen "webshopItems" er nu et array
 
-
-
         async function getJson() { // I denne variabel hentes json ind
 
-            let url = "https://mostvalue.dk/Copenhagenglass/wordpress/wp-json/wp/v2/Webshop_item?per_page=20"
+            let url = "https://mostvalue.dk/Copenhagenglass/wordpress/wp-json/wp/v2/Webshop_item?per_page=20" // definerer "url" som vores link til json data'en
 
-            let jsonData = await fetch(url); // Definerer den url
+            let jsonData = await fetch(url); // henter (fetcher) dataen fra vores url og sætter den ind i variablen jsonData
 
-            webshopItems = await jsonData.json();
+            webshopItems = await jsonData.json(); // indsætter vores fetchede data ind i array'et "webshopItems"
 
-            console.log(webshopItems);
+            console.log(webshopItems); // viser i consollen om denne data bliver hentet ind
 
-            visWebshop();
+            visWebshop(); // kalder næste funktiion
         };
 
 
